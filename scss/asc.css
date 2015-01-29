@@ -168,60 +168,77 @@ html body main h2 {
   line-height: 1.1em;
 }
 /* line 165, asc.scss */
+html body main h3 {
+  color: #0094ca;
+  font-weight: 700;
+  font-size: 1.8em;
+  line-height: 1.1em;
+}
+/* line 168, asc.scss */
+html body main h4 {
+  color: #0094ca;
+  font-weight: 700;
+  font-size: 1.2em;
+  line-height: 1.1em;
+}
+/* line 171, asc.scss */
 html body main p, html body main ul, html body main ol {
   font-size: 1.4em;
   line-height: 1.6em;
 }
-/* line 170, asc.scss */
+/* line 176, asc.scss */
 html body main figure.featured-image {
   width: 50%;
+  height: 100%;
+  position: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   float: left;
-  margin-left: -220px;
+  margin-left: -270px;
   margin-right: 30px;
 }
-/* line 180, asc.scss */
+/* line 187, asc.scss */
 html body main figure.featured-image img {
   position: fixed;
   height: 100%;
 }
-/* line 185, asc.scss */
+/* line 192, asc.scss */
 html body main .page {
-  float: left;
+  float: right;
   width: 50%;
+  margin-right: 170px;
   margin-top: 75px;
 }
 
-/* line 193, asc.scss */
+/* line 201, asc.scss */
 .blog main {
   margin-left: 270px;
   margin-top: 75px;
 }
 
 @media screen and (max-device-width: 791px) {
-  /* line 206, asc.scss */
+  /* line 214, asc.scss */
   html body #binder #spine header {
     background-color: #0094ca;
   }
-  /* line 209, asc.scss */
+  /* line 217, asc.scss */
   html body #binder #spine #wsu-signature {
     background-image: url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/mobile-logo1.png);
     background-repeat: no-repeat;
     background-size: 18% !important;
     background-position: center 12px !important;
   }
-  /* line 215, asc.scss */
+  /* line 223, asc.scss */
   html body #binder #spine #side-search-area {
     margin-top: 22px;
   }
-  /* line 218, asc.scss */
+  /* line 226, asc.scss */
   html body #binder #spine #side-latest-news {
     display: none;
   }
-  /* line 222, asc.scss */
+  /* line 230, asc.scss */
   html body #binder .shelved button#shelve, html body #binder .unshelved button#shelve {
     background: url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/menu.png);
     background-repeat: no-repeat;
@@ -229,14 +246,14 @@ html body main .page {
     background-color: #4e4c4b;
     display: block;
   }
-  /* line 230, asc.scss */
+  /* line 238, asc.scss */
   html body figure.featured-image {
     width: 100% !important;
     min-height: 100px !important;
     float: none;
     margin-left: 0px !important;
   }
-  /* line 236, asc.scss */
+  /* line 244, asc.scss */
   html body .page {
     float: none;
     width: 100% !important;

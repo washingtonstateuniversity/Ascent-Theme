@@ -156,11 +156,17 @@ html body {
 				}
 		}
 		h1 {
-			@include heading-styles(3em, 1.1em);
+			@include heading-styles (3em, 1.1em);
 			padding-bottom:1em;
 		}
 		h2 {
 			@include heading-styles (2.2em, 1.1em)
+		}
+		h3 {
+			@include heading-styles (1.8em, 1.1em)
+		}
+		h4 {
+			@include heading-styles (1.2em, 1.1em)
 		}
 		p, ul, ol {
 			
@@ -169,13 +175,14 @@ html body {
 		}
 		figure.featured-image {
 			width:50%;
-		
+			height:100%;
+			position:fixed;
 			-webkit-background-size: cover;
   			-moz-background-size: cover;
   			-o-background-size: cover;
  	 		background-size: cover;
 			float:left;
-			margin-left:-220px;
+			margin-left:-270px;
 			margin-right:30px;
 			& img {
 				position:fixed;
@@ -183,8 +190,9 @@ html body {
 			}
 		}
 		.page {
-			float:left;
+			float:right;
 			width:50%;
+			margin-right:170px;
 			margin-top:75px;
 		}
 	}

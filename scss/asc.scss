@@ -1,0 +1,242 @@
+$brand:#0094ca;
+$darkest-gray:#343232;
+$heavy-gray:#4e4c4b;
+$light-gray:#747270;
+$heavy-color:#fff;
+$webfont:'Roboto', sans-serif;
+
+@mixin heading-styles($size, $lh) {
+	color:$brand;
+	font-weight:700;
+	font-size:$size;
+	line-height:$lh;
+}
+
+html body {
+	height:100%;
+	font-family:$webfont;
+	font-weight:300;
+	color:$darkest-gray;
+	background-color:$heavy-color;
+		#spine.asc-heavy-gray #glue:before {
+			background-color:$heavy-gray;
+			color:$heavy-color;
+			left:-774px;
+			width:1000px;
+			position:absolute;
+		}
+		#spine { 
+			#glue, #glue:before {
+				width:222px;
+			}
+			#wsu-signature {
+				background-image:url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/ascent-logo.png);
+			} 
+			#side-search-area {
+				input#s {
+					width:196px;
+					height:37px;
+					display:block;
+					font-size:1.2em;
+					background-color:$darkest-gray;
+					border:solid 1px $light-gray;
+					margin-left:auto;
+					margin-right:auto;
+					padding-left:37px;
+					background-image: url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/searchicon.png);
+					background-repeat:no-repeat;
+					background-position: 8px 8px;
+					background-size:12%;
+					letter-spacing: 1px;
+					&:hover, &:focus {
+						border:1px solid $brand;
+					}
+				}
+
+			}
+			.spine-sitenav {
+				margin-left:0;
+				margin-right:0;
+				padding-top:8px;
+					ul li {
+						border-style:none;
+					}
+					a {
+						font-size:1.2em;
+						letter-spacing:1px;
+						line-height:1em;
+						padding:10px 1px 10px 12px;
+						color:$heavy-color;
+						border-left:$heavy-gray solid 8px;
+							&:hover {
+								border-left:$light-gray solid 8px;
+								color:$heavy-color;
+								background-color:$light-gray;
+								font-weight:300;
+								cursor:pointer;
+							}
+					}
+					li.dogeared>a {
+						color:$heavy-color;
+						background-color:$light-gray;
+						border-left:$brand solid 8px;
+						font-weight:300;
+					}
+				}
+			#side-latest-news {
+					& h4 {
+						color:$heavy-color;
+						text-transform: uppercase;
+						font-size:1.2em;
+						letter-spacing: 1px;
+						display: block;
+						width:178px;
+						margin-left:auto;
+						margin-right:auto;
+						margin-bottom:12px;
+						border-top:1px solid $light-gray;
+						padding-top:30px;
+											}
+					& .side-latest-news-box {
+						display: block;
+						height:100%;
+						width:178px;
+						background-color:$darkest-gray;
+						border:solid 1px $light-gray;
+						margin-left:auto;
+						margin-right:auto;
+						padding:5%;
+						color:white;
+					}
+					& .rmore {
+						display:block;
+						width:80px;
+						padding:5px;
+						font-size: 1.2em;
+						margin-left:auto;
+						margin-right:auto;
+						margin-top:12px;
+						margin-bottom:6px;
+						text-align:center;
+						background-color:$brand;
+							& a {
+								display: block;
+								height:100%;
+								width:100%;
+								color:$heavy-color;
+							}
+					&:hover,&:focus {
+								padding:4px;
+								background-color:$heavy-gray;
+								cursor: pointer;
+								border:1px solid $brand;			
+					}
+
+					}
+			}
+
+			.spine-footer {
+				color:$heavy-color;
+				font-size:1.3em;
+				line-height:1.1em;
+				width:178px;
+			}
+			.spine-global-links {
+				margin-top:22px;
+				padding-top:22px;
+				border-color:$light-gray;
+			}
+		}
+	main {
+		a {
+			color:$brand;
+			text-decoration: underline;
+				&:hover {
+					color:$light-gray;
+				}
+		}
+		h1 {
+			@include heading-styles(3em, 1.1em);
+			padding-bottom:1em;
+		}
+		h2 {
+			@include heading-styles (2.2em, 1.1em)
+		}
+		p, ul, ol {
+			
+			font-size:1.4em;
+			line-height:1.6em;
+		}
+		figure.featured-image {
+			width:50%;
+		
+			-webkit-background-size: cover;
+  			-moz-background-size: cover;
+  			-o-background-size: cover;
+ 	 		background-size: cover;
+			float:left;
+			margin-left:-220px;
+			margin-right:30px;
+			& img {
+				position:fixed;
+				height:100%;
+			}
+		}
+		.page {
+			float:left;
+			width:50%;
+			margin-top:75px;
+		}
+	}
+}
+.blog {
+	main {
+		margin-left:270px;
+		margin-top:75px;
+	}
+}
+
+$width-name: max-device-width;
+$target-width: 791px;
+
+@media screen and ($width-name : $target-width) {
+	html body {
+			#binder {
+				#spine {
+					header {
+						background-color:$brand;
+					}
+					#wsu-signature {
+						background-image:url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/mobile-logo1.png);
+						background-repeat: no-repeat;
+						background-size: 18% !important;
+						background-position: center 12px !important;
+					} 
+					#side-search-area {
+						margin-top:22px;												
+					}	
+					#side-latest-news {
+						display:none;
+					}
+				}
+				.shelved button#shelve, .unshelved button#shelve {
+						background:url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/menu.png);
+						background-repeat:no-repeat;
+						background-position:22px 15px;
+						background-color:$heavy-gray;
+						display:block;
+				}
+			}
+			figure.featured-image {
+				width:100% !important;
+				min-height: 100px !important;
+				float:none;
+				margin-left:0px !important;
+			}
+			.page {
+				float:none;
+				width:100% !important;
+				margin-top:0 !important;
+			}
+	}
+}

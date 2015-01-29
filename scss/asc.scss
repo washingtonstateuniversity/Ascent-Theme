@@ -30,7 +30,7 @@ html body {
 				width:222px;
 			}
 			#wsu-signature {
-				background-image:url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/ascent-logo.png);
+				background-image:url(/wp-content/uploads/sites/192/2015/01/ascent-logo.png);
 			} 
 			#side-search-area {
 				input#s {
@@ -43,7 +43,7 @@ html body {
 					margin-left:auto;
 					margin-right:auto;
 					padding-left:37px;
-					background-image: url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/searchicon.png);
+					background-image: url(/wp-content/uploads/sites/192/2015/01/searchicon.png);
 					background-repeat:no-repeat;
 					background-position: 8px 8px;
 					background-size:12%;
@@ -215,7 +215,7 @@ $target-width: 791px;
 						background-color:$brand;
 					}
 					#wsu-signature {
-						background-image:url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/mobile-logo1.png);
+						background-image:url(/wp-content/uploads/sites/192/2015/01/mobile-logo.png);
 						background-repeat: no-repeat;
 						background-size: 18% !important;
 						background-position: center 12px !important;
@@ -228,7 +228,7 @@ $target-width: 791px;
 					}
 				}
 				.shelved button#shelve, .unshelved button#shelve {
-						background:url(http://ascent.wsu.dev/wp-content/uploads/sites/4/2015/01/menu.png);
+						background:url(/wp-content/uploads/sites/192/2015/01/menu.png);
 						background-repeat:no-repeat;
 						background-position:22px 15px;
 						background-color:$heavy-gray;

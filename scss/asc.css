@@ -1,4 +1,4 @@
-/* line 15, asc.scss */
+/* line 19, asc.scss */
 html body {
   height: 100%;
   font-family: "Roboto", sans-serif;
@@ -6,7 +6,7 @@ html body {
   color: #343232;
   background-color: white;
 }
-/* line 21, asc.scss */
+/* line 25, asc.scss */
 html body #spine.asc-heavy-gray #glue:before {
   background-color: #4e4c4b;
   color: white;
@@ -14,15 +14,15 @@ html body #spine.asc-heavy-gray #glue:before {
   width: 1000px;
   position: absolute;
 }
-/* line 29, asc.scss */
+/* line 33, asc.scss */
 html body #spine #glue, html body #spine #glue:before {
   width: 222px;
 }
-/* line 32, asc.scss */
+/* line 36, asc.scss */
 html body #spine #wsu-signature {
   background-image: url(/wp-content/uploads/sites/192/2015/01/ascent-logo.png);
 }
-/* line 36, asc.scss */
+/* line 40, asc.scss */
 html body #spine #side-search-area input#s {
   width: 196px;
   height: 37px;
@@ -39,21 +39,21 @@ html body #spine #side-search-area input#s {
   background-size: 12%;
   letter-spacing: 1px;
 }
-/* line 51, asc.scss */
+/* line 55, asc.scss */
 html body #spine #side-search-area input#s:hover, html body #spine #side-search-area input#s:focus {
   border: 1px solid #0094ca;
 }
-/* line 57, asc.scss */
+/* line 61, asc.scss */
 html body #spine .spine-sitenav {
   margin-left: 0;
   margin-right: 0;
   padding-top: 8px;
 }
-/* line 61, asc.scss */
+/* line 65, asc.scss */
 html body #spine .spine-sitenav ul li {
   border-style: none;
 }
-/* line 64, asc.scss */
+/* line 68, asc.scss */
 html body #spine .spine-sitenav a {
   font-size: 1.2em;
   letter-spacing: 1px;
@@ -62,7 +62,7 @@ html body #spine .spine-sitenav a {
   color: white;
   border-left: #4e4c4b solid 8px;
 }
-/* line 71, asc.scss */
+/* line 75, asc.scss */
 html body #spine .spine-sitenav a:hover {
   border-left: #747270 solid 8px;
   color: white;
@@ -70,14 +70,14 @@ html body #spine .spine-sitenav a:hover {
   font-weight: 300;
   cursor: pointer;
 }
-/* line 79, asc.scss */
+/* line 83, asc.scss */
 html body #spine .spine-sitenav li.dogeared > a {
   color: white;
   background-color: #747270;
   border-left: #0094ca solid 8px;
   font-weight: 300;
 }
-/* line 87, asc.scss */
+/* line 91, asc.scss */
 html body #spine #side-latest-news h4 {
   color: white;
   text-transform: uppercase;
@@ -91,7 +91,7 @@ html body #spine #side-latest-news h4 {
   border-top: 1px solid #747270;
   padding-top: 30px;
 }
-/* line 100, asc.scss */
+/* line 104, asc.scss */
 html body #spine #side-latest-news .side-latest-news-box {
   display: block;
   height: 100%;
@@ -102,8 +102,14 @@ html body #spine #side-latest-news .side-latest-news-box {
   margin-right: auto;
   padding: 5%;
   color: white;
+  clear: both;
 }
-/* line 111, asc.scss */
+/* line 116, asc.scss */
+html body #spine #side-latest-news h5 {
+  font-size: 1.2em;
+  padding-bottom: 1em;
+}
+/* line 120, asc.scss */
 html body #spine #side-latest-news .rmore {
   display: block;
   width: 80px;
@@ -116,43 +122,45 @@ html body #spine #side-latest-news .rmore {
   text-align: center;
   background-color: #0094ca;
 }
-/* line 122, asc.scss */
+/* line 131, asc.scss */
 html body #spine #side-latest-news .rmore a {
   display: block;
   height: 100%;
   width: 100%;
   color: white;
 }
-/* line 128, asc.scss */
+/* line 137, asc.scss */
 html body #spine #side-latest-news .rmore:hover, html body #spine #side-latest-news .rmore:focus {
   padding: 4px;
   background-color: #4e4c4b;
   cursor: pointer;
   border: 1px solid #0094ca;
 }
-/* line 138, asc.scss */
+/* line 147, asc.scss */
 html body #spine .spine-footer {
   color: white;
   font-size: 1.3em;
   line-height: 1.1em;
   width: 178px;
 }
-/* line 144, asc.scss */
+/* line 153, asc.scss */
 html body #spine .spine-global-links {
   margin-top: 22px;
   padding-top: 22px;
+  display: block;
+  clear: both;
   border-color: #747270;
 }
-/* line 151, asc.scss */
+/* line 162, asc.scss */
 html body main a {
   color: #0094ca;
   text-decoration: underline;
 }
-/* line 154, asc.scss */
+/* line 165, asc.scss */
 html body main a:hover {
   color: #747270;
 }
-/* line 158, asc.scss */
+/* line 169, asc.scss */
 html body main h1 {
   color: #0094ca;
   font-weight: 700;
@@ -160,33 +168,33 @@ html body main h1 {
   line-height: 1.1em;
   padding-bottom: 1em;
 }
-/* line 162, asc.scss */
+/* line 173, asc.scss */
 html body main h2 {
   color: #0094ca;
   font-weight: 700;
   font-size: 2.2em;
   line-height: 1.1em;
 }
-/* line 165, asc.scss */
+/* line 176, asc.scss */
 html body main h3 {
   color: #0094ca;
   font-weight: 700;
   font-size: 1.8em;
   line-height: 1.1em;
 }
-/* line 168, asc.scss */
+/* line 179, asc.scss */
 html body main h4 {
   color: #0094ca;
   font-weight: 700;
   font-size: 1.2em;
   line-height: 1.1em;
 }
-/* line 171, asc.scss */
+/* line 182, asc.scss */
 html body main p, html body main ul, html body main ol {
   font-size: 1.4em;
   line-height: 1.6em;
 }
-/* line 176, asc.scss */
+/* line 187, asc.scss */
 html body main figure.featured-image {
   width: 50%;
   height: 100%;
@@ -199,46 +207,50 @@ html body main figure.featured-image {
   margin-left: -270px;
   margin-right: 30px;
 }
-/* line 187, asc.scss */
+/* line 198, asc.scss */
 html body main figure.featured-image img {
   position: fixed;
   height: 100%;
 }
-/* line 192, asc.scss */
+/* line 203, asc.scss */
 html body main .page {
-  float: right;
   width: 50%;
   margin-right: 150px;
-  margin-top: 75px;
+  margin-top: 65px;
+  float: right;
+}
+/* line 207, asc.scss */
+html body main .post {
+  margin-left: 70px;
 }
 
-/* line 201, asc.scss */
+/* line 213, asc.scss */
 .blog main {
   margin-left: 270px;
   margin-top: 75px;
 }
 
 @media screen and (max-device-width: 791px) {
-  /* line 214, asc.scss */
+  /* line 226, asc.scss */
   html body #binder #spine header {
     background-color: #0094ca;
   }
-  /* line 217, asc.scss */
+  /* line 229, asc.scss */
   html body #binder #spine #wsu-signature {
     background-image: url(/wp-content/uploads/sites/192/2015/01/mobile-logo.png);
     background-repeat: no-repeat;
     background-size: 18% !important;
     background-position: center 12px !important;
   }
-  /* line 223, asc.scss */
+  /* line 235, asc.scss */
   html body #binder #spine #side-search-area {
     margin-top: 22px;
   }
-  /* line 226, asc.scss */
+  /* line 238, asc.scss */
   html body #binder #spine #side-latest-news {
     display: none;
   }
-  /* line 230, asc.scss */
+  /* line 242, asc.scss */
   html body #binder .shelved button#shelve, html body #binder .unshelved button#shelve {
     background: url(/wp-content/uploads/sites/192/2015/01/menu.png);
     background-repeat: no-repeat;
@@ -246,17 +258,21 @@ html body main .page {
     background-color: #4e4c4b;
     display: block;
   }
-  /* line 238, asc.scss */
+  /* line 250, asc.scss */
   html body figure.featured-image {
     width: 100% !important;
     min-height: 100px !important;
     float: none;
     margin-left: 0px !important;
   }
-  /* line 244, asc.scss */
+  /* line 256, asc.scss */
   html body .page {
     float: none;
     width: 100% !important;
     margin-top: 0 !important;
+  }
+  /* line 261, asc.scss */
+  html body .post {
+    margin-left: 0 !important;
   }
 }

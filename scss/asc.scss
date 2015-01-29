@@ -11,7 +11,11 @@ $webfont:'Roboto', sans-serif;
 	font-size:$size;
 	line-height:$lh;
 }
-
+@mixin body-styles() {
+		margin-right:150px;
+		margin-top:65px;
+		float:right;
+}
 html body {
 	height:100%;
 	font-family:$webfont;
@@ -107,6 +111,11 @@ html body {
 						margin-right:auto;
 						padding:5%;
 						color:white;
+						clear:both;
+					}
+					& h5 {
+						font-size:1.2em;
+						padding-bottom:1em;
 					}
 					& .rmore {
 						display:block;
@@ -144,6 +153,8 @@ html body {
 			.spine-global-links {
 				margin-top:22px;
 				padding-top:22px;
+				display:block;
+				clear:both;
 				border-color:$light-gray;
 			}
 		}
@@ -190,10 +201,11 @@ html body {
 			}
 		}
 		.page {
-			float:right;
 			width:50%;
-			margin-right:150px;
-			margin-top:75px;
+			@include body-styles;
+		}
+		.post {
+			margin-left:70px;
 		}
 	}
 }
@@ -246,5 +258,8 @@ $target-width: 791px;
 				width:100% !important;
 				margin-top:0 !important;
 			}
-	}
+			.post {
+				margin-left:0 !important;
+			}
+		}
 }

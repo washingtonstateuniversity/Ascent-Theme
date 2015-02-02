@@ -260,18 +260,20 @@ html body main .post {
   }
   /* line 250, asc.scss */
   html body figure.featured-image {
+    position: relative !important;
+    display: block;
     width: 100% !important;
     min-height: 100px !important;
     float: none;
     margin-left: 0px !important;
   }
-  /* line 256, asc.scss */
+  /* line 258, asc.scss */
   html body .page {
     float: none;
     width: 100% !important;
-    margin-top: 0 !important;
+    margin: 0 !important;
   }
-  /* line 261, asc.scss */
+  /* line 263, asc.scss */
   html body .post {
     margin-left: 0 !important;
   }

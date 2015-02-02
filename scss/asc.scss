@@ -248,6 +248,8 @@ $target-width: 791px;
 				}
 			}
 			figure.featured-image {
+				position:relative !important;
+				display: block;
 				width:100% !important;
 				min-height: 100px !important;
 				float:none;
@@ -256,7 +258,7 @@ $target-width: 791px;
 			.page {
 				float:none;
 				width:100% !important;
-				margin-top:0 !important;
+				margin:0 !important;
 			}
 			.post {
 				margin-left:0 !important;

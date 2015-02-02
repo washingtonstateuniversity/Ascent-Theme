@@ -218,6 +218,8 @@ html body {
 
 $width-name: max-device-width;
 $target-width: 791px;
+$width-min-name: min-width;
+$target-min-width: 2100px;
 
 @media screen and ($width-name : $target-width) {
 	html body {
@@ -264,4 +266,11 @@ $target-width: 791px;
 				margin-left:0 !important;
 			}
 		}
+}
+@media screen and ($width-min-name : $target-min-width) {
+	html body {
+		#binder.fluid.max-1980 {
+			max-width:3000px;
+		}
+	}
 }

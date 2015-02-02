@@ -231,26 +231,26 @@ html body main .post {
 }
 
 @media screen and (max-device-width: 791px) {
-  /* line 226, asc.scss */
+  /* line 228, asc.scss */
   html body #binder #spine header {
     background-color: #0094ca;
   }
-  /* line 229, asc.scss */
+  /* line 231, asc.scss */
   html body #binder #spine #wsu-signature {
     background-image: url(/wp-content/uploads/sites/192/2015/01/mobile-logo.png);
     background-repeat: no-repeat;
     background-size: 18% !important;
     background-position: center 12px !important;
   }
-  /* line 235, asc.scss */
+  /* line 237, asc.scss */
   html body #binder #spine #side-search-area {
     margin-top: 22px;
   }
-  /* line 238, asc.scss */
+  /* line 240, asc.scss */
   html body #binder #spine #side-latest-news {
     display: none;
   }
-  /* line 242, asc.scss */
+  /* line 244, asc.scss */
   html body #binder .shelved button#shelve, html body #binder .unshelved button#shelve {
     background: url(/wp-content/uploads/sites/192/2015/01/menu.png);
     background-repeat: no-repeat;
@@ -258,7 +258,7 @@ html body main .post {
     background-color: #4e4c4b;
     display: block;
   }
-  /* line 250, asc.scss */
+  /* line 252, asc.scss */
   html body figure.featured-image {
     position: relative !important;
     display: block;
@@ -267,14 +267,20 @@ html body main .post {
     float: none;
     margin-left: 0px !important;
   }
-  /* line 258, asc.scss */
+  /* line 260, asc.scss */
   html body .page {
     float: none;
     width: 100% !important;
     margin: 0 !important;
   }
-  /* line 263, asc.scss */
+  /* line 265, asc.scss */
   html body .post {
     margin-left: 0 !important;
+  }
+}
+@media screen and (min-width: 2100px) {
+  /* line 272, asc.scss */
+  html body #binder.fluid.max-1980 {
+    max-width: 3000px;
   }
 }

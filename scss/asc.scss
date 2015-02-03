@@ -58,6 +58,11 @@ html body {
 				}
 
 			}
+			&:not(.cropped) {
+					.spine-navigation {
+						padding-bottom:0px;
+					}
+				}
 			.spine-sitenav {
 				margin-left:0;
 				margin-right:0;
@@ -204,8 +209,15 @@ html body {
 			width:50%;
 			@include body-styles;
 		}
-		.post {
+		.post, .wsuwp_uc_project, .wsuwp_uc_publication, .wsuwp_uc_person, .wsuwp_uc_entity {
 			margin-left:70px;
+		}
+		footer {
+			&.main-footer {
+				width:90%;
+				margin-left:auto;
+				margin-right:auto;
+			}
 		}
 	}
 }

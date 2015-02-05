@@ -16,6 +16,21 @@ $webfont:'Roboto', sans-serif;
 		margin-top:65px;
 		float:right;
 }
+@mixin button-styles() {
+		text-align:center;
+		background-color:$brand;
+}
+@mixin button-a-style() {
+	display: block;
+	height:100%;
+	width:100%;
+	color:$heavy-color;
+}
+@mixin button-a-hover {
+	background-color:$heavy-gray;
+	cursor: pointer;
+	border:1px solid $brand;	
+}
 html body {
 	height:100%;
 	font-family:$webfont;
@@ -131,21 +146,14 @@ html body {
 						margin-right:auto;
 						margin-top:12px;
 						margin-bottom:6px;
-						text-align:center;
-						background-color:$brand;
+						@include button-styles;
 							& a {
-								display: block;
-								height:100%;
-								width:100%;
-								color:$heavy-color;
+								@include button-a-style;
 							}
 					&:hover,&:focus {
-								padding:4px;
-								background-color:$heavy-gray;
-								cursor: pointer;
-								border:1px solid $brand;			
+							padding:4px;
+							@include button-a-hover;			
 					}
-
 					}
 			}
 
@@ -209,9 +217,29 @@ html body {
 			width:50%;
 			@include body-styles;
 		}
-		.post, .wsuwp_uc_project, .wsuwp_uc_publication, .wsuwp_uc_person, .wsuwp_uc_entity {
-			margin-left:70px;
+		.post, .wsuwp_uc_project, .wsuwp_uc_publication, .wsuwp_uc_person, .wsuwp_uc_entity, #tribe-events-pg-template {
+				margin-left:70px;
+			 		#tribe-bar-form { 
+			 			background:$heavy-color;
+			 			color:$darkest-gray;
+			 			input[type=email], input[type=password], input[type=text], select, textarea {
+			 				color:$darkest-gray;
+			 				font-family: $webfont;
+			 				font-size: 1.2em;
+			 			}
+			 				.tribe-bar-submit
+			 						input[type=submit] {
+			 							@include button-styles;
+			 							font-family: $webfont;
+			 							letter-spacing: 1px;
+			 						&:hover, &:focus {
+			 							@include button-a-hover;
+			 							padding:9px;
+			 						}
+			 				}
+			 			}
 		}
+		
 		footer {
 			&.main-footer {
 				width:90%;
@@ -219,6 +247,12 @@ html body {
 				margin-right:auto;
 			}
 		}
+	}
+}
+.datepicker {
+	&.dropdown-menu{
+		color:$darkest-gray;
+		 font-family: $webfont !important;
 	}
 }
 .blog {

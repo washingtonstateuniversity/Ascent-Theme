@@ -333,7 +333,7 @@ html body main footer.main-footer {
     margin: 0 !important;
   }
   /* line 311, asc.scss */
-  html body .post {
+  html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
     margin-left: 0 !important;
   }
 }

@@ -229,7 +229,9 @@ html body {
 				margin-left:70px;
 					.tribe-events-calendar {
 						td.tribe-events-present {
-							background-color:$brand;
+							div[id*="tribe-events-daynum-"]{
+								background-color:$brand;
+							}
 						}
 					}
 			 		#tribe-bar-form { 

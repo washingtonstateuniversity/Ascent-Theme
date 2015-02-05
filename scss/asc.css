@@ -287,46 +287,46 @@ input[type=submit]:focus {
   border: 1px solid #0094ca;
   padding: 9px;
 }
-/* line 259, asc.scss */
+/* line 258, asc.scss */
 html body main footer.main-footer {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 268, asc.scss */
+/* line 267, asc.scss */
 .datepicker.dropdown-menu {
   color: #343232;
   font-family: "Roboto", sans-serif !important;
 }
 
-/* line 274, asc.scss */
+/* line 273, asc.scss */
 .blog main {
   margin-left: 200px;
   margin-top: 75px;
 }
 
 @media screen and (max-device-width: 791px) {
-  /* line 289, asc.scss */
+  /* line 288, asc.scss */
   html body #binder #spine header {
     background-color: #0094ca;
   }
-  /* line 292, asc.scss */
+  /* line 291, asc.scss */
   html body #binder #spine #wsu-signature {
     background-image: url(/wp-content/uploads/sites/192/2015/01/mobile-logo.png);
     background-repeat: no-repeat;
     background-size: 18% !important;
     background-position: center 12px !important;
   }
-  /* line 298, asc.scss */
+  /* line 297, asc.scss */
   html body #binder #spine #side-search-area {
     margin-top: 22px;
   }
-  /* line 301, asc.scss */
+  /* line 300, asc.scss */
   html body #binder #spine #side-latest-news {
     display: none;
   }
-  /* line 305, asc.scss */
+  /* line 304, asc.scss */
   html body #binder .shelved button#shelve, html body #binder .unshelved button#shelve {
     background: url(/wp-content/uploads/sites/192/2015/01/menu.png);
     background-repeat: no-repeat;
@@ -334,7 +334,7 @@ html body main footer.main-footer {
     background-color: #4e4c4b;
     display: block;
   }
-  /* line 313, asc.scss */
+  /* line 312, asc.scss */
   html body figure.featured-image {
     position: relative !important;
     display: block;
@@ -343,19 +343,19 @@ html body main footer.main-footer {
     float: none;
     margin-left: 0px !important;
   }
-  /* line 321, asc.scss */
+  /* line 320, asc.scss */
   html body .page {
     float: none;
     width: 100% !important;
     margin: 0 !important;
   }
-  /* line 326, asc.scss */
+  /* line 325, asc.scss */
   html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
     margin-left: 0 !important;
   }
 }
 @media screen and (min-width: 2100px) {
-  /* line 333, asc.scss */
+  /* line 332, asc.scss */
   html body #binder.fluid.max-1980 {
     max-width: 3000px;
   }

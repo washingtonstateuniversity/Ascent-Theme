@@ -201,7 +201,7 @@ html body {
 			padding-bottom:1em;
 		}
 		h2 {
-			@include heading-styles (2.2em, 1.1em)
+			@include heading-styles (2.2em, 1.1em);
 		}
 		h3 {
 			@include heading-styles (1.8em, 1.1em)

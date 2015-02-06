@@ -1,4 +1,4 @@
-/* line 34, asc.scss */
+/* line 35, asc.scss */
 html body {
   height: 100%;
   font-family: "Roboto", sans-serif;
@@ -6,7 +6,7 @@ html body {
   color: #343232;
   background-color: white;
 }
-/* line 40, asc.scss */
+/* line 41, asc.scss */
 html body #spine.asc-heavy-gray #glue:before {
   background-color: #4e4c4b;
   color: white;
@@ -14,15 +14,15 @@ html body #spine.asc-heavy-gray #glue:before {
   width: 1000px;
   position: absolute;
 }
-/* line 48, asc.scss */
+/* line 49, asc.scss */
 html body #spine #glue, html body #spine #glue:before {
   width: 222px;
 }
-/* line 51, asc.scss */
+/* line 52, asc.scss */
 html body #spine #wsu-signature {
   background-image: url(/wp-content/uploads/sites/192/2015/01/ascent-logo.png);
 }
-/* line 55, asc.scss */
+/* line 56, asc.scss */
 html body #spine #side-search-area input#s {
   width: 196px;
   height: 37px;
@@ -39,25 +39,25 @@ html body #spine #side-search-area input#s {
   background-size: 12%;
   letter-spacing: 1px;
 }
-/* line 70, asc.scss */
+/* line 71, asc.scss */
 html body #spine #side-search-area input#s:hover, html body #spine #side-search-area input#s:focus {
   border: 1px solid #0094ca;
 }
-/* line 77, asc.scss */
+/* line 78, asc.scss */
 html body #spine:not(.cropped) .spine-navigation {
   padding-bottom: 0px;
 }
-/* line 81, asc.scss */
+/* line 82, asc.scss */
 html body #spine .spine-sitenav {
   margin-left: 0;
   margin-right: 0;
   padding-top: 8px;
 }
-/* line 85, asc.scss */
+/* line 86, asc.scss */
 html body #spine .spine-sitenav ul li {
   border-style: none;
 }
-/* line 88, asc.scss */
+/* line 89, asc.scss */
 html body #spine .spine-sitenav a {
   font-size: 1.2em;
   letter-spacing: 1px;
@@ -66,7 +66,7 @@ html body #spine .spine-sitenav a {
   color: white;
   border-left: #4e4c4b solid 8px;
 }
-/* line 95, asc.scss */
+/* line 96, asc.scss */
 html body #spine .spine-sitenav a:hover {
   border-left: #747270 solid 8px;
   color: white;
@@ -74,38 +74,38 @@ html body #spine .spine-sitenav a:hover {
   font-weight: 300;
   cursor: pointer;
 }
-/* line 103, asc.scss */
+/* line 104, asc.scss */
 html body #spine .spine-sitenav li.dogeared > a {
   color: white;
   background-color: #747270;
   border-left: #0094ca solid 8px;
   font-weight: 300;
 }
-/* line 109, asc.scss */
+/* line 110, asc.scss */
 html body #spine .spine-sitenav:not(.homeless) > ul > li:first-child > a {
   background-image: none;
   padding-left: 1em;
 }
-/* line 112, asc.scss */
+/* line 113, asc.scss */
 html body #spine .spine-sitenav:not(.homeless) > ul > li:first-child > a:before, html body #spine .spine-sitenav:not(.homeless) > ul > li:first-child > a:hover {
   background-image: none;
   background-color: #747270;
 }
-/* line 117, asc.scss */
+/* line 118, asc.scss */
 html body #spine .spine-sitenav:not(.homeless) > ul > li.active:first-child > a {
   background-image: none;
 }
-/* line 119, asc.scss */
+/* line 120, asc.scss */
 html body #spine .spine-sitenav:not(.homeless) > ul > li.active:first-child > a:before, html body #spine .spine-sitenav:not(.homeless) > ul > li.active:first-child > a:hover {
   background-image: none;
   background-color: #747270;
 }
-/* line 125, asc.scss */
+/* line 126, asc.scss */
 html body #spine #side-latest-news {
   /* Remove hidden if we decide to use */
   display: none;
 }
-/* line 128, asc.scss */
+/* line 129, asc.scss */
 html body #spine #side-latest-news h4 {
   color: white;
   text-transform: uppercase;
@@ -119,7 +119,7 @@ html body #spine #side-latest-news h4 {
   border-top: 1px solid #747270;
   padding-top: 30px;
 }
-/* line 141, asc.scss */
+/* line 142, asc.scss */
 html body #spine #side-latest-news .side-latest-news-box {
   height: 100%;
   width: 178px;
@@ -131,12 +131,12 @@ html body #spine #side-latest-news .side-latest-news-box {
   color: white;
   clear: both;
 }
-/* line 152, asc.scss */
+/* line 153, asc.scss */
 html body #spine #side-latest-news h5 {
   font-size: 1.2em;
   padding-bottom: 1em;
 }
-/* line 156, asc.scss */
+/* line 157, asc.scss */
 html body #spine #side-latest-news .rmore {
   display: block;
   width: 80px;
@@ -149,28 +149,28 @@ html body #spine #side-latest-news .rmore {
   text-align: center;
   background-color: #0094ca;
 }
-/* line 166, asc.scss */
+/* line 167, asc.scss */
 html body #spine #side-latest-news .rmore a {
   display: block;
   height: 100%;
   width: 100%;
   color: white;
 }
-/* line 169, asc.scss */
+/* line 170, asc.scss */
 html body #spine #side-latest-news .rmore:hover, html body #spine #side-latest-news .rmore:focus {
   padding: 4px;
   background-color: #4e4c4b;
   cursor: pointer;
   border: 1px solid #0094ca;
 }
-/* line 176, asc.scss */
+/* line 177, asc.scss */
 html body #spine .spine-footer {
   color: white;
   font-size: 1.3em;
   line-height: 1.1em;
   width: 178px;
 }
-/* line 182, asc.scss */
+/* line 183, asc.scss */
 html body #spine .spine-global-links {
   margin-top: 22px;
   padding-top: 22px;
@@ -178,16 +178,16 @@ html body #spine .spine-global-links {
   clear: both;
   border-color: #747270;
 }
-/* line 191, asc.scss */
+/* line 192, asc.scss */
 html body main a {
   color: #0094ca;
   text-decoration: underline;
 }
-/* line 194, asc.scss */
+/* line 195, asc.scss */
 html body main a:hover {
   color: #747270;
 }
-/* line 198, asc.scss */
+/* line 199, asc.scss */
 html body main h1 {
   color: #0094ca;
   font-weight: 700;
@@ -195,33 +195,33 @@ html body main h1 {
   line-height: 1.1em;
   padding-bottom: 1em;
 }
-/* line 202, asc.scss */
+/* line 203, asc.scss */
 html body main h2 {
   color: #0094ca;
   font-weight: 700;
   font-size: 2.2em;
   line-height: 1.1em;
 }
-/* line 205, asc.scss */
+/* line 206, asc.scss */
 html body main h3 {
   color: #0094ca;
   font-weight: 700;
   font-size: 1.8em;
   line-height: 1.1em;
 }
-/* line 208, asc.scss */
+/* line 209, asc.scss */
 html body main h4 {
   color: #0094ca;
   font-weight: 700;
   font-size: 1.2em;
   line-height: 1.1em;
 }
-/* line 211, asc.scss */
+/* line 212, asc.scss */
 html body main p, html body main ul, html body main ol {
   font-size: 1.4em;
   line-height: 1.6em;
 }
-/* line 216, asc.scss */
+/* line 217, asc.scss */
 html body main figure.featured-image {
   width: 50%;
   height: 100%;
@@ -234,38 +234,38 @@ html body main figure.featured-image {
   margin-left: -270px;
   margin-right: 30px;
 }
-/* line 227, asc.scss */
+/* line 228, asc.scss */
 html body main figure.featured-image img {
   position: fixed;
   height: 100%;
 }
-/* line 232, asc.scss */
+/* line 233, asc.scss */
 html body main .page {
   width: 50%;
   margin-right: 150px;
   margin-top: 65px;
   float: right;
 }
-/* line 236, asc.scss */
+/* line 237, asc.scss */
 html body main .post, html body main .wsuwp_uc_project, html body main .wsuwp_uc_publication, html body main .wsuwp_uc_person, html body main .wsuwp_uc_entity, html body main #tribe-events-pg-template {
   margin-left: 70px;
 }
-/* line 240, asc.scss */
+/* line 241, asc.scss */
 html body main .post .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_project .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_publication .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_person .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_entity .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main #tribe-events-pg-template .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"] {
   background-color: #0094ca;
 }
-/* line 245, asc.scss */
+/* line 247, asc.scss */
 html body main .post #tribe-bar-form, html body main .wsuwp_uc_project #tribe-bar-form, html body main .wsuwp_uc_publication #tribe-bar-form, html body main .wsuwp_uc_person #tribe-bar-form, html body main .wsuwp_uc_entity #tribe-bar-form, html body main #tribe-events-pg-template #tribe-bar-form {
   background: white;
   color: #343232;
 }
-/* line 248, asc.scss */
+/* line 250, asc.scss */
 html body main .post #tribe-bar-form input[type=email], html body main .post #tribe-bar-form input[type=password], html body main .post #tribe-bar-form input[type=text], html body main .post #tribe-bar-form select, html body main .post #tribe-bar-form textarea, html body main .wsuwp_uc_project #tribe-bar-form input[type=email], html body main .wsuwp_uc_project #tribe-bar-form input[type=password], html body main .wsuwp_uc_project #tribe-bar-form input[type=text], html body main .wsuwp_uc_project #tribe-bar-form select, html body main .wsuwp_uc_project #tribe-bar-form textarea, html body main .wsuwp_uc_publication #tribe-bar-form input[type=email], html body main .wsuwp_uc_publication #tribe-bar-form input[type=password], html body main .wsuwp_uc_publication #tribe-bar-form input[type=text], html body main .wsuwp_uc_publication #tribe-bar-form select, html body main .wsuwp_uc_publication #tribe-bar-form textarea, html body main .wsuwp_uc_person #tribe-bar-form input[type=email], html body main .wsuwp_uc_person #tribe-bar-form input[type=password], html body main .wsuwp_uc_person #tribe-bar-form input[type=text], html body main .wsuwp_uc_person #tribe-bar-form select, html body main .wsuwp_uc_person #tribe-bar-form textarea, html body main .wsuwp_uc_entity #tribe-bar-form input[type=email], html body main .wsuwp_uc_entity #tribe-bar-form input[type=password], html body main .wsuwp_uc_entity #tribe-bar-form input[type=text], html body main .wsuwp_uc_entity #tribe-bar-form select, html body main .wsuwp_uc_entity #tribe-bar-form textarea, html body main #tribe-events-pg-template #tribe-bar-form input[type=email], html body main #tribe-events-pg-template #tribe-bar-form input[type=password], html body main #tribe-events-pg-template #tribe-bar-form input[type=text], html body main #tribe-events-pg-template #tribe-bar-form select, html body main #tribe-events-pg-template #tribe-bar-form textarea {
   color: #343232;
   font-family: "Roboto", sans-serif;
   font-size: 1.2em;
 }
-/* line 254, asc.scss */
+/* line 256, asc.scss */
 html body main .post #tribe-bar-form .tribe-bar-submit
 input[type=submit], html body main .wsuwp_uc_project #tribe-bar-form .tribe-bar-submit
 input[type=submit], html body main .wsuwp_uc_publication #tribe-bar-form .tribe-bar-submit
@@ -278,7 +278,7 @@ input[type=submit] {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
 }
-/* line 258, asc.scss */
+/* line 260, asc.scss */
 html body main .post #tribe-bar-form .tribe-bar-submit
 input[type=submit]:hover, html body main .post #tribe-bar-form .tribe-bar-submit
 input[type=submit]:focus, html body main .wsuwp_uc_project #tribe-bar-form .tribe-bar-submit
@@ -297,46 +297,59 @@ input[type=submit]:focus {
   border: 1px solid #0094ca;
   padding: 9px;
 }
-/* line 266, asc.scss */
+/* line 268, asc.scss */
 html body main footer.main-footer {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 275, asc.scss */
+/* line 277, asc.scss */
 .datepicker.dropdown-menu {
   color: #343232;
   font-family: "Roboto", sans-serif !important;
 }
 
-/* line 281, asc.scss */
+/* line 283, asc.scss */
 .blog main {
   margin-left: 200px;
   margin-top: 75px;
 }
 
+/* line 291, asc.scss */
+.post-type-archive-wsuwp_uc_entity main header h1 {
+  margin-left: 70px;
+}
+/* line 296, asc.scss */
+.post-type-archive-wsuwp_uc_entity main h2.article-title {
+  font-size: 1.2em;
+  font-weight: 300;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 1em;
+}
+
 @media screen and (max-device-width: 791px) {
-  /* line 296, asc.scss */
+  /* line 315, asc.scss */
   html body #binder #spine header {
     background-color: #0094ca;
   }
-  /* line 299, asc.scss */
+  /* line 318, asc.scss */
   html body #binder #spine #wsu-signature {
     background-image: url(/wp-content/uploads/sites/192/2015/01/mobile-logo.png);
     background-repeat: no-repeat;
     background-size: 18% !important;
     background-position: center 12px !important;
   }
-  /* line 305, asc.scss */
+  /* line 324, asc.scss */
   html body #binder #spine #side-search-area {
     margin-top: 22px;
   }
-  /* line 308, asc.scss */
+  /* line 327, asc.scss */
   html body #binder #spine #side-latest-news {
     display: none;
   }
-  /* line 312, asc.scss */
+  /* line 331, asc.scss */
   html body #binder .shelved button#shelve, html body #binder .unshelved button#shelve {
     background: url(/wp-content/uploads/sites/192/2015/01/menu.png);
     background-repeat: no-repeat;
@@ -344,7 +357,7 @@ html body main footer.main-footer {
     background-color: #4e4c4b;
     display: block;
   }
-  /* line 320, asc.scss */
+  /* line 339, asc.scss */
   html body figure.featured-image {
     position: relative !important;
     display: block;
@@ -353,19 +366,19 @@ html body main footer.main-footer {
     float: none;
     margin-left: 0px !important;
   }
-  /* line 328, asc.scss */
+  /* line 347, asc.scss */
   html body .page {
     float: none;
     width: 100% !important;
     margin: 0 !important;
   }
-  /* line 333, asc.scss */
+  /* line 352, asc.scss */
   html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
     margin-left: 0 !important;
   }
 }
 @media screen and (min-width: 2100px) {
-  /* line 340, asc.scss */
+  /* line 359, asc.scss */
   html body #binder.fluid.max-1980 {
     max-width: 3000px;
   }

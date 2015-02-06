@@ -2,6 +2,7 @@ $brand:#0094ca;
 $darkest-gray:#343232;
 $heavy-gray:#4e4c4b;
 $light-gray:#747270;
+$lightest-gray:#EEEEEC;
 $heavy-color:#fff;
 $webfont:'Roboto', sans-serif;
 
@@ -242,6 +243,7 @@ html body {
 							}
 						}
 					}
+
 			 		#tribe-bar-form { 
 			 			background:$heavy-color;
 			 			color:$darkest-gray;
@@ -283,7 +285,24 @@ html body {
 		margin-top:75px;
 	}
 }
-
+.post-type-archive-wsuwp_uc_entity {
+	main {
+		header {
+			h1 {
+				margin-left:70px;
+			}
+		}
+		h2 {
+			&.article-title {
+				font-size:1.2em;
+				font-weight: 300;
+				padding-top:8px;
+				padding-bottom:8px;
+				padding-left:1em;
+			}
+		}
+	}
+}
 $width-name: max-device-width;
 $target-width: 791px;
 $width-min-name: min-width;

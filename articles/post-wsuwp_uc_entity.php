@@ -1,8 +1,8 @@
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="article-header">
 		<hgroup>
 			<?php if ( is_single() ) : ?>
-				<h1 class="article-title"><?php the_title(); ?></h1>
 			<?php else : ?>
 				<h2 class="article-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php endif; ?>

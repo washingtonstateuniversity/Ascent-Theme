@@ -109,9 +109,17 @@ html body {
 					&:not(.homeless)>ul>li:first-child>a {
 						background-image:none;
 						padding-left:1em;
-						&:before, &:hover {
-							background-image:none;
-						}
+							&:before, &:hover {
+								background-image:none;
+								background-color:$light-gray;
+							}
+					}
+					&:not(.homeless)>ul>li.active:first-child>a {
+						background-image:none;
+							&:before, &:hover {
+								background-image:none;
+								background-color:$light-gray;
+							}
 					}
 				}
 			#side-latest-news {

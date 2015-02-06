@@ -317,11 +317,11 @@ html body main footer.main-footer {
 }
 
 /* line 291, asc.scss */
-.post-type-archive-wsuwp_uc_entity main header h1 {
-  margin-left: 70px;
+.post-type-archive-wsuwp_uc_entity main header h1, .single-wsuwp_uc_person main header h1 {
+  margin-left: 50px;
 }
 /* line 296, asc.scss */
-.post-type-archive-wsuwp_uc_entity main h2.article-title {
+.post-type-archive-wsuwp_uc_entity main h2.article-title, .single-wsuwp_uc_person main h2.article-title {
   font-size: 1.2em;
   font-weight: 300;
   padding-top: 8px;

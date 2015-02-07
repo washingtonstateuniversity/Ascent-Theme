@@ -1,17 +1,5 @@
 <?php while ( have_posts() ) : the_post(); ?>
 <section class="row halves gutter pad-ends">
-
-	<div class="column one">
-		<header>
-				<h1 class="article-title"><?php the_title(); ?></h1>
-		</header>
-		<?php
-		if ( has_post_thumbnail() ) {
-			?><figure class="article-thumbnail"><?php spine_the_featured_image(); ?></figure><?php
-		}
-		?>
-	</div>
-
 	<div class="column two">
 		<?php if ( function_exists( 'wsuwp_uc_get_meta' ) ) {
 			$display_fields = array( 'prefix', 'first_name', 'last_name', 'suffix', 'title', 'title_secondary', 'office', 'email', 'phone' );

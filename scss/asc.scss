@@ -285,12 +285,10 @@ html body {
 		margin-top:75px;
 	}
 }
-.post-type-archive {
+.post-type-archive, .single-wsuwp_uc_person  {
 	main {
-		header {
 			h1 {
 				margin-left:50px;
-			}
 		}
 		h2 {
 			&.article-title {

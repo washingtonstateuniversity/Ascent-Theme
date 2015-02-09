@@ -376,9 +376,14 @@ html body main footer.main-footer {
   html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
     margin-left: 0 !important;
   }
+
+  /* line 356, asc.scss */
+  .post-type-archive main h1, .single-wsuwp_uc_person main h1 {
+    margin-left: 0px;
+  }
 }
 @media screen and (min-width: 2100px) {
-  /* line 357, asc.scss */
+  /* line 364, asc.scss */
   html body #binder.fluid.max-1980 {
     max-width: 3000px;
   }

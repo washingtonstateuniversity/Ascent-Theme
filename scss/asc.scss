@@ -351,6 +351,13 @@ $target-min-width: 2100px;
 				margin-left:0 !important;
 			}
 		}
+		.post-type-archive, .single-wsuwp_uc_person  {
+	main {
+			h1 {
+				margin-left:0px;
+		}
+	}
+}
 }
 @media screen and ($width-min-name : $target-min-width) {
 	html body {

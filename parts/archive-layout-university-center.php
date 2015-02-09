@@ -4,7 +4,7 @@
 if (is_post_type_archive( 'wsuwp_uc_entity' )) {
   echo "<header>
   <h1>University Partners</h1>
-  </header>'";
+  </header>";
 } else if ( is_post_type_archive( 'wsuwp_uc_person' )) {
  echo "<header>
   <h1>Advisory Committee</h1>

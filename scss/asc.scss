@@ -68,6 +68,7 @@ html body {
 					background-position: 8px 8px;
 					background-size:12%;
 					letter-spacing: 1px;
+					color:$lightest-gray;
 					&:hover, &:focus {
 						border:1px solid $brand;
 					}
@@ -85,6 +86,11 @@ html body {
 				padding-top:8px;
 					ul li {
 						border-style:none;
+						& ul {
+							margin:8px 0 8px 0;
+							background-color:$darkest-gray;
+							
+						}
 					}
 					a {
 						font-size:1.2em;
@@ -285,7 +291,7 @@ html body {
 		margin-top:75px;
 	}
 }
-.post-type-archive, .single-wsuwp_uc_person  {
+.post-type-archive, .single-wsuwp_uc_person, .tax-wsuwp_uc_topics  {
 	main {
 			h1 {
 				margin-left:50px;

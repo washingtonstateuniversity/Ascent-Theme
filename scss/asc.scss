@@ -236,9 +236,12 @@ html body {
 				height:100%;
 			}
 		}
-		.page {
+		.page, .wsuwp_uc_project {
 			width:50%;
 			@include body-styles;
+		}
+		.wsuwp_uc_project {
+			margin-right:100px;
 		}
 		.post, .wsuwp_uc_project, .wsuwp_uc_publication, .wsuwp_uc_person, .wsuwp_uc_entity, #tribe-events-pg-template {
 				margin-left:70px;
@@ -249,7 +252,6 @@ html body {
 							}
 						}
 					}
-
 			 		#tribe-bar-form { 
 			 			background:$heavy-color;
 			 			color:$darkest-gray;
@@ -270,6 +272,7 @@ html body {
 			 				}
 			 			}
 		}
+
 		footer {
 			&.main-footer {
 				width:90%;
@@ -285,13 +288,30 @@ html body {
 		 font-family: $webfont !important;
 	}
 }
+.single-wsuwp_uc_project {
+	footer {
+		display:none;
+	}
+}
+.tax-wsuwp_uc_topics, .post-type-archive-wsuwp_uc_project {
+	main {
+		.wsuwp_uc_project {
+			float:none;
+			margin-top:0;
+			margin-bottom:0;
+		}
+		.article-thumbnail {
+			display:none;
+		}
+	}
+}
 .blog {
 	main {
 		margin-left:200px;
 		margin-top:75px;
 	}
 }
-.post-type-archive, .single-wsuwp_uc_person, .tax-wsuwp_uc_topics  {
+.post-type-archive, .single-wsuwp_uc_person, .tax-wsuwp_uc_topics {
 	main {
 			h1 {
 				margin-left:50px;
@@ -348,16 +368,16 @@ $target-min-width: 2100px;
 				float:none;
 				margin-left:0px !important;
 			}
-			.page {
+			.page, .wsuwp_uc_project {
 				float:none;
 				width:100% !important;
 				margin:0 !important;
 			}
-			.post,.wsuwp_uc_project, .wsuwp_uc_publication, .wsuwp_uc_person, .wsuwp_uc_entity, #tribe-events-pg-template{
+			.post,.wsuwp_uc_project, .wsuwp_uc_publication, .wsuwp_uc_person, .wsuwp_uc_entity, #tribe-events-pg-template {
 				margin-left:0 !important;
 			}
 		}
-		.post-type-archive, .single-wsuwp_uc_person  {
+		.post-type-archive, .single-wsuwp_uc_person, .single-wsuwp_uc_project {
 	main {
 			h1 {
 				margin-left:0px;

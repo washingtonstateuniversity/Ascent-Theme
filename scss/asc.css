@@ -246,32 +246,36 @@ html body main figure.featured-image img {
   height: 100%;
 }
 /* line 239, asc.scss */
-html body main .page {
+html body main .page, html body main .wsuwp_uc_project {
   width: 50%;
   margin-right: 150px;
   margin-top: 65px;
   float: right;
 }
 /* line 243, asc.scss */
+html body main .wsuwp_uc_project {
+  margin-right: 100px;
+}
+/* line 246, asc.scss */
 html body main .post, html body main .wsuwp_uc_project, html body main .wsuwp_uc_publication, html body main .wsuwp_uc_person, html body main .wsuwp_uc_entity, html body main #tribe-events-pg-template {
   margin-left: 70px;
 }
-/* line 247, asc.scss */
+/* line 250, asc.scss */
 html body main .post .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_project .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_publication .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_person .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_entity .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main #tribe-events-pg-template .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"] {
   background-color: #0094ca;
 }
-/* line 253, asc.scss */
+/* line 255, asc.scss */
 html body main .post #tribe-bar-form, html body main .wsuwp_uc_project #tribe-bar-form, html body main .wsuwp_uc_publication #tribe-bar-form, html body main .wsuwp_uc_person #tribe-bar-form, html body main .wsuwp_uc_entity #tribe-bar-form, html body main #tribe-events-pg-template #tribe-bar-form {
   background: white;
   color: #343232;
 }
-/* line 256, asc.scss */
+/* line 258, asc.scss */
 html body main .post #tribe-bar-form input[type=email], html body main .post #tribe-bar-form input[type=password], html body main .post #tribe-bar-form input[type=text], html body main .post #tribe-bar-form select, html body main .post #tribe-bar-form textarea, html body main .wsuwp_uc_project #tribe-bar-form input[type=email], html body main .wsuwp_uc_project #tribe-bar-form input[type=password], html body main .wsuwp_uc_project #tribe-bar-form input[type=text], html body main .wsuwp_uc_project #tribe-bar-form select, html body main .wsuwp_uc_project #tribe-bar-form textarea, html body main .wsuwp_uc_publication #tribe-bar-form input[type=email], html body main .wsuwp_uc_publication #tribe-bar-form input[type=password], html body main .wsuwp_uc_publication #tribe-bar-form input[type=text], html body main .wsuwp_uc_publication #tribe-bar-form select, html body main .wsuwp_uc_publication #tribe-bar-form textarea, html body main .wsuwp_uc_person #tribe-bar-form input[type=email], html body main .wsuwp_uc_person #tribe-bar-form input[type=password], html body main .wsuwp_uc_person #tribe-bar-form input[type=text], html body main .wsuwp_uc_person #tribe-bar-form select, html body main .wsuwp_uc_person #tribe-bar-form textarea, html body main .wsuwp_uc_entity #tribe-bar-form input[type=email], html body main .wsuwp_uc_entity #tribe-bar-form input[type=password], html body main .wsuwp_uc_entity #tribe-bar-form input[type=text], html body main .wsuwp_uc_entity #tribe-bar-form select, html body main .wsuwp_uc_entity #tribe-bar-form textarea, html body main #tribe-events-pg-template #tribe-bar-form input[type=email], html body main #tribe-events-pg-template #tribe-bar-form input[type=password], html body main #tribe-events-pg-template #tribe-bar-form input[type=text], html body main #tribe-events-pg-template #tribe-bar-form select, html body main #tribe-events-pg-template #tribe-bar-form textarea {
   color: #343232;
   font-family: "Roboto", sans-serif;
   font-size: 1.2em;
 }
-/* line 262, asc.scss */
+/* line 264, asc.scss */
 html body main .post #tribe-bar-form .tribe-bar-submit
 input[type=submit], html body main .wsuwp_uc_project #tribe-bar-form .tribe-bar-submit
 input[type=submit], html body main .wsuwp_uc_publication #tribe-bar-form .tribe-bar-submit
@@ -284,7 +288,7 @@ input[type=submit] {
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
 }
-/* line 266, asc.scss */
+/* line 268, asc.scss */
 html body main .post #tribe-bar-form .tribe-bar-submit
 input[type=submit]:hover, html body main .post #tribe-bar-form .tribe-bar-submit
 input[type=submit]:focus, html body main .wsuwp_uc_project #tribe-bar-form .tribe-bar-submit
@@ -303,30 +307,46 @@ input[type=submit]:focus {
   border: 1px solid #0094ca;
   padding: 9px;
 }
-/* line 274, asc.scss */
+/* line 277, asc.scss */
 html body main footer.main-footer {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 283, asc.scss */
+/* line 286, asc.scss */
 .datepicker.dropdown-menu {
   color: #343232;
   font-family: "Roboto", sans-serif !important;
 }
 
-/* line 289, asc.scss */
+/* line 292, asc.scss */
+.single-wsuwp_uc_project footer {
+  display: none;
+}
+
+/* line 298, asc.scss */
+.tax-wsuwp_uc_topics main .wsuwp_uc_project, .post-type-archive-wsuwp_uc_project main .wsuwp_uc_project {
+  float: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* line 303, asc.scss */
+.tax-wsuwp_uc_topics main .article-thumbnail, .post-type-archive-wsuwp_uc_project main .article-thumbnail {
+  display: none;
+}
+
+/* line 309, asc.scss */
 .blog main {
   margin-left: 200px;
   margin-top: 75px;
 }
 
-/* line 296, asc.scss */
+/* line 316, asc.scss */
 .post-type-archive main h1, .single-wsuwp_uc_person main h1, .tax-wsuwp_uc_topics main h1 {
   margin-left: 50px;
 }
-/* line 300, asc.scss */
+/* line 320, asc.scss */
 .post-type-archive main h2.article-title, .single-wsuwp_uc_person main h2.article-title, .tax-wsuwp_uc_topics main h2.article-title {
   font-size: 1.2em;
   font-weight: 300;
@@ -336,26 +356,26 @@ html body main footer.main-footer {
 }
 
 @media screen and (max-device-width: 791px) {
-  /* line 319, asc.scss */
+  /* line 339, asc.scss */
   html body #binder #spine header {
     background-color: #0094ca;
   }
-  /* line 322, asc.scss */
+  /* line 342, asc.scss */
   html body #binder #spine #wsu-signature {
     background-image: url(/wp-content/uploads/sites/192/2015/01/mobile-logo.png);
     background-repeat: no-repeat;
     background-size: 18% !important;
     background-position: center 12px !important;
   }
-  /* line 328, asc.scss */
+  /* line 348, asc.scss */
   html body #binder #spine #side-search-area {
     margin-top: 22px;
   }
-  /* line 331, asc.scss */
+  /* line 351, asc.scss */
   html body #binder #spine #side-latest-news {
     display: none;
   }
-  /* line 335, asc.scss */
+  /* line 355, asc.scss */
   html body #binder .shelved button#shelve, html body #binder .unshelved button#shelve {
     background: url(/wp-content/uploads/sites/192/2015/01/menu.png);
     background-repeat: no-repeat;
@@ -363,7 +383,7 @@ html body main footer.main-footer {
     background-color: #4e4c4b;
     display: block;
   }
-  /* line 343, asc.scss */
+  /* line 363, asc.scss */
   html body figure.featured-image {
     position: relative !important;
     display: block;
@@ -372,24 +392,24 @@ html body main footer.main-footer {
     float: none;
     margin-left: 0px !important;
   }
-  /* line 351, asc.scss */
-  html body .page {
+  /* line 371, asc.scss */
+  html body .page, html body .wsuwp_uc_project {
     float: none;
     width: 100% !important;
     margin: 0 !important;
   }
-  /* line 356, asc.scss */
+  /* line 376, asc.scss */
   html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
     margin-left: 0 !important;
   }
 
-  /* line 362, asc.scss */
-  .post-type-archive main h1, .single-wsuwp_uc_person main h1 {
+  /* line 382, asc.scss */
+  .post-type-archive main h1, .single-wsuwp_uc_person main h1, .single-wsuwp_uc_project main h1 {
     margin-left: 0px;
   }
 }
 @media screen and (min-width: 2100px) {
-  /* line 370, asc.scss */
+  /* line 390, asc.scss */
   html body #binder.fluid.max-1980 {
     max-width: 3000px;
   }

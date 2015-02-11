@@ -1,5 +1,4 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 	<header class="article-header">
 		<hgroup>
 			<?php if ( is_single() ) : ?>
@@ -9,7 +8,6 @@
 			<?php endif; ?>
 		</hgroup>
 	</header>
-
 	<?php if ( ! is_singular() ) : ?>
 		<div class="article-summary">
 			<?php

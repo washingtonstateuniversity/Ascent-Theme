@@ -330,23 +330,24 @@ html body main footer.main-footer {
   float: none;
   margin-top: 0;
   margin-bottom: 0;
+  width: 100%;
 }
-/* line 303, asc.scss */
+/* line 304, asc.scss */
 .tax-wsuwp_uc_topics main .article-thumbnail, .post-type-archive-wsuwp_uc_project main .article-thumbnail {
   display: none;
 }
 
-/* line 309, asc.scss */
+/* line 310, asc.scss */
 .blog main {
   margin-left: 200px;
   margin-top: 75px;
 }
 
-/* line 316, asc.scss */
+/* line 317, asc.scss */
 .post-type-archive main h1, .single-wsuwp_uc_person main h1, .tax-wsuwp_uc_topics main h1 {
   margin-left: 50px;
 }
-/* line 320, asc.scss */
+/* line 321, asc.scss */
 .post-type-archive main h2.article-title, .single-wsuwp_uc_person main h2.article-title, .tax-wsuwp_uc_topics main h2.article-title {
   font-size: 1.2em;
   font-weight: 300;
@@ -356,26 +357,26 @@ html body main footer.main-footer {
 }
 
 @media screen and (max-device-width: 791px) {
-  /* line 339, asc.scss */
+  /* line 340, asc.scss */
   html body #binder #spine header {
     background-color: #0094ca;
   }
-  /* line 342, asc.scss */
+  /* line 343, asc.scss */
   html body #binder #spine #wsu-signature {
     background-image: url(/wp-content/uploads/sites/192/2015/01/mobile-logo.png);
     background-repeat: no-repeat;
     background-size: 18% !important;
     background-position: center 12px !important;
   }
-  /* line 348, asc.scss */
+  /* line 349, asc.scss */
   html body #binder #spine #side-search-area {
     margin-top: 22px;
   }
-  /* line 351, asc.scss */
+  /* line 352, asc.scss */
   html body #binder #spine #side-latest-news {
     display: none;
   }
-  /* line 355, asc.scss */
+  /* line 356, asc.scss */
   html body #binder .shelved button#shelve, html body #binder .unshelved button#shelve {
     background: url(/wp-content/uploads/sites/192/2015/01/menu.png);
     background-repeat: no-repeat;
@@ -383,7 +384,7 @@ html body main footer.main-footer {
     background-color: #4e4c4b;
     display: block;
   }
-  /* line 363, asc.scss */
+  /* line 364, asc.scss */
   html body figure.featured-image {
     position: relative !important;
     display: block;
@@ -392,24 +393,24 @@ html body main footer.main-footer {
     float: none;
     margin-left: 0px !important;
   }
-  /* line 371, asc.scss */
+  /* line 372, asc.scss */
   html body .page, html body .wsuwp_uc_project {
     float: none;
     width: 100% !important;
     margin: 0 !important;
   }
-  /* line 376, asc.scss */
+  /* line 377, asc.scss */
   html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
     margin-left: 0 !important;
   }
 
-  /* line 382, asc.scss */
+  /* line 383, asc.scss */
   .post-type-archive main h1, .single-wsuwp_uc_person main h1, .single-wsuwp_uc_project main h1 {
     margin-left: 0px;
   }
 }
 @media screen and (min-width: 2100px) {
-  /* line 390, asc.scss */
+  /* line 391, asc.scss */
   html body #binder.fluid.max-1980 {
     max-width: 3000px;
   }

@@ -1,6 +1,11 @@
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="article-header">
 		<hgroup>
+			<div class="ascent-num-box">
+				<h3 class="ascent-num-title">ASCENT No.</h3>
+				<h2 class="ascent-num"><?php echo esc_html( ascent_get_project_number() );?></h2>
+			</div>
 			<?php if ( is_single() ) : ?>
 				<h1 class="article-title"><?php the_title(); ?></h1>
 			<?php else : ?>
@@ -29,5 +34,4 @@
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'spine' ), 'after' => '</div>' ) ); ?>
 		</div>
 	<?php endif; ?>
-
 </article>

@@ -1,6 +1,7 @@
 $brand:#0094ca;
 $darkest-gray:#343232;
 $heavy-gray:#4e4c4b;
+$medium-gray:#CBCBCB;
 $light-gray:#747270;
 $lightest-gray:#EEEEEC;
 $heavy-color:#fff;
@@ -203,7 +204,7 @@ html body {
 				}
 		}
 		h1 {
-			@include heading-styles (3em, 1.1em);
+			@include heading-styles (3em, 1.2em);
 			padding-bottom:1em;
 		}
 		h2 {
@@ -291,6 +292,26 @@ html body {
 .single-wsuwp_uc_project {
 	footer {
 		display:none;
+	}
+	header.article-header {
+		hgroup {
+			.ascent-num-box {
+				width:35%;
+				border-bottom:1px solid $medium-gray;
+				margin-bottom:1.4em;
+			}
+			h3.ascent-num-title {
+				font-weight:300;
+				display:inline-block;
+				font-size:1.2em;
+				color:$medium-gray;
+			}
+			h2.ascent-num {
+				display: inline-block;
+				font-size:4em;
+				color:$medium-gray;
+			}
+		}
 	}
 }
 .tax-wsuwp_uc_topics, .post-type-archive-wsuwp_uc_project {
@@ -380,9 +401,12 @@ $target-min-width: 2100px;
 		}
 		.post-type-archive, .single-wsuwp_uc_person, .single-wsuwp_uc_project {
 	main {
-			h1 {
-				margin-left:0px;
+		h1 {
+			margin-left:0px;
 		}
+		h2.ascent-num {
+			padding-top:0;
+			}
 	}
 }
 }

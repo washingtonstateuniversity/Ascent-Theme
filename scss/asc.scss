@@ -299,7 +299,7 @@ html body {
 				width:35%;
 				border-bottom:1px solid $medium-gray;
 				margin-bottom:1.4em;
-			}
+			
 			h3.ascent-num-title {
 				font-weight:300;
 				display:inline-block;
@@ -310,6 +310,23 @@ html body {
 				display: inline-block;
 				font-size:4em;
 				color:$medium-gray;
+			}
+			}
+		}
+	}
+}
+.post-type-archive-wsuwp_uc_project {
+		header.article-header {
+		hgroup {
+			.ascent-num-box {
+					margin-top:1em;
+				h3.ascent-num-title { 
+					display:none;
+				}
+				h2.ascent-num {
+					font-size:1.3em;
+					color:$medium-gray;
+				}
 			}
 		}
 	}

@@ -22,3 +22,13 @@ function ascent_blog_favicon() {
 	echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('wpurl').'wp-content/themes/ascent/favicon.ico" />';
 }
 add_action('wp_head', 'ascent_blog_favicon');
+
+function ascent_filter_query( $query ) {
+		if ( $query->is_post_type_archive( $this->entity_content_type ) || $query->is_post_type_archive( $this->project_content_type ) ) {
+			$query->set( 'orderby', 'project_number' );
+			$query->set( 'order', 'ASC' );
+		}
+		// People are sorted by their last names in archive views.
+		
+	}
+add_action( 'ascent_pre_get_posts', 'ascent_filter_query' ); 

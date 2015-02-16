@@ -359,7 +359,7 @@ html body main footer.main-footer {
 .tax-wsuwp_uc_topics main header.article-header hgroup .ascent-num-box, .post-type-archive-wsuwp_uc_project main header.article-header hgroup .ascent-num-box {
   display: inline-block;
   width: 40px;
-  margin-top: 1em;
+  margin-top: 0;
 }
 /* line 335, asc.scss */
 .tax-wsuwp_uc_topics main header.article-header hgroup .ascent-num-box h3.ascent-num-title, .post-type-archive-wsuwp_uc_project main header.article-header hgroup .ascent-num-box h3.ascent-num-title {

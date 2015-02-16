@@ -331,16 +331,16 @@ html body {
 				.ascent-num-box {
 					display:inline-block;
 					width:40px;
-					margin-top:1em;
-					h3.ascent-num-title { 
-						display:none;
-					}
-					h2.ascent-num {
-						width:40px;
-						font-size:1.3em;
-						color:$medium-gray;
-						padding-right:0;
-					}
+					margin-top:0;
+						h3.ascent-num-title { 
+							display:none;
+						}
+						h2.ascent-num {
+							width:40px;
+							font-size:1.3em;
+							color:$medium-gray;
+							padding-right:0;
+						}
 				}
 			}
 		}

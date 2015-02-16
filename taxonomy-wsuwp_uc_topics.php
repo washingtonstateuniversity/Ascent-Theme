@@ -20,7 +20,7 @@ if (is_tax( 'wsuwp_uc_topics', 'alternative-fuels' )) {
 }
 else if (is_tax( 'wsuwp_uc_topics', 'emissionsclimate' )) {
  echo "<header>
-  <h1>Noise</h1>
+  <h1>Emissions/Climate</h1>
   </header>";
 }
 else if (is_tax( 'wsuwp_uc_topics', 'design-and-operations' )) {

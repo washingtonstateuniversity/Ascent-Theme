@@ -458,9 +458,14 @@ html body main footer.main-footer {
   .post-type-archive main h2.ascent-num, .single-wsuwp_uc_person main h2.ascent-num, .single-wsuwp_uc_project main h2.ascent-num {
     padding-top: 0;
   }
+
+  /* line 443, asc.scss */
+  .tax-wsuwp_uc_topics main header.article-header hgroup .ascent-num-box, .post-type-archive-wsuwp_uc_project main header.article-header hgroup .ascent-num-box {
+    margin-top: 1em;
+  }
 }
 @media screen and (min-width: 2100px) {
-  /* line 442, asc.scss */
+  /* line 454, asc.scss */
   html body #binder.fluid.max-1980 {
     max-width: 3000px;
   }

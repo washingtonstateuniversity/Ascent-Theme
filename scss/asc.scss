@@ -433,7 +433,19 @@ $target-min-width: 2100px;
 		}
 		h2.ascent-num {
 			padding-top:0;
+		}
+	}
+}
+.tax-wsuwp_uc_topics, .post-type-archive-wsuwp_uc_project {
+	main {
+		header.article-header {
+			hgroup {
+				.ascent-num-box {
+					margin-top:1em;		
+				}
 			}
+		}
+
 	}
 }
 }

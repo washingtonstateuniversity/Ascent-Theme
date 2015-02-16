@@ -319,16 +319,25 @@ html body {
 		header.article-header {
 		hgroup {
 			.ascent-num-box {
+				display:inline-block;
+					width:40px;
 					margin-top:1em;
 				h3.ascent-num-title { 
 					display:none;
 				}
 				h2.ascent-num {
+					width:40px;
 					font-size:1.3em;
 					color:$medium-gray;
+					padding-right:0;
 				}
 			}
 		}
+	}
+	h2.article-title {
+		display:inline-block;
+		width:90%;
+		padding-left:0 !important;
 	}
 }
 .tax-wsuwp_uc_topics, .post-type-archive-wsuwp_uc_project {

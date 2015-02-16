@@ -315,11 +315,11 @@ html body {
 		}
 	}
 }
-.post-type-archive-wsuwp_uc_project {
+.post-type-archive-wsuwp_uc_project, .tax-wsuwp_uc_topics {
 		header.article-header {
 		hgroup {
 			.ascent-num-box {
-				display:inline-block;
+					display:inline-block;
 					width:40px;
 					margin-top:1em;
 				h3.ascent-num-title { 

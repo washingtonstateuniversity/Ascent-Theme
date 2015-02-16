@@ -345,24 +345,24 @@ html body main footer.main-footer {
 }
 
 /* line 321, asc.scss */
-.post-type-archive-wsuwp_uc_project header.article-header hgroup .ascent-num-box {
+.post-type-archive-wsuwp_uc_project header.article-header hgroup .ascent-num-box, .tax-wsuwp_uc_topics header.article-header hgroup .ascent-num-box {
   display: inline-block;
   width: 40px;
   margin-top: 1em;
 }
 /* line 325, asc.scss */
-.post-type-archive-wsuwp_uc_project header.article-header hgroup .ascent-num-box h3.ascent-num-title {
+.post-type-archive-wsuwp_uc_project header.article-header hgroup .ascent-num-box h3.ascent-num-title, .tax-wsuwp_uc_topics header.article-header hgroup .ascent-num-box h3.ascent-num-title {
   display: none;
 }
 /* line 328, asc.scss */
-.post-type-archive-wsuwp_uc_project header.article-header hgroup .ascent-num-box h2.ascent-num {
+.post-type-archive-wsuwp_uc_project header.article-header hgroup .ascent-num-box h2.ascent-num, .tax-wsuwp_uc_topics header.article-header hgroup .ascent-num-box h2.ascent-num {
   width: 40px;
   font-size: 1.3em;
   color: #cbcbcb;
   padding-right: 0;
 }
 /* line 337, asc.scss */
-.post-type-archive-wsuwp_uc_project h2.article-title {
+.post-type-archive-wsuwp_uc_project h2.article-title, .tax-wsuwp_uc_topics h2.article-title {
   display: inline-block;
   width: 90%;
   padding-left: 0 !important;

@@ -25,7 +25,7 @@ add_action('wp_head', 'ascent_blog_favicon');
 
 function ascent_filter_query( $query ) {
 		if ( $query->is_post_type_archive( $this->entity_content_type ) || $query->is_post_type_archive( $this->project_content_type ) ) {
-			$query->set( 'orderby', 'project_number' );
+			$query->set( 'orderby', $project_number );
 			$query->set( 'order', 'ASC' );
 		}
 		// People are sorted by their last names in archive views.

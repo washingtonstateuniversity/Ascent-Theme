@@ -296,7 +296,6 @@ html body {
 	header.article-header {
 		hgroup {
 			.ascent-num-box {
-				width:35%;
 				border-bottom:1px solid $medium-gray;
 				margin-bottom:1.4em;
 			
@@ -332,6 +331,7 @@ html body {
 					display:inline-block;
 					width:40px;
 					margin-top:0;
+					vertical-align:top;	
 						h3.ascent-num-title { 
 							display:none;
 						}
@@ -348,6 +348,7 @@ html body {
 		display:inline-block;
 		width:90%;
 		padding-left:0 !important;
+		line-height:1.3em;
 	}
 	figure.featured-image {
 		display:none;
@@ -360,7 +361,7 @@ html body {
 		margin-top:75px;
 	}
 }
-.post-type-archive, .single-wsuwp_uc_person, .tax-wsuwp_uc_topics {
+.post-type-archive, .single-wsuwp_uc_person, .tax-wsuwp_uc_topics, .tax-wsuwp_uc_entity_type {
 	main {
 			h1 {
 				margin-left:50px;
@@ -373,6 +374,10 @@ html body {
 				padding-bottom:8px;
 				padding-left:1em;
 			}
+		}
+		p {
+			font-size:1.2em;
+			padding-bottom:8px;
 		}
 	}
 }
@@ -441,7 +446,7 @@ $target-min-width: 2100px;
 		header.article-header {
 			hgroup {
 				.ascent-num-box {
-					margin-top:1em;		
+					margin-top:1em;	
 				}
 			}
 		}

@@ -1,13 +1,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="article-header">
-		<hgroup>
+		
 			<?php if ( is_single() ) : ?>
 			<?php else : ?>
-				<h2 class="article-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				<p><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></p>
 			<?php endif; ?>
-		</hgroup>
-	</header>
 
 	<?php if ( ! is_singular() ) : ?>
 		<div class="article-summary">

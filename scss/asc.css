@@ -141,8 +141,14 @@ html body {
     color: #0094ca;
     font-weight: 700;
     font-size: 3em;
-    line-height: 1.2em;
+    line-height: 1.1em;
     padding-bottom: 1em; }
+  html body main h1.upper-title {
+    font-weight: 300;
+    display: inline-block;
+    font-size: 1.2em;
+    color: #CBCBCB;
+    padding-bottom: 0; }
   html body main h2 {
     color: #0094ca;
     font-weight: 700;
@@ -161,6 +167,8 @@ html body {
   html body main p, html body main ul, html body main ol {
     font-size: 1.4em;
     line-height: 1.6em; }
+  html body main ul li, html body main ol li {
+    padding-bottom: 1em; }
   html body main figure.featured-image {
     width: 50%;
     height: 100%;
@@ -221,6 +229,8 @@ html body {
           cursor: pointer;
           border: 1px solid #0094ca;
           padding: 9px; }
+    html body main .post .wsuwp-uc-entities, html body main .post .wsuwp-uc-people, html body main .wsuwp_uc_project .wsuwp-uc-entities, html body main .wsuwp_uc_project .wsuwp-uc-people, html body main .wsuwp_uc_publication .wsuwp-uc-entities, html body main .wsuwp_uc_publication .wsuwp-uc-people, html body main .wsuwp_uc_person .wsuwp-uc-entities, html body main .wsuwp_uc_person .wsuwp-uc-people, html body main .wsuwp_uc_entity .wsuwp-uc-entities, html body main .wsuwp_uc_entity .wsuwp-uc-people, html body main #tribe-events-pg-template .wsuwp-uc-entities, html body main #tribe-events-pg-template .wsuwp-uc-people {
+      width: 100%; }
   html body main footer.main-footer {
     width: 90%;
     margin-left: auto;

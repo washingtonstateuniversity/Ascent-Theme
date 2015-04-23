@@ -33,6 +33,12 @@ $webfont:'Roboto', sans-serif;
 	cursor: pointer;
 	border:1px solid $brand;	
 }
+@mixin gray-header {
+	font-weight:300;
+	display:inline-block;
+	font-size:1.2em;
+	color:$medium-gray;
+}
 html body {
 	height:100%;
 	font-family:$webfont;
@@ -204,9 +210,13 @@ html body {
 				}
 		}
 		h1 {
-			@include heading-styles (3em, 1.2em);
+			@include heading-styles (3em, 1.1em);
 			padding-bottom:1em;
-		}
+			}
+		h1.upper-title {
+			@include gray-header;
+			padding-bottom:0;
+			}
 		h2 {
 			@include heading-styles (2.2em, 1.1em);
 		}
@@ -220,6 +230,11 @@ html body {
 			
 			font-size:1.4em;
 			line-height:1.6em;
+		}
+		ul, ol {
+			li {
+				padding-bottom:1em;
+			} 
 		}
 		figure.featured-image {
 			width:50%;
@@ -272,6 +287,9 @@ html body {
 			 						}
 			 				}
 			 			}
+			 		.wsuwp-uc-entities, .wsuwp-uc-people {
+						width:100%;
+					}
 		}
 
 		footer {
@@ -300,10 +318,7 @@ html body {
 				margin-bottom:1.4em;
 			
 			h3.ascent-num-title {
-				font-weight:300;
-				display:inline-block;
-				font-size:1.2em;
-				color:$medium-gray;
+				@include gray-header;
 			}
 			h2.ascent-num {
 				display: inline-block;

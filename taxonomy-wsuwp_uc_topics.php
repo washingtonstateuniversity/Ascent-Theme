@@ -4,7 +4,11 @@
 
 <?php get_template_part('parts/headers'); ?>
 <?php get_template_part('parts/featured-images'); ?>
-
+	<section class="row single gutter pad-ends">
+		<div class="column one">
+			<p><?php echo wp_kses_post( term_description() ); ?></p>
+		</div>
+	</section>
 <section class="row side-right gutter pad-ends">
 
 	<div class="column one">

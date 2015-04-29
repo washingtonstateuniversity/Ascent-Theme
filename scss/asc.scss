@@ -262,10 +262,11 @@ html body {
 			& h1 {
 				@include gray-header;
 				font-size:150%;
+				font-weight:700;
 				text-transform: uppercase;
 				border-bottom:1px solid $lightest-gray;
 				margin-right:2em;
-				font-weight:700;
+				padding-bottom:5px;
 				& .ascent-main-header {
 					font-weight:300;
 				}
@@ -336,7 +337,7 @@ html body {
 	header.article-header {
 		hgroup {
 			.ascent-num-box {
-				border-bottom:1px solid $medium-gray;
+				border-bottom:1px solid $lightest-gray;
 				margin-bottom:1.4em;
 			
 			h3.ascent-num-title {

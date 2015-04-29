@@ -190,10 +190,11 @@ html body {
       font-size: 1.2em;
       color: #CBCBCB;
       font-size: 150%;
+      font-weight: 700;
       text-transform: uppercase;
       border-bottom: 1px solid #EEEEEC;
       margin-right: 2em;
-      font-weight: 700; }
+      padding-bottom: 5px; }
       html body main header.main-header h1 .ascent-main-header {
         font-weight: 300; }
   html body main .page, html body main .wsuwp_uc_project {
@@ -258,7 +259,7 @@ html body {
 .single-wsuwp_uc_project footer {
   display: none; }
 .single-wsuwp_uc_project header.article-header hgroup .ascent-num-box {
-  border-bottom: 1px solid #CBCBCB;
+  border-bottom: 1px solid #EEEEEC;
   margin-bottom: 1.4em; }
   .single-wsuwp_uc_project header.article-header hgroup .ascent-num-box h3.ascent-num-title {
     font-weight: 300;

@@ -21,5 +21,5 @@ add_action('wp_head', 'ascent_blog_favicon');
 * Override with new custom favicon
 */
 function ascent_blog_favicon() {
-	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . esc_url( home_url( '/wp-content/themes/ascent/favicon.ico' ) ) . '" />';
+	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . esc_url( get_stylesheet_directory_uri() . '/favicon.ico' ) . '" />';
 }

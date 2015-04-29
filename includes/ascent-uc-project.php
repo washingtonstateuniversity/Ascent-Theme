@@ -7,6 +7,11 @@ class Ascent_UC_Project {
 	var $advisor_content_slug = 'faa_advisors';
 
 	/**
+	 * @var string Slug for tracking the assigment of project leads to projects.
+	 */
+	var $project_lead_content_slug = 'project_leads';
+
+	/**
 	 * Setup the extension.
 	 */
 	public function __construct() {
@@ -35,6 +40,7 @@ class Ascent_UC_Project {
 
 		add_meta_box( 'ascent-project-number', 'Project Number', array( $this, 'display_project_number_meta_box' ), null, 'normal', 'default' );
 		add_meta_box( 'ascent-assign-advisors', 'Assign FAA Advisors', array( $this, 'display_assign_advisors_meta_box' ), null, 'normal', 'default' );
+		add_meta_box( 'ascent-assign-project-leads', 'Assign Project Leads', array( $this, 'display_assign_project_leads_meta_box' ), null, 'normal', 'default' );
 	}
 
 	/**
@@ -70,6 +76,23 @@ class Ascent_UC_Project {
 	}
 
 	/**
+	 * Display a meta box used to assign project leads to projects.
+	 *
+	 * @param WP_Post $post Currently displayed post object.
+	 */
+	public function display_assign_project_leads_meta_box( $post ) {
+		global $wsuwp_university_center;
+
+		if ( wsuwp_uc_get_object_type_slug( 'project' ) !== $post->post_type ) {
+			return;
+		}
+
+		$current_leads = get_post_meta( $post->ID, '_' . $this->project_lead_content_slug . '_ids', true );
+		$all_leads = wsuwp_uc_get_all_object_data( wsuwp_uc_get_object_type_slug( 'people' ) );
+		$wsuwp_university_center->display_autocomplete_input( $all_leads, $current_leads, $this->project_lead_content_slug );
+	}
+
+	/**
 	 * Save post meta for the UC project type.
 	 *
 	 * @param int $post_id
@@ -97,6 +120,15 @@ class Ascent_UC_Project {
 			$people_ids = wsuwp_uc_clean_post_ids( $people_ids, $this->advisor_content_slug );
 
 			update_post_meta( $post_id, '_' . $this->advisor_content_slug . '_ids', $people_ids );
+			wp_cache_delete( 'wsuwp_uc_all_' . wsuwp_uc_get_object_type_slug( 'project' ) );
+			wsuwp_uc_get_all_object_data( wsuwp_uc_get_object_type_slug( 'project' ) );
+		}
+
+		if ( isset( $_POST['assign_' . $this->project_lead_content_slug . '_ids'] ) ) {
+			$people_ids = explode( ',', $_POST['assign_' . $this->project_lead_content_slug . '_ids'] );
+			$people_ids = wsuwp_uc_clean_post_ids( $people_ids, $this->project_lead_content_slug );
+
+			update_post_meta( $post_id, '_' . $this->project_lead_content_slug . '_ids', $people_ids );
 			wp_cache_delete( 'wsuwp_uc_all_' . wsuwp_uc_get_object_type_slug( 'project' ) );
 			wsuwp_uc_get_all_object_data( wsuwp_uc_get_object_type_slug( 'project' ) );
 		}

@@ -24,8 +24,13 @@ html body {
     html body #spine .spine-sitenav ul li {
       border-style: none; }
       html body #spine .spine-sitenav ul li ul {
-        margin: 8px 0 8px 0;
+        margin-left: 0px;
+        margin-right: 0px;
         background-color: #343232; }
+      html body #spine .spine-sitenav ul li.parent .sub-menu {
+        display: none; }
+      html body #spine .spine-sitenav ul li.opened .sub-menu {
+        display: block; }
     html body #spine .spine-sitenav a {
       font-size: 1.2em;
       letter-spacing: 1px;
@@ -118,14 +123,10 @@ html body {
     border-color: #747270; }
   html body main a {
     color: #0094ca;
-    text-decoration: none;
-    border-bottom: 1px solid #0094ca;
-    padding-bottom: 1px; }
+    text-decoration: underline; }
     html body main a:hover {
       color: #747270;
-      border-bottom: 1px solid #EEEEEC;
-      transition: color .3s ease;
-      transition: border-bottom .3 ease; }
+      transition: color .3s ease; }
   html body main h1 {
     color: #0094ca;
     font-weight: 700;

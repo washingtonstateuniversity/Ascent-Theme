@@ -77,9 +77,16 @@ html body {
 					ul li {
 						border-style:none;
 						& ul {
-							margin:8px 0 8px 0;
+							margin-left:0px;
+							margin-right:0px;
 							background-color:$darkest-gray;
 							
+						}
+						&.parent .sub-menu{
+							display:none;
+						}
+						&.opened .sub-menu {
+							display:block;
 						}
 					}
 					a {
@@ -188,14 +195,10 @@ html body {
 	main {
 		a {
 				color:$brand;
-				text-decoration: none;
-				border-bottom:1px solid $brand;
-				padding-bottom:1px;
+				text-decoration: underline;
 				&:hover {
 					color:$light-gray;
-					border-bottom:1px solid $lightest-gray;
 					transition:color .3s ease;
-					transition:border-bottom .3 ease;
 				}
 		}
 		h1 {

@@ -10,6 +10,8 @@ html body {
     left: -774px;
     width: 1000px;
     position: absolute; }
+  html body #spine nav li.parent.opened > a {
+    padding-bottom: 12px; }
   html body #spine #glue, html body #spine #glue:before {
     width: 222px; }
   html body #spine #wsu-signature {
@@ -182,6 +184,8 @@ html body {
     float: right; }
   html body main .wsuwp_uc_project {
     margin-right: 120px; }
+  html body main .wsuwp-uc-entities, html body main .wsuwp-uc-people, html body main .wsuwp-uc-projects, html body main .wsuwp-uc-publications {
+    width: 100%; }
   html body main .post, html body main .wsuwp_uc_project, html body main .wsuwp_uc_publication, html body main .wsuwp_uc_person, html body main .wsuwp_uc_entity, html body main #tribe-events-pg-template {
     margin-left: 70px; }
     html body main .post .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_project .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_publication .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_person .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main .wsuwp_uc_entity .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"], html body main #tribe-events-pg-template .tribe-events-calendar td.tribe-events-present div[id*="tribe-events-daynum-"] {

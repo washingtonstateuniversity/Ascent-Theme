@@ -53,6 +53,9 @@ html body {
 			position:absolute;
 		}
 		#spine { 
+			nav li.parent.opened>a {
+				padding-bottom:12px;
+			}
 			#glue, #glue:before {
 				width:222px;
 			}
@@ -82,7 +85,10 @@ html body {
 							background-color:$darkest-gray;
 							
 						}
-						&.parent .sub-menu{
+						&.parent {
+
+						}
+						&.parent .sub-menu {
 							display:none;
 						}
 						&.opened .sub-menu {
@@ -252,6 +258,9 @@ html body {
 		}
 		.wsuwp_uc_project {
 			margin-right:120px;
+		}
+		.wsuwp-uc-entities, .wsuwp-uc-people, .wsuwp-uc-projects, .wsuwp-uc-publications {
+			width:100%;
 		}
 		.post, .wsuwp_uc_project, .wsuwp_uc_publication, .wsuwp_uc_person, .wsuwp_uc_entity, #tribe-events-pg-template {
 				margin-left:70px;

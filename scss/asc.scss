@@ -61,24 +61,8 @@ html body {
 			} 
 			#side-search-area {
 				input#s {
-					width:196px;
-					height:37px;
-					display:block;
-					font-size:1.2em;
-					background-color:$darkest-gray;
-					border:solid 1px $light-gray;
-					margin-left:auto;
-					margin-right:auto;
-					padding-left:37px;
-					background-image: url(/wp-content/uploads/sites/192/2015/01/searchicon.png);
-					background-repeat:no-repeat;
-					background-position: 8px 8px;
-					background-size:12%;
-					letter-spacing: 1px;
-					color:$lightest-gray;
-					&:hover, &:focus {
-						border:1px solid $brand;
-					}
+				display:none;
+				
 				}
 
 			}
@@ -90,7 +74,6 @@ html body {
 			.spine-sitenav {
 				margin-left:0;
 				margin-right:0;
-				padding-top:8px;
 					ul li {
 						border-style:none;
 						& ul {
@@ -129,6 +112,7 @@ html body {
 							}
 					}
 					&:not(.homeless)>ul>li.active:first-child>a {
+						background-color:$light-gray;
 						background-image:none;
 							&:before, &:hover {
 								background-image:none;
@@ -369,7 +353,7 @@ html body {
 		display:inline-block;
 		width:90%;
 		padding-left:0 !important;
-		line-height:1.3em;
+		line-height:1.4em;
 	}
 	figure.featured-image {
 		display:none;

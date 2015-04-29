@@ -177,6 +177,25 @@ html body {
     html body main figure.featured-image img {
       position: fixed;
       height: 100%; }
+  html body main header.main-header {
+    background-color: transparent;
+    height: 72px;
+    text-align: right;
+    margin-top: 3em;
+    position: absolute;
+    right: 0; }
+    html body main header.main-header h1 {
+      font-weight: 300;
+      display: inline-block;
+      font-size: 1.2em;
+      color: #CBCBCB;
+      font-size: 150%;
+      text-transform: uppercase;
+      border-bottom: 1px solid #EEEEEC;
+      margin-right: 2em;
+      font-weight: 700; }
+      html body main header.main-header h1 .ascent-main-header {
+        font-weight: 300; }
   html body main .page, html body main .wsuwp_uc_project {
     width: 50%;
     margin-right: 150px;

@@ -252,6 +252,25 @@ html body {
 				height:100%;
 			}
 		}
+		header.main-header {
+			background-color:transparent;
+			height:72px;
+			text-align:right;
+			margin-top:3em;
+			position:absolute;
+			right:0;
+			& h1 {
+				@include gray-header;
+				font-size:150%;
+				text-transform: uppercase;
+				border-bottom:1px solid $lightest-gray;
+				margin-right:2em;
+				font-weight:700;
+				& .ascent-main-header {
+					font-weight:300;
+				}
+			}
+		}
 		.page, .wsuwp_uc_project {
 			width:50%;
 			@include body-styles;

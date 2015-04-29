@@ -7,8 +7,8 @@ $lightest-gray:#EEEEEC;
 $heavy-color:#fff;
 $webfont:'Roboto', sans-serif;
 
-@mixin heading-styles($size, $lh) {
-	color:$brand;
+@mixin heading-styles($size, $lh, $hcolor) {
+	color:$hcolor;
 	font-weight:700;
 	font-size:$size;
 	line-height:$lh;
@@ -203,14 +203,18 @@ html body {
 		}
 	main {
 		a {
-			color:$brand;
-			text-decoration: underline;
+				color:$brand;
+				text-decoration: none;
+				border-bottom:1px solid $brand;
 				&:hover {
 					color:$light-gray;
+					border-bottom:1px solid $lightest-gray;
+					transition:color .3s ease;
+					transition:border-bottom .3 ease;
 				}
 		}
 		h1 {
-			@include heading-styles (3em, 1.1em);
+			@include heading-styles (3em, 1.1em, $brand);
 			padding-bottom:1em;
 			}
 		h1.upper-title {
@@ -218,22 +222,23 @@ html body {
 			padding-bottom:0;
 			}
 		h2 {
-			@include heading-styles (2.2em, 1.1em);
+			@include heading-styles (2.2em, 1.1em, $heavy-gray);
 		}
 		h3 {
-			@include heading-styles (1.8em, 1.1em)
+			@include heading-styles (1.8em, 1.1em, $brand);
+			font-weight:400;
 		}
 		h4 {
-			@include heading-styles (1.2em, 1.1em)
+			@include heading-styles (1.2em, 1.1em, $brand);
 		}
 		p, ul, ol {
 			
-			font-size:1.4em;
+			font-size:1.1em;
 			line-height:1.6em;
 		}
 		ul, ol {
 			li {
-				padding-bottom:1em;
+				padding-bottom:.2em;
 			} 
 		}
 		figure.featured-image {

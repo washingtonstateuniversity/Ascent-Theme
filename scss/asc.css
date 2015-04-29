@@ -134,9 +134,13 @@ html body {
     border-color: #747270; }
   html body main a {
     color: #0094ca;
-    text-decoration: underline; }
+    text-decoration: none;
+    border-bottom: 1px solid #0094ca; }
     html body main a:hover {
-      color: #747270; }
+      color: #747270;
+      border-bottom: 1px solid #EEEEEC;
+      transition: color .3s ease;
+      transition: border-bottom .3 ease; }
   html body main h1 {
     color: #0094ca;
     font-weight: 700;
@@ -150,7 +154,7 @@ html body {
     color: #CBCBCB;
     padding-bottom: 0; }
   html body main h2 {
-    color: #0094ca;
+    color: #4e4c4b;
     font-weight: 700;
     font-size: 2.2em;
     line-height: 1.1em; }
@@ -158,17 +162,18 @@ html body {
     color: #0094ca;
     font-weight: 700;
     font-size: 1.8em;
-    line-height: 1.1em; }
+    line-height: 1.1em;
+    font-weight: 400; }
   html body main h4 {
     color: #0094ca;
     font-weight: 700;
     font-size: 1.2em;
     line-height: 1.1em; }
   html body main p, html body main ul, html body main ol {
-    font-size: 1.4em;
+    font-size: 1.1em;
     line-height: 1.6em; }
   html body main ul li, html body main ol li {
-    padding-bottom: 1em; }
+    padding-bottom: .2em; }
   html body main figure.featured-image {
     width: 50%;
     height: 100%;

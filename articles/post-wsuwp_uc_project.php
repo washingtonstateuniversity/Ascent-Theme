@@ -1,4 +1,3 @@
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="article-header">
 		<hgroup>

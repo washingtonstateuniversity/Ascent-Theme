@@ -2,12 +2,25 @@
 
 class Ascent_UC_Project {
 	/**
+	 * @var string Slug for tracking the assignment of FAA Advisors to projects.
+	 */
+	var $advisor_content_slug = 'faa_advisors';
+
+	/**
 	 * Setup the extension.
 	 */
 	public function __construct() {
 		add_action( 'add_meta_boxes', array( $this, 'add_meta_boxes' ) );
 		add_action( 'save_post', array( $this, 'save_post' ), 10, 2 );
 		add_action( 'pre_get_posts', array( $this, 'modify_archive_query' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ), 20 );
+	}
+
+	/**
+	 * Enqueue scripts required in the admin.
+	 */
+	public function admin_enqueue_scripts() {
+		wp_enqueue_script( 'wsuwp-ascent-admin', get_stylesheet_directory_uri() . '/js/admin.js', array( 'jquery-ui-autocomplete' ), false, true );
 	}
 
 	/**
@@ -21,6 +34,7 @@ class Ascent_UC_Project {
 		}
 
 		add_meta_box( 'ascent-project-number', 'Project Number', array( $this, 'display_project_number_meta_box' ), null, 'normal', 'default' );
+		add_meta_box( 'ascent-assign-advisors', 'Assign FAA Advisors', array( $this, 'display_assign_advisors_meta_box' ), null, 'normal', 'default' );
 	}
 
 	/**
@@ -36,6 +50,23 @@ class Ascent_UC_Project {
 		<label for="project-number">Project Number:</label>
 		<input type="text" id="project-number" name="project_number" value="<?php echo esc_attr( $project_number ); ?>" />
 	<?php
+	}
+
+	/**
+	 * Display a meta box used to assign FAA advisors to projects.
+	 *
+	 * @param WP_Post $post Currently displayed post object.
+	 */
+	public function display_assign_advisors_meta_box( $post ) {
+		global $wsuwp_university_center;
+
+		if ( wsuwp_uc_get_object_type_slug( 'project' ) !== $post->post_type ) {
+			return;
+		}
+
+		$current_advisors = get_post_meta( $post->ID, '_' . $this->advisor_content_slug . '_ids', true );
+		$all_advisors = wsuwp_uc_get_all_object_data( wsuwp_uc_get_object_type_slug( 'people' ) );
+		$wsuwp_university_center->display_autocomplete_input( $all_advisors, $current_advisors, $this->advisor_content_slug );
 	}
 
 	/**
@@ -61,11 +92,18 @@ class Ascent_UC_Project {
 			return;
 		}
 
-		if ( ! isset( $_POST['project_number'] ) ) {
-			return;
+		if ( isset( $_POST['assign_' . $this->advisor_content_slug . '_ids'] ) ) {
+			$people_ids = explode( ',', $_POST['assign_' . $this->advisor_content_slug . '_ids'] );
+			$people_ids = wsuwp_uc_clean_post_ids( $people_ids, $this->advisor_content_slug );
+
+			update_post_meta( $post_id, '_' . $this->advisor_content_slug . '_ids', $people_ids );
+			wp_cache_delete( 'wsuwp_uc_all_' . wsuwp_uc_get_object_type_slug( 'project' ) );
+			wsuwp_uc_get_all_object_data( wsuwp_uc_get_object_type_slug( 'project' ) );
 		}
 
-		update_post_meta( $post_id, '_ascent_uc_project_number', sanitize_text_field( $_POST['project_number'] ) );
+		if ( isset( $_POST['project_number'] ) ) {
+			update_post_meta( $post_id, '_ascent_uc_project_number', sanitize_text_field( $_POST['project_number'] ) );
+		}
 	}
 
 	/**

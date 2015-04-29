@@ -209,10 +209,14 @@ class Ascent_UC_Project {
 	/**
 	 * Modify the archive query for projects.
 	 *
-	 * @param $query
+	 * @param WP_Query $query
 	 */
 	public function modify_archive_query( $query ) {
-		if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'wsuwp_uc_project' ) ) {
+		if ( ! $query->is_main_query() || is_admin() ) {
+			return;
+		}
+
+		if ( $query->is_post_type_archive( 'wsuwp_uc_project' ) || $query->is_tax( 'wsuwp_uc_topics') ) {
 			// We want all projects to display.
 			$query->set( 'posts_per_page', '2000' );
 			$query->set( 'meta_key', '_ascent_uc_project_number' );

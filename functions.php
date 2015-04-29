@@ -15,10 +15,11 @@ function ascent_sandbox_child_enqueue_scripts() {
 * Add HTML5 search box on the side bar menu
 */
 add_theme_support( 'html5', array( 'search-form' ) );
+
+add_action('wp_head', 'ascent_blog_favicon');
 /*
 * Override with new custom favicon
 */
 function ascent_blog_favicon() {
-	echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('wpurl').'wp-content/themes/ascent/favicon.ico" />';
+	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . esc_url( home_url( '/wp-content/themes/ascent/favicon.ico' ) ) . '" />';
 }
-add_action('wp_head', 'ascent_blog_favicon');

@@ -1,5 +1,3 @@
-<section class="row single gutter pad-ends">
-	<div class="column one">
 <?php
 
 if ( is_post_type_archive( 'wsuwp_uc_entity' ) ) {
@@ -8,16 +6,17 @@ if ( is_post_type_archive( 'wsuwp_uc_entity' ) ) {
 	$archive_headline = 'Members';
 } elseif ( is_post_type_archive( 'wsuwp_uc_project' ) ) {
 	$archive_headline = 'Projects';
-} elseif ( is_tax( 'wsuwp_uc_entity_type', 'university-partners' ) ) {
-	$archive_headline = 'University Partners';
-} elseif ( is_tax( 'wsuwp_uc_entity_type', 'advisory-committee' ) ) {
-	$archive_headline = 'Advisory Committee';
+} elseif ( is_tax( 'wsuwp_uc_entity_type' ) ) {
+	$archive_headline = single_term_title( '', false );
+} else {
+	$archive_headline = '';
 }
-
 ?>
-<header>
-	<h1><?php echo $archive_headline; ?></h1>
-</header>
+<section class="row single gutter pad-ends">
+	<div class="column one">
+		<header>
+			<h1><?php echo $archive_headline; ?></h1>
+		</header>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'articles/post', get_post_type() ); ?>

@@ -119,7 +119,8 @@ html body {
   html body main a {
     color: #0094ca;
     text-decoration: none;
-    border-bottom: 1px solid #0094ca; }
+    border-bottom: 1px solid #0094ca;
+    padding-bottom: 1px; }
     html body main a:hover {
       color: #747270;
       border-bottom: 1px solid #EEEEEC;
@@ -143,7 +144,7 @@ html body {
     font-size: 2.2em;
     line-height: 1.1em; }
   html body main h3 {
-    color: #0094ca;
+    color: #4e4c4b;
     font-weight: 700;
     font-size: 1.8em;
     line-height: 1.1em;

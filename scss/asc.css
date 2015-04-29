@@ -178,6 +178,7 @@ html body {
     width: 50%;
     height: 100%;
     position: fixed;
+    background-position: 0px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

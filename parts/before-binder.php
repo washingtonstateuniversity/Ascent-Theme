@@ -20,7 +20,7 @@
 </a>
 <nav class="main-menu navreg">
 	<div id="logo">
-		<a href="<?php echo esc_url( home_url() ); ?>"><img src="https://stage.ascent.wsu.edu/wp-content/uploads/sites/192/2015/01/ascent-logo.png" ></a>
+		<a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/ascent-logo.png' ); ?>" ></a>
 		<div class="ffa">
 			<p>FAA Center of Excellence for Alternative Jet Fuels &amp; Environment</p>
 		</div>

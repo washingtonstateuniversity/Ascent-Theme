@@ -134,7 +134,7 @@ html body {
 				}
 		}
 	main {
-		margin-top:60px;
+		margin-top:47px;
 		a {
 				color:$brand;
 				text-decoration: underline;
@@ -255,6 +255,9 @@ html body {
 	}
 }
 .home {
+	main {
+		margin-top:0;
+	}
 		.videobg {
 			display:block;
 			width:100%;
@@ -401,35 +404,13 @@ $width-name: max-device-width;
 $target-width: 791px;
 $width-min-name: min-width;
 $target-min-width: 2100px;
+$menu-max-width: 1014px;
+$menu-min-width: 300px;
+@media screen and ($menu-max-width : $menu-min-width) {
 
+}
 @media screen and ($width-name : $target-width) {
 	html body {
-			#binder {
-				#spine {
-					header {
-						background-color:$brand;
-					}
-					#wsu-signature {
-						background-image:url(/wp-content/uploads/sites/192/2015/01/mobile-logo.png);
-						background-repeat: no-repeat;
-						background-size: 18% !important;
-						background-position: center 12px !important;
-					} 
-					#side-search-area {
-						margin-top:22px;												
-					}	
-					#side-latest-news {
-						display:none;
-					}
-				}
-				.shelved button#shelve, .unshelved button#shelve {
-						background:url(/wp-content/uploads/sites/192/2015/01/menu.png);
-						background-repeat:no-repeat;
-						background-position:22px 15px;
-						background-color:$heavy-gray;
-						display:block;
-				}
-			}
 			figure.featured-image {
 				position:relative !important;
 				display: block;

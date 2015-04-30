@@ -76,7 +76,7 @@ html body {
           html body .main-menu ul li li a {
             padding: 14px; }
   html body main {
-    margin-top: 60px; }
+    margin-top: 47px; }
     html body main a {
       color: #0094ca;
       text-decoration: underline; }
@@ -204,6 +204,8 @@ html body {
       html body main .post .wsuwp-uc-entities, html body main .post .wsuwp-uc-people, html body main .wsuwp_uc_project .wsuwp-uc-entities, html body main .wsuwp_uc_project .wsuwp-uc-people, html body main .wsuwp_uc_publication .wsuwp-uc-entities, html body main .wsuwp_uc_publication .wsuwp-uc-people, html body main .wsuwp_uc_person .wsuwp-uc-entities, html body main .wsuwp_uc_person .wsuwp-uc-people, html body main .wsuwp_uc_entity .wsuwp-uc-entities, html body main .wsuwp_uc_entity .wsuwp-uc-people, html body main #tribe-events-pg-template .wsuwp-uc-entities, html body main #tribe-events-pg-template .wsuwp-uc-people {
         width: 100%; }
 
+.home main {
+  margin-top: 0; }
 .home .videobg {
   display: block;
   width: 100%;
@@ -305,23 +307,6 @@ footer {
   padding-bottom: 8px; }
 
 @media screen and (max-device-width: 791px) {
-  html body #binder #spine header {
-    background-color: #0094ca; }
-  html body #binder #spine #wsu-signature {
-    background-image: url(/wp-content/uploads/sites/192/2015/01/mobile-logo.png);
-    background-repeat: no-repeat;
-    background-size: 18% !important;
-    background-position: center 12px !important; }
-  html body #binder #spine #side-search-area {
-    margin-top: 22px; }
-  html body #binder #spine #side-latest-news {
-    display: none; }
-  html body #binder .shelved button#shelve, html body #binder .unshelved button#shelve {
-    background: url(/wp-content/uploads/sites/192/2015/01/menu.png);
-    background-repeat: no-repeat;
-    background-position: 22px 15px;
-    background-color: #4e4c4b;
-    display: block; }
   html body figure.featured-image {
     position: relative !important;
     display: block;

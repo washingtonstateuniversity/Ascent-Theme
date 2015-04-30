@@ -2,7 +2,6 @@
 
 	<?php if ( ! is_singular() ) : ?>
 		<header class="article-header">
-			<hgroup>
 				<?php
 				if ( has_post_thumbnail() ) {
 					?><figure class="article-thumbnail"><?php the_post_thumbnail( array( 132, 132, true ) ); ?></figure><?php
@@ -31,7 +30,6 @@
 					if ( ! empty( $display_data['title_secondary'] ) ) : ?><div class="person-title-secondary"><?php echo esc_html( $display_data['title_secondary'] ); ?></div><?php endif;
 
 				} ?>
-			</hgroup>
 		</header>
 
 		<div class="article-summary">

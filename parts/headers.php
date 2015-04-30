@@ -11,9 +11,13 @@ if ( is_post_type_archive( 'wsuwp_uc_entity' ) ) {
 	$header_headline = 'Topics';
 } elseif ( is_singular( 'wsuwp_uc_entity' ) ) {
 	$header_headline = 'Partners';
+} else {
+	$header_headline = false;
 }
 
+if ( $header_headline ) :
 ?>
 <header class="main-header">
 	<h1><span class="ascent-main-header">Ascent</span> <?php echo $header_headline; ?></h1>
 </header>
+<?php endif;

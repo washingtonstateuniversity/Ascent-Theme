@@ -226,6 +226,13 @@ class Ascent_UC_Project {
 		}
 	}
 
+	/**
+	 * Retrieve the Ascent project number associated with a project.
+	 *
+	 * @param int $post_id Post ID of the project.
+	 *
+	 * @return string Project number associated with the project.
+	 */
 	public function get_project_number( $post_id ) {
 		$project_number = get_post_meta( $post_id, '_ascent_uc_project_number', true );
 		return $project_number;

@@ -50,7 +50,6 @@ html body {
 	}
 		.main-menu {
 			font-size: 1.2em;
-			font-weight: 300;
 			width: 100%;
 			background-color: $heavy-gray;
 			margin-top: 0;
@@ -58,47 +57,40 @@ html body {
 			z-index: 201;
 			position: fixed;
 				#logo {
-					position:absolute;
+					display:inline-block;
 					vertical-align: middle;
-					left:20px;
+					margin-right:10px;
 					img {
-						display: inline-block;
-						width:145px;
-					}
-					.ffa {
-						position:absolute;
-						display:none;
-						visibility:hidden;
-						background-color:$heavy-gray;
-						color:$heavy-color;
-						font-size:1em;
-						padding:12px;
-					}
-					&:hover .ffa {
-						display:block;
-						visibility: visible;
+						margin-left:2em;
+						height:50px;
+						padding-top:10px;
+						padding-bottom:10px;
 					}
 				}
 				#mobilelogo {
 					display: none;
 				}
 				ul {
+					display:inline-block;
 					text-align:center;
 					margin-top:0;
 					margin-bottom:0;
 					padding-top:0;
 					padding-bottom:0;
-					
 					li {
-						margin:0;
-						padding-top:0;
-						padding-bottom:0;
+						margin-top:0;
+						margin-bottom:0;
+						margin-right:0;
+						margin-left:-4px;
+						padding:0;
 						display:inline-block;
 						&  a {
-							padding-top: 20px;
-							padding-bottom: 20px;
-							padding-left:10px;
-							padding-right:10px;
+							font-weight: 300;
+							margin:0;
+							padding-top: 28px;
+							padding-bottom: 28px;
+							padding-left:15px;
+							padding-right:15px;
 							color:$heavy-color;
 							display:block;
 							height:100%;
@@ -120,7 +112,7 @@ html body {
 								position: absolute;
 								background-color:$darkest-gray;
 								border-left:1px solid $brand;
-								top:62px;
+								top:78px;
 
 							}
 							&:hover ul {
@@ -140,7 +132,6 @@ html body {
 
 
 				}
-			
 		}
 	main {
 		margin-top:60px;
@@ -261,10 +252,20 @@ html body {
 						width:100%;
 					}
 		}
-
-		
 	}
 }
+.home {
+		.logo-container {
+				margin-top:8em;
+				width:40%;
+				margin-left:auto;
+				margin-right:auto;
+				text-align: center;
+				img {
+					width:100%;
+				}
+			}
+		}
 footer {	
 	text-align:right;
 	display:block;
@@ -350,7 +351,7 @@ footer {
 	figure.featured-image {
 		display:none;
 	}
-	}
+}
 }
 .blog {
 	main {

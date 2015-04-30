@@ -8,7 +8,6 @@ html body {
     display: none; }
   html body .main-menu {
     font-size: 1.2em;
-    font-weight: 300;
     width: 100%;
     background-color: #4e4c4b;
     margin-top: 0;
@@ -16,41 +15,37 @@ html body {
     z-index: 201;
     position: fixed; }
     html body .main-menu #logo {
-      position: absolute;
+      display: inline-block;
       vertical-align: middle;
-      left: 20px; }
+      margin-right: 10px; }
       html body .main-menu #logo img {
-        display: inline-block;
-        width: 145px; }
-      html body .main-menu #logo .ffa {
-        position: absolute;
-        display: none;
-        visibility: hidden;
-        background-color: #4e4c4b;
-        color: #fff;
-        font-size: 1em;
-        padding: 12px; }
-      html body .main-menu #logo:hover .ffa {
-        display: block;
-        visibility: visible; }
+        margin-left: 2em;
+        height: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px; }
     html body .main-menu #mobilelogo {
       display: none; }
     html body .main-menu ul {
+      display: inline-block;
       text-align: center;
       margin-top: 0;
       margin-bottom: 0;
       padding-top: 0;
       padding-bottom: 0; }
       html body .main-menu ul li {
-        margin: 0;
-        padding-top: 0;
-        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+        margin-left: -4px;
+        padding: 0;
         display: inline-block; }
         html body .main-menu ul li a {
-          padding-top: 20px;
-          padding-bottom: 20px;
-          padding-left: 10px;
-          padding-right: 10px;
+          font-weight: 300;
+          margin: 0;
+          padding-top: 28px;
+          padding-bottom: 28px;
+          padding-left: 15px;
+          padding-right: 15px;
           color: #fff;
           display: block;
           height: 100%; }
@@ -69,7 +64,7 @@ html body {
           position: absolute;
           background-color: #343232;
           border-left: 1px solid #0094ca;
-          top: 62px; }
+          top: 78px; }
         html body .main-menu ul li:hover ul {
           padding: 0;
           background-color: #4e4c4b;
@@ -208,6 +203,15 @@ html body {
             padding: 9px; }
       html body main .post .wsuwp-uc-entities, html body main .post .wsuwp-uc-people, html body main .wsuwp_uc_project .wsuwp-uc-entities, html body main .wsuwp_uc_project .wsuwp-uc-people, html body main .wsuwp_uc_publication .wsuwp-uc-entities, html body main .wsuwp_uc_publication .wsuwp-uc-people, html body main .wsuwp_uc_person .wsuwp-uc-entities, html body main .wsuwp_uc_person .wsuwp-uc-people, html body main .wsuwp_uc_entity .wsuwp-uc-entities, html body main .wsuwp_uc_entity .wsuwp-uc-people, html body main #tribe-events-pg-template .wsuwp-uc-entities, html body main #tribe-events-pg-template .wsuwp-uc-people {
         width: 100%; }
+
+.home .logo-container {
+  margin-top: 8em;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+  .home .logo-container img {
+    width: 100%; }
 
 footer {
   text-align: right;

@@ -39,13 +39,21 @@ $webfont:'Roboto', sans-serif;
 	font-size:1.2em;
 	color:$medium-gray;
 }
+/* resets */
+html {
+	background-color:white !important;
+	margin:0;
+	padding:0;
+}
 html body {
+	margin:0;
+	padding:0;
 	height:100%;
 	font-family:$webfont;
 	font-weight:300;
 	color:$darkest-gray;
 	background-color:$heavy-color;
-	#spine {
+	#spine, #mobilelogo {
 		display:none;
 	}
 		.main-menu {
@@ -67,9 +75,7 @@ html body {
 						padding-bottom:10px;
 					}
 				}
-				#mobilelogo {
-					display: none;
-				}
+		
 				ul {
 					display:inline-block;
 					text-align:center;
@@ -123,6 +129,7 @@ html body {
 								opacity:1;
 							}
 							& li {
+								margin-left:2px;
 								display:block;
 									a {
 										padding:14px;
@@ -259,7 +266,12 @@ html body {
 .home {
 	main {
 		margin-top:0;	
-	}
+	}	
+	#binder.fluid.max-1980 .row {
+				max-width:918px;
+				margin-left:auto;
+				margin-right:auto;
+			}
 		.videobg {
 			display:block;
 			width:100%;
@@ -279,28 +291,44 @@ html body {
 		width:100%;
 		float:left;
 	}
-	footer {
+	footer.main-foot {
 		text-align: center;
 		width:80%;
 		margin-left:auto;
 		margin-right:auto;
-		p{
-			width:100%;
-		}
+		float:none;
 	}
 }
-footer {	
+footer.main-foot {	
 	text-align:right;
 	display:block;
 	margin-bottom:0;
-		p {	
-			color:$light-gray;
-			width:56%;
-			padding-top:1em;
-			margin-top:2em;
-			border-top:1px solid $lightest-gray;
-			text-align: center;
-			float:right;
+	color:$light-gray;
+	width:56%;
+	padding-top:1em;
+	margin-top:2em;
+	border-top:1px solid $lightest-gray;
+	text-align: center;
+	float:right;
+		a {
+			color:$brand;
+			text-decoration: underline;
+			&:hover {
+				color:$light-gray;
+				transition:color .3s ease;
+			}
+		}
+		ul {	
+			li {
+				display:inline-block;
+				padding-right:.4em;
+				padding-left:.2em;
+				border-right:1px solid $lightest-gray;
+				&:last-of-type {
+					border-right:none;
+				}
+			}
+		
 		}
 }
 .datepicker {
@@ -411,24 +439,99 @@ footer {
 		}
 	}
 }
-@media screen and (max-width : 894px) {
+@media screen and (max-width : 989px) {
 	html body {
-		.main-menu {
-			ul {
+		#binder.fluid main {
+			margin-left:0;
+			margin-right:0;
+		}
+		nav.main-menu {
+			position: fixed;
+			margin: 0;
+			top: 0;
+			height: 0;
+			z-index: 200;
+			#logo {
 				display:none;
-				visibility: hidden;
+			}
+			ul {
+				width: 100%;
+				background-color:$heavy-gray;
+				float: left;
+				display: none;
+				padding-left: 0;
+				padding-right:0;
+				padding-top:65px;
+				margin-right:0;
+				margin-left:0;
+				&.shownav {
+					display: block;
+				}
+					li {
+						width: 100%;
+						padding: 0;
+						float: left;
+						border-bottom: 1px solid $darkest-gray;
+						&:last-of-type {
+							border-bottom:none;
+						}
+						&:hover ul {
+							position: relative;
+							padding: 0;
+							margin: 0;
+						}
+						a {
+							font-size:150%;
+						}
+						ul {
+							top: 0;
+							width: 100%;
+							margin-top: 14px;
+							margin-bottom:0;
+							margin-right:0;
+							padding:0;
+							display: block;
+							li {
+								margin-left:4px;
+								background-color:$lightest-gray;
+								text-align: center;
+								border:none;
+								a {
+									color:$heavy-gray;
+									border-bottom:1px solid $heavy-color;
+								}
+							}
+						}
+					}
 			}
 		}
+		.mobilenav {
+			width: 100% !important;
+			border-top: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 201;
+			height:65px;
+			margin-top: 0;
+			padding: 0;
+			cursor: pointer;
+			background: url("/wp-content/themes/ascent/images/menu.png") no-repeat;
+			background-position: 90% center;
+			background-color:$brand;
+			&:hover {
+				background-color: $darkest-gray;
+			}
+			#mobilelogo  {
+				display:block;
+				img {
+					margin-left:2em;
+					margin-top:10px;
+					height:45px;
+				}
+			}
+		}	
 	}
-	.mobilenav {
-		display:block;
-		width:100%;
-		background-color:green;
-		z-index:1000;
-	}
-		
-}
-@media screen and (max-width : 791px) {
 	html body {
 		figure.featured-image {
 				position:relative !important;
@@ -469,6 +572,9 @@ footer {
 
 	}
 }
+}
+@media screen and (max-width : 791px) {
+	
 }
 @media screen and (min-width : 2100px) {
 	html body {

@@ -16,7 +16,7 @@
 		/* ]]> */
 	</script>
 <?php } ?>
-<a class="mobilenav" href="#"><div id="mobilelogo"></div>
+<a class="mobilenav" href="#"><div id="mobilelogo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/ascent-logo-wm.png' ); ?>" ></div>
 </a>
 <nav class="main-menu navreg">
 	<div id="logo">

@@ -1,10 +1,18 @@
+/* resets */
+html {
+  background-color: white !important;
+  margin: 0;
+  padding: 0; }
+
 html body {
+  margin: 0;
+  padding: 0;
   height: 100%;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #343232;
   background-color: #fff; }
-  html body #spine {
+  html body #spine, html body #mobilelogo {
     display: none; }
   html body .main-menu {
     font-size: 1.2em;
@@ -23,8 +31,6 @@ html body {
         height: 50px;
         padding-top: 10px;
         padding-bottom: 10px; }
-    html body .main-menu #mobilelogo {
-      display: none; }
     html body .main-menu ul {
       display: inline-block;
       text-align: center;
@@ -72,6 +78,7 @@ html body {
           visibility: visible;
           opacity: 1; }
         html body .main-menu ul li li {
+          margin-left: 2px;
           display: block; }
           html body .main-menu ul li li a {
             padding: 14px; }
@@ -208,6 +215,10 @@ html body {
 
 .home main {
   margin-top: 0; }
+.home #binder.fluid.max-1980 .row {
+  max-width: 918px;
+  margin-left: auto;
+  margin-right: auto; }
 .home .videobg {
   display: block;
   width: 100%;
@@ -223,26 +234,37 @@ html body {
 .home .page {
   width: 100%;
   float: left; }
-.home footer {
+.home footer.main-foot {
   text-align: center;
   width: 80%;
   margin-left: auto;
-  margin-right: auto; }
-  .home footer p {
-    width: 100%; }
+  margin-right: auto;
+  float: none; }
 
-footer {
+footer.main-foot {
   text-align: right;
   display: block;
-  margin-bottom: 0; }
-  footer p {
-    color: #747270;
-    width: 56%;
-    padding-top: 1em;
-    margin-top: 2em;
-    border-top: 1px solid #EEEEEC;
-    text-align: center;
-    float: right; }
+  margin-bottom: 0;
+  color: #747270;
+  width: 56%;
+  padding-top: 1em;
+  margin-top: 2em;
+  border-top: 1px solid #EEEEEC;
+  text-align: center;
+  float: right; }
+  footer.main-foot a {
+    color: #0094ca;
+    text-decoration: underline; }
+    footer.main-foot a:hover {
+      color: #747270;
+      transition: color .3s ease; }
+  footer.main-foot ul li {
+    display: inline-block;
+    padding-right: .4em;
+    padding-left: .2em;
+    border-right: 1px solid #EEEEEC; }
+    footer.main-foot ul li:last-of-type {
+      border-right: none; }
 
 .datepicker.dropdown-menu {
   color: #343232;
@@ -311,17 +333,82 @@ footer {
 @media (max-width: 1014px) {
   html body .main-menu {
     font-size: 1em; } }
-@media screen and (max-width: 894px) {
-  html body .main-menu ul {
-    display: none;
-    visibility: hidden; }
+@media screen and (max-width: 989px) {
+  html body #binder.fluid main {
+    margin-left: 0;
+    margin-right: 0; }
+  html body nav.main-menu {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    height: 0;
+    z-index: 200; }
+    html body nav.main-menu #logo {
+      display: none; }
+    html body nav.main-menu ul {
+      width: 100%;
+      background-color: #4e4c4b;
+      float: left;
+      display: none;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 65px;
+      margin-right: 0;
+      margin-left: 0; }
+      html body nav.main-menu ul.shownav {
+        display: block; }
+      html body nav.main-menu ul li {
+        width: 100%;
+        padding: 0;
+        float: left;
+        border-bottom: 1px solid #343232; }
+        html body nav.main-menu ul li:last-of-type {
+          border-bottom: none; }
+        html body nav.main-menu ul li:hover ul {
+          position: relative;
+          padding: 0;
+          margin: 0; }
+        html body nav.main-menu ul li a {
+          font-size: 150%; }
+        html body nav.main-menu ul li ul {
+          top: 0;
+          width: 100%;
+          margin-top: 14px;
+          margin-bottom: 0;
+          margin-right: 0;
+          padding: 0;
+          display: block; }
+          html body nav.main-menu ul li ul li {
+            margin-left: 4px;
+            background-color: #EEEEEC;
+            text-align: center;
+            border: none; }
+            html body nav.main-menu ul li ul li a {
+              color: #4e4c4b;
+              border-bottom: 1px solid #fff; }
+  html body .mobilenav {
+    width: 100% !important;
+    border-top: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 201;
+    height: 65px;
+    margin-top: 0;
+    padding: 0;
+    cursor: pointer;
+    background: url("/wp-content/themes/ascent/images/menu.png") no-repeat;
+    background-position: 90% center;
+    background-color: #0094ca; }
+    html body .mobilenav:hover {
+      background-color: #343232; }
+    html body .mobilenav #mobilelogo {
+      display: block; }
+      html body .mobilenav #mobilelogo img {
+        margin-left: 2em;
+        margin-top: 10px;
+        height: 45px; }
 
-  .mobilenav {
-    display: block;
-    width: 100%;
-    background-color: green;
-    z-index: 1000; } }
-@media screen and (max-width: 791px) {
   html body figure.featured-image {
     position: relative !important;
     display: block;

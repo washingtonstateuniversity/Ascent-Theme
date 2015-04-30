@@ -210,7 +210,7 @@ html body {
 				}
 			}
 		}
-		.page, .wsuwp_uc_project {
+		div.page, .wsuwp_uc_project {
 			width:50%;
 			@include body-styles;
 		}
@@ -255,17 +255,35 @@ html body {
 	}
 }
 .home {
+		.videobg {
+			display:block;
+			width:100%;
+			margin-top:47px;
+		}
 		.logo-container {
-				margin-top:8em;
-				width:40%;
+				margin-top:50px;
+				width:500px;
 				margin-left:auto;
 				margin-right:auto;
 				text-align: center;
 				img {
 					width:100%;
 				}
-			}
+	}
+	.page {
+		width:100%;
+		float:left;
+	}
+	footer {
+		text-align: center;
+		width:80%;
+		margin-left:auto;
+		margin-right:auto;
+		p{
+			width:100%;
 		}
+	}
+}
 footer {	
 	text-align:right;
 	display:block;
@@ -291,7 +309,7 @@ footer {
 	main footer {
 		display:none;
 	}
-	section {
+	section:first-of-type {
 		margin-top:3em;
 	}
 	header.article-header {

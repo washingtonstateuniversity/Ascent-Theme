@@ -153,7 +153,7 @@ html body {
         html body main header.main-header h1 .ascent-main-header {
           font-weight: 300;
           font-size: 75%; }
-    html body main .page, html body main .wsuwp_uc_project {
+    html body main div.page, html body main .wsuwp_uc_project {
       width: 50%;
       margin-right: 150px;
       margin-top: 65px;
@@ -204,13 +204,27 @@ html body {
       html body main .post .wsuwp-uc-entities, html body main .post .wsuwp-uc-people, html body main .wsuwp_uc_project .wsuwp-uc-entities, html body main .wsuwp_uc_project .wsuwp-uc-people, html body main .wsuwp_uc_publication .wsuwp-uc-entities, html body main .wsuwp_uc_publication .wsuwp-uc-people, html body main .wsuwp_uc_person .wsuwp-uc-entities, html body main .wsuwp_uc_person .wsuwp-uc-people, html body main .wsuwp_uc_entity .wsuwp-uc-entities, html body main .wsuwp_uc_entity .wsuwp-uc-people, html body main #tribe-events-pg-template .wsuwp-uc-entities, html body main #tribe-events-pg-template .wsuwp-uc-people {
         width: 100%; }
 
+.home .videobg {
+  display: block;
+  width: 100%;
+  margin-top: 47px; }
 .home .logo-container {
-  margin-top: 8em;
-  width: 40%;
+  margin-top: 50px;
+  width: 500px;
   margin-left: auto;
   margin-right: auto;
   text-align: center; }
   .home .logo-container img {
+    width: 100%; }
+.home .page {
+  width: 100%;
+  float: left; }
+.home footer {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+  .home footer p {
     width: 100%; }
 
 footer {
@@ -232,7 +246,7 @@ footer {
 
 .single-wsuwp_uc_project main footer {
   display: none; }
-.single-wsuwp_uc_project section {
+.single-wsuwp_uc_project section:first-of-type {
   margin-top: 3em; }
 .single-wsuwp_uc_project header.article-header hgroup .ascent-num-box {
   border-bottom: 1px solid #EEEEEC;

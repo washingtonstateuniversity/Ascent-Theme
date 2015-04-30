@@ -45,154 +45,105 @@ html body {
 	font-weight:300;
 	color:$darkest-gray;
 	background-color:$heavy-color;
-		#spine.asc-heavy-gray #glue:before {
-			background-color:$heavy-gray;
-			color:$heavy-color;
-			left:-774px;
-			width:1000px;
-			position:absolute;
-		}
-		#spine { 
-			
-			#glue, #glue:before {
-				width:222px;
-			}
-			#wsu-signature {
-				background-image:url(/wp-content/uploads/sites/192/2015/01/ascent-logo.png);
-			} 
-			#side-search-area {
-				input#s {
-				display:none;
-				
-				}
-
-			}
-			&:not(.cropped) {
-					.spine-navigation {
-						padding-bottom:0px;
+	#spine {
+		display:none;
+	}
+		.main-menu {
+			font-size: 1.2em;
+			font-weight: 300;
+			width: 100%;
+			background-color: $heavy-gray;
+			margin-top: 0;
+			top: 0;
+			z-index: 201;
+			position: fixed;
+				#logo {
+					position:absolute;
+					vertical-align: middle;
+					left:20px;
+					img {
+						display: inline-block;
+						width:145px;
+					}
+					.ffa {
+						position:absolute;
+						display:none;
+						visibility:hidden;
+						background-color:$heavy-gray;
+						color:$heavy-color;
+						font-size:1em;
+						padding:12px;
+					}
+					&:hover .ffa {
+						display:block;
+						visibility: visible;
 					}
 				}
-			/* Not traditionally in the nesting because it needs to override the spine.css specifically */
-			nav li.parent.active>a, nav li.parent.opened>a {
-				padding-bottom:12px;
-			}
-			/* */
-			.spine-sitenav {
-				margin-left:0;
-				margin-right:0;
-					ul li {
-						border-style:none;
-						& ul {
-							margin-left:0px;
-							margin-right:0px;
+				#mobilelogo {
+					display: none;
+				}
+				ul {
+					text-align:center;
+					margin-top:0;
+					margin-bottom:0;
+					padding-top:0;
+					padding-bottom:0;
+					
+					li {
+						margin:0;
+						padding-top:0;
+						padding-bottom:0;
+						display:inline-block;
+						&  a {
+							padding-top: 20px;
+							padding-bottom: 20px;
+							padding-left:10px;
+							padding-right:10px;
+							color:$heavy-color;
+							display:block;
+							height:100%;
+						&:hover {
+							margin:0;
+							display:block;
+							height:100%;
+							color:$brand;
 							background-color:$darkest-gray;
-							
 						}
 					}
-					a {
-						font-size:1.2em;
-						letter-spacing:1px;
-						line-height:1em;
-						padding:10px 1px 10px 12px;
-						color:$heavy-color;
-						border-left:$heavy-gray solid 8px;
-							&:hover {
-								border-left:$light-gray solid 8px;
-								color:$heavy-color;
-								background-color:$light-gray;
-								font-weight:300;
-								cursor:pointer;
-							}
-					}
-					li.dogeared>a {
-						color:$heavy-color;
-						background-color:$light-gray;
-						border-left:$brand solid 8px;
-						font-weight:300;
-					}
-					&:not(.homeless)>ul>li:first-child>a {
-						background-image:none;
-						padding-left:1em;
-							&:before, &:hover {
-								background-image:none;
-								background-color:$light-gray;
-							}
-					}
-					&:not(.homeless)>ul>li.active:first-child>a {
-						background-color:$light-gray;
-						background-image:none;
-							&:before, &:hover {
-								background-image:none;
-								background-color:$light-gray;
-							}
-					}
-				}
-			#side-latest-news {
-					/* Remove hidden if we decide to use */
-					display:none;
-					& h4 {
-						color:$heavy-color;
-						text-transform: uppercase;
-						font-size:1.2em;
-						letter-spacing: 1px;
-						display: block;
-						width:178px;
-						margin-left:auto;
-						margin-right:auto;
-						margin-bottom:12px;
-						border-top:1px solid $light-gray;
-						padding-top:30px;
-											}
-					& .side-latest-news-box {
-						height:100%;
-						width:178px;
-						background-color:$darkest-gray;
-						border:solid 1px $light-gray;
-						margin-left:auto;
-						margin-right:auto;
-						padding:5%;
-						color:white;
-						clear:both;
-					}
-					& h5 {
-						font-size:1.2em;
-						padding-bottom:1em;
-					}
-					& .rmore {
-						display:block;
-						width:80px;
-						padding:5px;
-						font-size: 1.2em;
-						margin-left:auto;
-						margin-right:auto;
-						margin-top:12px;
-						margin-bottom:6px;
-						@include button-styles;
-							& a {
-								@include button-a-style;
-							}
-					&:hover,&:focus {
-							padding:4px;
-							@include button-a-hover;			
-					}
-					}
-			}
+						&.current a {
+							background-color:$darkest-gray;
+						}
+							ul {
+								display:none;
+								visibility: hidden;
+								text-align:left;
+								position: absolute;
+								background-color:$darkest-gray;
+								border-left:1px solid $brand;
+								top:62px;
 
-			.spine-footer {
-				color:$heavy-color;
-				font-size:1.3em;
-				line-height:1.1em;
-				width:178px;
-			}
-			.spine-global-links {
-				margin-top:22px;
-				padding-top:22px;
-				display:block;
-				clear:both;
-				border-color:$light-gray;
-			}
+							}
+							&:hover ul {
+								padding:0;
+								background-color:$heavy-gray;
+								display:block;
+								visibility: visible;
+								opacity:1;
+							}
+							& li {
+								display:block;
+									a {
+										padding:14px;
+									}
+							}
+					}
+
+
+				}
+			
 		}
 	main {
+		margin-top:60px;
 		a {
 				color:$brand;
 				text-decoration: underline;
@@ -255,14 +206,16 @@ html body {
 			right:0;
 			& h1 {
 				@include gray-header;
-				font-size:150%;
+				font-size:130%;
 				font-weight:700;
 				text-transform: uppercase;
 				border-bottom:1px solid $lightest-gray;
 				margin-right:2em;
 				padding-bottom:5px;
+				padding-left:3em;
 				& .ascent-main-header {
 					font-weight:300;
+					font-size:75%;
 				}
 			}
 		}
@@ -309,14 +262,22 @@ html body {
 					}
 		}
 
-		footer {
-			&.main-footer {
-				width:90%;
-				margin-left:auto;
-				margin-right:auto;
-			}
-		}
+		
 	}
+}
+footer {	
+	text-align:right;
+	display:block;
+	margin-bottom:0;
+		p {	
+			color:$light-gray;
+			width:50%;
+			padding-top:1em;
+			margin-top:2em;
+			border-top:1px solid $lightest-gray;
+			text-align: center;
+			float:right;
+		}
 }
 .datepicker {
 	&.dropdown-menu{
@@ -325,8 +286,12 @@ html body {
 	}
 }
 .single-wsuwp_uc_project {
-	footer {
+
+	main footer {
 		display:none;
+	}
+	section {
+		margin-top:3em;
 	}
 	header.article-header {
 		hgroup {

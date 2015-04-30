@@ -10,6 +10,9 @@ add_action( 'wp_enqueue_scripts', 'ascent_sandbox_child_enqueue_scripts');
 function ascent_sandbox_child_enqueue_scripts() {
 	wp_enqueue_style( 'ascent-style', get_stylesheet_directory_uri() . '/scss/asc.css' );
 	wp_enqueue_script( 'ascent-cu', get_stylesheet_directory_uri() . '/js/cu.js', array( 'jquery' ), spine_get_script_version(), true );
+	wp_enqueue_script( 'ascent-videobg', get_stylesheet_directory_uri() . '/js/jQuery.videobg.js', array( 'jquery' ), spine_get_script_version(), true );
+	wp_enqueue_script( 'ascent-custom', get_stylesheet_directory_uri() . '/custom.js', array( 'jquery' ), spine_get_script_version(), true );
+
 }
 /* 
 * Add HTML5 search box on the side bar menu

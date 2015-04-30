@@ -1,10 +1,10 @@
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		
-			<?php if ( is_single() ) : ?>
-			<?php else : ?>
-				<p><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></p>
-			<?php endif; ?>
+
+	<?php if ( is_single() ) : ?>
+		<h1><?php the_title(); ?></h1>
+	<?php else : ?>
+		<p><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></p>
+	<?php endif; ?>
 
 	<?php if ( ! is_singular() ) : ?>
 		<div class="article-summary">

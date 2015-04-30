@@ -23,6 +23,7 @@ class Ascent_UC_Project {
 		add_action( 'manage_wsuwp_uc_project_posts_custom_column', array( $this, 'manage_project_posts_custom_column' ), 10, 2 );
 		add_action( 'manage_edit-wsuwp_uc_project_sortable_columns', array( $this, 'sort_columns' ), 10, 1 );
 		add_filter( 'request', array( $this, 'sort_project_number' ) );
+		add_filter( 'the_content', array( $this, 'add_content' ), 998, 1 );
 	}
 
 	/**
@@ -228,6 +229,42 @@ class Ascent_UC_Project {
 	public function get_project_number( $post_id ) {
 		$project_number = get_post_meta( $post_id, '_ascent_uc_project_number', true );
 		return $project_number;
+	}
+
+	/**
+	 * Add FAA Advisers and Project Leads to project content.
+	 *
+	 * @param string $content Current object content.
+	 *
+	 * @return string Modified content.
+	 */
+	public function add_content( $content ) {
+		if ( false === is_singular( wsuwp_uc_get_object_type_slug( 'project' ) ) ) {
+			return $content;
+		}
+
+		$advisers = wsuwp_uc_get_object_objects( get_the_ID(), $this->advisor_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
+		$leads    = wsuwp_uc_get_object_objects( get_the_ID(), $this->project_lead_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
+
+		$added_html = '';
+
+		if ( false !== $advisers && ! empty( $advisers ) ) {
+			$added_html .= '<div class="wsuwp-uc-advisers"><h3>FAA Advisers</h3><ul>';
+			foreach( $advisers as $adviser ) {
+				$added_html .= '<li><a href="' . esc_url( $adviser['url'] ) . '">' . esc_html( $adviser['name'] ) . '</a></li>';
+			}
+			$added_html .= '</ul></div>';
+		}
+
+		if ( false !== $leads && ! empty( $leads ) ) {
+			$added_html .= '<div class="wsuwp-uc-project-leads"><h3>Project Leads</h3><ul>';
+			foreach( $leads as $lead ) {
+				$added_html .= '<li><a href="' . esc_url( $lead['url'] ) . '">' . esc_html( $lead['name'] ) . '</a></li>';
+			}
+			$added_html .= '</ul></div>';
+		}
+
+		return $content . $added_html;
 	}
 }
 $ascent_uc_project = new Ascent_UC_Project();

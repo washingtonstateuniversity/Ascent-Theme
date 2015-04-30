@@ -2,6 +2,7 @@
 
 // Add extensions of the University Center project model.
 include_once( __DIR__ . '/includes/ascent-uc-project.php' );
+include_once( __DIR__ . '/includes/plugin-swwrc-video.php' );
 
 add_action( 'wp_enqueue_scripts', 'ascent_sandbox_child_enqueue_scripts');
 /**

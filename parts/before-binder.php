@@ -3,7 +3,7 @@
 	<div id="videobg" class="videobg">
 		<div class="banner-container">
 			<div class="logo-container">
-				<!-- SWWRC logo removed -->
+				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/ascent-logo-full.png' ); ?>" >
 			</div>
 			<?php if ( $cob_page_headline = swwrc_get_page_headline() ) : ?>
 				<h1><?php echo wp_kses_post( $cob_page_headline ); ?></h1>
@@ -20,10 +20,7 @@
 </a>
 <nav class="main-menu navreg">
 	<div id="logo">
-		<a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/ascent-logo.png' ); ?>" ></a>
-		<div class="ffa">
-			<p>FAA Center of Excellence for Alternative Jet Fuels &amp; Environment</p>
-		</div>
+		<a href="<?php echo esc_url( home_url() ); ?>"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/ascent-logo-wm.png' ); ?>" ></a>
 </div>
 <?php
 	$spine_site_args = array(

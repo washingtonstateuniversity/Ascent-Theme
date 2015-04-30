@@ -134,6 +134,8 @@ html body {
 				}
 		}
 	main {
+		margin-left:auto;
+		margin-right:auto;
 		margin-top:47px;
 		a {
 				color:$brand;
@@ -181,7 +183,7 @@ html body {
   			-o-background-size: cover;
  	 		background-size: cover;
 			float:left;
-			margin-left:-270px;
+			margin-left:-170px;
 			margin-right:30px;
 			& img {
 				position:fixed;
@@ -256,7 +258,7 @@ html body {
 }
 .home {
 	main {
-		margin-top:0;
+		margin-top:0;	
 	}
 		.videobg {
 			display:block;
@@ -264,7 +266,7 @@ html body {
 			margin-top:47px;
 		}
 		.logo-container {
-				margin-top:50px;
+				margin-top:70px;
 				width:500px;
 				margin-left:auto;
 				margin-right:auto;
@@ -293,7 +295,7 @@ footer {
 	margin-bottom:0;
 		p {	
 			color:$light-gray;
-			width:50%;
+			width:56%;
 			padding-top:1em;
 			margin-top:2em;
 			border-top:1px solid $lightest-gray;
@@ -400,18 +402,35 @@ footer {
 		}
 	}
 }
-$width-name: max-device-width;
-$target-width: 791px;
-$width-min-name: min-width;
-$target-min-width: 2100px;
-$menu-max-width: 1014px;
-$menu-min-width: 300px;
-@media screen and ($menu-max-width : $menu-min-width) {
-
+@media (max-width: 1014px) {
+	html {
+		body {
+			.main-menu {
+				font-size:1em;		
+			}
+		}
+	}
 }
-@media screen and ($width-name : $target-width) {
+@media screen and (max-width : 894px) {
 	html body {
-			figure.featured-image {
+		.main-menu {
+			ul {
+				display:none;
+				visibility: hidden;
+			}
+		}
+	}
+	.mobilenav {
+		display:block;
+		width:100%;
+		background-color:green;
+		z-index:1000;
+	}
+		
+}
+@media screen and (max-width : 791px) {
+	html body {
+		figure.featured-image {
 				position:relative !important;
 				display: block;
 				width:100% !important;
@@ -451,7 +470,7 @@ $menu-min-width: 300px;
 	}
 }
 }
-@media screen and ($width-min-name : $target-min-width) {
+@media screen and (min-width : 2100px) {
 	html body {
 		#binder.fluid.max-1980 {
 			max-width:3000px;

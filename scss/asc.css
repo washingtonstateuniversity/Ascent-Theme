@@ -10,119 +10,118 @@ html body {
     left: -774px;
     width: 1000px;
     position: absolute; }
-  html body #spine nav li.parent.opened > a {
-    padding-bottom: 12px; }
-  html body #spine #glue, html body #spine #glue:before {
-    width: 222px; }
-  html body #spine #wsu-signature {
-    background-image: url(/wp-content/uploads/sites/192/2015/01/ascent-logo.png); }
-  html body #spine #side-search-area input#s {
-    display: none; }
-  html body #spine:not(.cropped) .spine-navigation {
-    padding-bottom: 0px; }
-  html body #spine .spine-sitenav {
-    margin-left: 0;
-    margin-right: 0; }
-    html body #spine .spine-sitenav ul li {
-      border-style: none; }
-      html body #spine .spine-sitenav ul li ul {
-        margin-left: 0px;
-        margin-right: 0px;
-        background-color: #343232; }
-      html body #spine .spine-sitenav ul li.parent .sub-menu {
-        display: none; }
-      html body #spine .spine-sitenav ul li.opened .sub-menu {
-        display: block; }
-    html body #spine .spine-sitenav a {
-      font-size: 1.2em;
-      letter-spacing: 1px;
-      line-height: 1em;
-      padding: 10px 1px 10px 12px;
-      color: #fff;
-      border-left: #4e4c4b solid 8px; }
-      html body #spine .spine-sitenav a:hover {
-        border-left: #747270 solid 8px;
+  html body #spine {
+    /* Not traditionally in the nesting because it needs to override the spine.css specifically */
+    /* */ }
+    html body #spine #glue, html body #spine #glue:before {
+      width: 222px; }
+    html body #spine #wsu-signature {
+      background-image: url(/wp-content/uploads/sites/192/2015/01/ascent-logo.png); }
+    html body #spine #side-search-area input#s {
+      display: none; }
+    html body #spine:not(.cropped) .spine-navigation {
+      padding-bottom: 0px; }
+    html body #spine nav li.parent.active > a, html body #spine nav li.parent.opened > a {
+      padding-bottom: 12px; }
+    html body #spine .spine-sitenav {
+      margin-left: 0;
+      margin-right: 0; }
+      html body #spine .spine-sitenav ul li {
+        border-style: none; }
+        html body #spine .spine-sitenav ul li ul {
+          margin-left: 0px;
+          margin-right: 0px;
+          background-color: #343232; }
+      html body #spine .spine-sitenav a {
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        line-height: 1em;
+        padding: 10px 1px 10px 12px;
+        color: #fff;
+        border-left: #4e4c4b solid 8px; }
+        html body #spine .spine-sitenav a:hover {
+          border-left: #747270 solid 8px;
+          color: #fff;
+          background-color: #747270;
+          font-weight: 300;
+          cursor: pointer; }
+      html body #spine .spine-sitenav li.dogeared > a {
         color: #fff;
         background-color: #747270;
-        font-weight: 300;
-        cursor: pointer; }
-    html body #spine .spine-sitenav li.dogeared > a {
-      color: #fff;
-      background-color: #747270;
-      border-left: #0094ca solid 8px;
-      font-weight: 300; }
-    html body #spine .spine-sitenav:not(.homeless) > ul > li:first-child > a {
-      background-image: none;
-      padding-left: 1em; }
-      html body #spine .spine-sitenav:not(.homeless) > ul > li:first-child > a:before, html body #spine .spine-sitenav:not(.homeless) > ul > li:first-child > a:hover {
+        border-left: #0094ca solid 8px;
+        font-weight: 300; }
+      html body #spine .spine-sitenav:not(.homeless) > ul > li:first-child > a {
         background-image: none;
-        background-color: #747270; }
-    html body #spine .spine-sitenav:not(.homeless) > ul > li.active:first-child > a {
-      background-color: #747270;
-      background-image: none; }
-      html body #spine .spine-sitenav:not(.homeless) > ul > li.active:first-child > a:before, html body #spine .spine-sitenav:not(.homeless) > ul > li.active:first-child > a:hover {
-        background-image: none;
-        background-color: #747270; }
-  html body #spine #side-latest-news {
-    /* Remove hidden if we decide to use */
-    display: none; }
-    html body #spine #side-latest-news h4 {
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 1.2em;
-      letter-spacing: 1px;
-      display: block;
-      width: 178px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 12px;
-      border-top: 1px solid #747270;
-      padding-top: 30px; }
-    html body #spine #side-latest-news .side-latest-news-box {
-      height: 100%;
-      width: 178px;
-      background-color: #343232;
-      border: solid 1px #747270;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 5%;
-      color: white;
-      clear: both; }
-    html body #spine #side-latest-news h5 {
-      font-size: 1.2em;
-      padding-bottom: 1em; }
-    html body #spine #side-latest-news .rmore {
-      display: block;
-      width: 80px;
-      padding: 5px;
-      font-size: 1.2em;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 12px;
-      margin-bottom: 6px;
-      text-align: center;
-      background-color: #0094ca; }
-      html body #spine #side-latest-news .rmore a {
+        padding-left: 1em; }
+        html body #spine .spine-sitenav:not(.homeless) > ul > li:first-child > a:before, html body #spine .spine-sitenav:not(.homeless) > ul > li:first-child > a:hover {
+          background-image: none;
+          background-color: #747270; }
+      html body #spine .spine-sitenav:not(.homeless) > ul > li.active:first-child > a {
+        background-color: #747270;
+        background-image: none; }
+        html body #spine .spine-sitenav:not(.homeless) > ul > li.active:first-child > a:before, html body #spine .spine-sitenav:not(.homeless) > ul > li.active:first-child > a:hover {
+          background-image: none;
+          background-color: #747270; }
+    html body #spine #side-latest-news {
+      /* Remove hidden if we decide to use */
+      display: none; }
+      html body #spine #side-latest-news h4 {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        letter-spacing: 1px;
         display: block;
+        width: 178px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 12px;
+        border-top: 1px solid #747270;
+        padding-top: 30px; }
+      html body #spine #side-latest-news .side-latest-news-box {
         height: 100%;
-        width: 100%;
-        color: #fff; }
-      html body #spine #side-latest-news .rmore:hover, html body #spine #side-latest-news .rmore:focus {
-        padding: 4px;
-        background-color: #4e4c4b;
-        cursor: pointer;
-        border: 1px solid #0094ca; }
-  html body #spine .spine-footer {
-    color: #fff;
-    font-size: 1.3em;
-    line-height: 1.1em;
-    width: 178px; }
-  html body #spine .spine-global-links {
-    margin-top: 22px;
-    padding-top: 22px;
-    display: block;
-    clear: both;
-    border-color: #747270; }
+        width: 178px;
+        background-color: #343232;
+        border: solid 1px #747270;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5%;
+        color: white;
+        clear: both; }
+      html body #spine #side-latest-news h5 {
+        font-size: 1.2em;
+        padding-bottom: 1em; }
+      html body #spine #side-latest-news .rmore {
+        display: block;
+        width: 80px;
+        padding: 5px;
+        font-size: 1.2em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 12px;
+        margin-bottom: 6px;
+        text-align: center;
+        background-color: #0094ca; }
+        html body #spine #side-latest-news .rmore a {
+          display: block;
+          height: 100%;
+          width: 100%;
+          color: #fff; }
+        html body #spine #side-latest-news .rmore:hover, html body #spine #side-latest-news .rmore:focus {
+          padding: 4px;
+          background-color: #4e4c4b;
+          cursor: pointer;
+          border: 1px solid #0094ca; }
+    html body #spine .spine-footer {
+      color: #fff;
+      font-size: 1.3em;
+      line-height: 1.1em;
+      width: 178px; }
+    html body #spine .spine-global-links {
+      margin-top: 22px;
+      padding-top: 22px;
+      display: block;
+      clear: both;
+      border-color: #747270; }
   html body main a {
     color: #0094ca;
     text-decoration: underline; }

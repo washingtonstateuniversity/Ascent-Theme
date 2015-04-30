@@ -53,9 +53,7 @@ html body {
 			position:absolute;
 		}
 		#spine { 
-			nav li.parent.opened>a {
-				padding-bottom:12px;
-			}
+			
 			#glue, #glue:before {
 				width:222px;
 			}
@@ -74,6 +72,11 @@ html body {
 						padding-bottom:0px;
 					}
 				}
+			/* Not traditionally in the nesting because it needs to override the spine.css specifically */
+			nav li.parent.active>a, nav li.parent.opened>a {
+				padding-bottom:12px;
+			}
+			/* */
 			.spine-sitenav {
 				margin-left:0;
 				margin-right:0;
@@ -84,15 +87,6 @@ html body {
 							margin-right:0px;
 							background-color:$darkest-gray;
 							
-						}
-						&.parent {
-
-						}
-						&.parent .sub-menu {
-							display:none;
-						}
-						&.opened .sub-menu {
-							display:block;
 						}
 					}
 					a {

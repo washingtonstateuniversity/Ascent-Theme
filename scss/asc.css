@@ -78,14 +78,15 @@ html body {
           visibility: visible;
           opacity: 1; }
         html body .main-menu ul li li {
-          margin-left: 2px;
+          margin-left: 1px;
           display: block; }
           html body .main-menu ul li li a {
             padding: 14px; }
   html body main {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 47px; }
+    margin-top: 47px;
+    margin-bottom: 3em; }
     html body main a {
       color: #0094ca;
       text-decoration: underline; }
@@ -334,9 +335,32 @@ footer.main-foot {
   html body .main-menu {
     font-size: 1em; } }
 @media screen and (max-width: 989px) {
+  html body.home #binder.fluid main {
+    margin-top: 3em; }
+
   html body #binder.fluid main {
     margin-left: 0;
-    margin-right: 0; }
+    margin-right: 0;
+    margin-top: 24em; }
+  html body figure.featured-image {
+    position: absolute !important;
+    top: 0;
+    height: 300px !important;
+    display: block;
+    width: 100% !important;
+    min-height: 100px !important;
+    float: none;
+    margin-left: 0px !important; }
+  html body .page, html body .wsuwp_uc_project {
+    float: none;
+    width: 100% !important;
+    margin: 0 !important; }
+  html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
+    margin-left: 0 !important; }
+  html body footer.main-foot {
+    width: 100%;
+    float: left;
+    text-align: center; }
   html body nav.main-menu {
     position: fixed;
     margin: 0;
@@ -397,7 +421,7 @@ footer.main-foot {
     margin-top: 0;
     padding: 0;
     cursor: pointer;
-    background: url("/wp-content/themes/ascent/images/menu.png") no-repeat;
+    background: url("../images/menu.png") no-repeat;
     background-position: 90% center;
     background-color: #0094ca; }
     html body .mobilenav:hover {
@@ -409,20 +433,6 @@ footer.main-foot {
         margin-top: 10px;
         height: 45px; }
 
-  html body figure.featured-image {
-    position: relative !important;
-    display: block;
-    width: 100% !important;
-    min-height: 100px !important;
-    float: none;
-    margin-left: 0px !important; }
-  html body .page, html body .wsuwp_uc_project {
-    float: none;
-    width: 100% !important;
-    margin: 0 !important; }
-  html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
-    margin-left: 0 !important; }
-
   .post-type-archive main h1, .single-wsuwp_uc_person main h1, .single-wsuwp_uc_project main h1 {
     margin-left: 0px; }
   .post-type-archive main h2.ascent-num, .single-wsuwp_uc_person main h2.ascent-num, .single-wsuwp_uc_project main h2.ascent-num {
@@ -430,6 +440,39 @@ footer.main-foot {
 
   .tax-wsuwp_uc_topics main header.article-header hgroup .ascent-num-box, .post-type-archive-wsuwp_uc_project main header.article-header hgroup .ascent-num-box {
     margin-top: 1em; } }
+@media screen and (max-width: 791px) {
+  html body #binder.fluid main {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 20em; }
+  html body figure.featured-image {
+    position: absolute !important;
+    top: 0;
+    height: 300px !important;
+    display: block;
+    width: 100% !important;
+    min-height: 100px !important;
+    float: none;
+    margin-left: 0px !important; }
+  html body main header.main-header {
+    position: relative; }
+    html body main header.main-header h1 .ascent-main-header {
+      font-weight: 300;
+      font-size: 75%; }
+  html body nav.main-menu ul li a {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 110%; } }
+@media screen and (max-width: 491px) {
+  html body main h1 {
+    font-size: 2em; }
+  html body footer.main-foot {
+    border-top: none; }
+    html body footer.main-foot ul li {
+      border-right: none;
+      border-top: 1px solid #EEEEEC;
+      padding-top: 1em;
+      padding-bottom: 1em; } }
 @media screen and (min-width: 2100px) {
   html body #binder.fluid.max-1980 {
     max-width: 3000px; } }

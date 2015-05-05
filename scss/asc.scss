@@ -400,9 +400,6 @@ html {
 			.wsuwp_uc_entity:first-of-type {
 				border-top:none;
 			}
-			.wsuwp-uc-entities, .wsuwp-uc-people, .wsuwp-uc-projects, .wsuwp-uc-publications {
-				width:100%;
-			}
 			.wsuwp_uc_project {
 				margin-top:0;
 				margin-bottom:0;
@@ -473,6 +470,10 @@ html {
 			margin-left:200px;
 			margin-top:75px;
 		}
+	}
+	/* Take uc lists 100% */
+	.wsuwp-uc-entities, .wsuwp-uc-people, .wsuwp-uc-projects, .wsuwp-uc-publications {
+		width:100%;
 	}
 	/* Take footer 100% */
 	.home, .single-wsuwp_uc_entity  {

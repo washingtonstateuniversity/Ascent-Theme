@@ -4,6 +4,7 @@ html {
   background-color: white !important;
   margin: 0;
   padding: 0;
+  /* Take uc lists 100% */
   /* Take footer 100% */
   /* End foot at 100% */ }
   html body {
@@ -309,8 +310,6 @@ html {
       display: inline-block; }
   html body.archive main .wsuwp_uc_entity:first-of-type {
     border-top: none; }
-  html body.archive main .wsuwp-uc-entities, html body.archive main .wsuwp-uc-people, html body.archive main .wsuwp-uc-projects, html body.archive main .wsuwp-uc-publications {
-    width: 100%; }
   html body.archive main .wsuwp_uc_project {
     margin-top: 0;
     margin-bottom: 0; }
@@ -356,6 +355,8 @@ html {
   html body.blog main {
     margin-left: 200px;
     margin-top: 75px; }
+  html .wsuwp-uc-entities, html .wsuwp-uc-people, html .wsuwp-uc-projects, html .wsuwp-uc-publications {
+    width: 100%; }
   html .home footer.main-foot, html .home footer.main-footer, html .single-wsuwp_uc_entity footer.main-foot, html .single-wsuwp_uc_entity footer.main-footer {
     text-align: center !important;
     width: 80%;

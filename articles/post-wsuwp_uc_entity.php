@@ -1,14 +1,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php if ( is_single() ) : ?>
-		<h1><?php the_title(); ?></h1>
-	<?php else : ?>
-		<p><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></p>
-	<?php endif; ?>
-
-	<?php if ( ! is_singular() ) : ?>
-		<div class="article-summary">
-			<?php
+<?php if ( ! is_singular() ) : ?>
+	<?php
 
 			if ( has_post_thumbnail() ) {
 				?><figure class="article-thumbnail"><?php the_post_thumbnail( array( 132, 132, true ) ); ?></figure><?php
@@ -20,7 +12,16 @@
 			}
 
 			?>
+		<div class="article-summary">
+			
 		</div><!-- .article-summary -->
+	<?php if ( is_single() ) : ?>
+		<h1><?php the_title(); ?></h1>
+	<?php else : ?>
+		<p><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></p>
+	<?php endif; ?>
+
+	
 	<?php else : ?>
 		<div class="article-body">
 			<?php the_content(); ?>

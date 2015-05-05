@@ -1,3 +1,4 @@
+<figure class="featured-image"></figure>
 <?php
 
 if ( is_post_type_archive( 'wsuwp_uc_entity' ) ) {
@@ -12,7 +13,7 @@ if ( is_post_type_archive( 'wsuwp_uc_entity' ) ) {
 	$archive_headline = '';
 }
 ?>
-<section class="row single gutter pad-ends">
+<section class="row single gutter pad-ends entity-section">
 	<div class="column one">
 		<header>
 			<h1><?php echo $archive_headline; ?></h1>

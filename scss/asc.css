@@ -278,6 +278,10 @@ html {
     float: left; }
   html body.single-wsuwp_uc_person .wsuwp-uc-entities h3, html body.single-wsuwp_uc .wsuwp-uc-entities h3 {
     display: none; }
+  html body.single-wsuwp_uc_person .pager, html body.single-wsuwp_uc .pager {
+    width: 64%;
+    float: right;
+    text-align: center; }
   html body.single-wsuwp_uc_entity #binder.fluid .row:not(.column):not(.rebound) {
     margin-top: 76px; }
   html body.single-wsuwp_uc_entity figure.featured-image {

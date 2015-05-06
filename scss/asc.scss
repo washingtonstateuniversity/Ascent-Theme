@@ -212,10 +212,10 @@ html {
 							margin-right:2em;
 							padding-bottom:5px;
 							padding-left:3em;
-						& .ascent-main-header {
-							font-weight:300;
-							font-size:75%;
-						}
+								& .ascent-main-header {
+									font-weight:300;
+									font-size:75%;
+								}
 						}
 				}
 			.type-page, .wsuwp_uc_project,.wsuwp_uc_entity {
@@ -354,13 +354,8 @@ html {
 				display:none;
 			}
 		}
-		.pager {
-			width:64%;
-			float:right;
-			text-align: center;
-		}
 	}
-	body.single-wsuwp_uc_entity {
+	body.single-wsuwp_uc_entity, body.single-wsuwp_uc_person {
 		#binder.fluid .row:not(.column):not(.rebound) {
 			margin-top:76px;
 		}
@@ -368,8 +363,8 @@ html {
 			&.featured-image {
 				background-size:contain;
 				position:absolute;
-				width:200px;
-				height: 200px;
+				width:300px;
+				height: 300px;
 				margin-left:130px;
 				margin-top:120px
 			}
@@ -390,14 +385,18 @@ html {
 					.article-thumbnail {
 						display:inline-block !important;
 						float:left;
-						width:150px;
-						margin-bottom:15px;
+						width:180px;
+						margin-bottom:18px;
+						margin-top:18px;
 						text-align: center;
+							img {
+								width:100%;
+							}
 					}
 					p { 
 						height:60px;
 						vertical-align: middle;
-						margin-left:8px;
+						margin-left:12px;
 						padding-top:15px;
 						display:inline-block;
 					}
@@ -476,12 +475,17 @@ html {
 			margin-top:75px;
 		}
 	}
+	#binder.fluid .row:not(.column):not(.rebound).pager {
+			width:64% !important;
+			float:right;
+			text-align: center;
+	}
 	/* Take uc lists 100% */
 	.wsuwp-uc-entities, .wsuwp-uc-people, .wsuwp-uc-projects, .wsuwp-uc-publications {
 		width:100%;
 	}
 	/* Take footer 100% */
-	.home, .single-wsuwp_uc_entity  {
+	.home, .single-wsuwp_uc_entity, .single-wsuwp_uc_person {
 		footer.main-foot, footer.main-footer {
 			text-align: center !important;
 			width:80%;

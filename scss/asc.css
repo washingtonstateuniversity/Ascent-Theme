@@ -278,17 +278,13 @@ html {
     float: left; }
   html body.single-wsuwp_uc_person .wsuwp-uc-entities h3, html body.single-wsuwp_uc .wsuwp-uc-entities h3 {
     display: none; }
-  html body.single-wsuwp_uc_person .pager, html body.single-wsuwp_uc .pager {
-    width: 64%;
-    float: right;
-    text-align: center; }
-  html body.single-wsuwp_uc_entity #binder.fluid .row:not(.column):not(.rebound) {
+  html body.single-wsuwp_uc_entity #binder.fluid .row:not(.column):not(.rebound), html body.single-wsuwp_uc_person #binder.fluid .row:not(.column):not(.rebound) {
     margin-top: 76px; }
-  html body.single-wsuwp_uc_entity figure.featured-image {
+  html body.single-wsuwp_uc_entity figure.featured-image, html body.single-wsuwp_uc_person figure.featured-image {
     background-size: contain;
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin-left: 130px;
     margin-top: 120px; }
   html body.archive main .row .column {
@@ -303,13 +299,16 @@ html {
     html body.archive main .wsuwp_uc_entity .article-thumbnail {
       display: inline-block !important;
       float: left;
-      width: 150px;
-      margin-bottom: 15px;
+      width: 180px;
+      margin-bottom: 18px;
+      margin-top: 18px;
       text-align: center; }
+      html body.archive main .wsuwp_uc_entity .article-thumbnail img {
+        width: 100%; }
     html body.archive main .wsuwp_uc_entity p {
       height: 60px;
       vertical-align: middle;
-      margin-left: 8px;
+      margin-left: 12px;
       padding-top: 15px;
       display: inline-block; }
   html body.archive main .wsuwp_uc_entity:first-of-type {
@@ -359,9 +358,13 @@ html {
   html body.blog main {
     margin-left: 200px;
     margin-top: 75px; }
+  html #binder.fluid .row:not(.column):not(.rebound).pager {
+    width: 64% !important;
+    float: right;
+    text-align: center; }
   html .wsuwp-uc-entities, html .wsuwp-uc-people, html .wsuwp-uc-projects, html .wsuwp-uc-publications {
     width: 100%; }
-  html .home footer.main-foot, html .home footer.main-footer, html .single-wsuwp_uc_entity footer.main-foot, html .single-wsuwp_uc_entity footer.main-footer {
+  html .home footer.main-foot, html .home footer.main-footer, html .single-wsuwp_uc_entity footer.main-foot, html .single-wsuwp_uc_entity footer.main-footer, html .single-wsuwp_uc_person footer.main-foot, html .single-wsuwp_uc_person footer.main-footer {
     text-align: center !important;
     width: 80%;
     margin-left: auto;

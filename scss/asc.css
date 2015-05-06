@@ -299,16 +299,14 @@ html {
     html body.archive main .wsuwp_uc_entity .article-thumbnail {
       display: inline-block !important;
       float: left;
-      width: 180px;
-      margin-bottom: 18px;
-      margin-top: 18px;
+      width: 150px;
+      margin: 18px;
       text-align: center; }
       html body.archive main .wsuwp_uc_entity .article-thumbnail img {
         width: 100%; }
     html body.archive main .wsuwp_uc_entity p {
       height: 60px;
       vertical-align: middle;
-      margin-left: 12px;
       padding-top: 15px;
       display: inline-block; }
   html body.archive main .wsuwp_uc_entity:first-of-type {

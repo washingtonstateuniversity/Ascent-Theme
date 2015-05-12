@@ -307,7 +307,8 @@ html {
     html body.archive main .wsuwp_uc_entity p {
       float: none;
       vertical-align: middle;
-      display: inline-block; }
+      display: inline-block;
+      max-width: 50%; }
     html body.archive main .wsuwp_uc_entity .article-summary {
       display: none;
       clear: none; }

@@ -24,6 +24,7 @@
 	
 	<?php else : ?>
 		<div class="article-body">
+			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'spine' ), 'after' => '</div>' ) ); ?>
 		</div>

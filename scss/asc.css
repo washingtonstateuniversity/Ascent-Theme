@@ -283,7 +283,7 @@ html {
   html body.single-wsuwp_uc_entity figure.featured-image, html body.single-wsuwp_uc_person figure.featured-image {
     background-size: contain;
     position: absolute;
-    width: 300px;
+    width: 200px;
     height: 300px;
     margin-left: 130px;
     margin-top: 120px; }
@@ -300,7 +300,7 @@ html {
       display: inline-block !important;
       float: left;
       width: 150px;
-      margin: 18px;
+      margin: 18px 18px 18px 0;
       text-align: center; }
       html body.archive main .wsuwp_uc_entity .article-thumbnail img {
         width: 100%; }
@@ -318,7 +318,7 @@ html {
       margin-top: 0;
       width: 100%;
       float: left; }
-  html body.archive main .article-thumbnail, html body.archive main .article-summary {
+  html body.archive main .article-thumbnail {
     display: none; }
   html body.archive main section.row.side-right .column.one {
     width: 100%; }
@@ -401,13 +401,12 @@ html {
 @media screen and (max-width: 791px) {
   html {
     /* body */ }
-    html body.single-wsuwp_uc_entity main .row:not(.boundless):not(.rebound) {
-      width: 100%;
+    html body.single-wsuwp_uc_entity main section.row:not(.boundless):not(.rebound) {
+      width: 100% !important;
       margin-top: 2em !important; }
     html body.single-wsuwp_uc_entity main figure.featured-image {
       height: 120px !important;
       width: 100% !important;
-      margin-left: 10% !important;
       margin-top: 1em !important;
       display: block; }
     html body nav.main-menu ul li a {
@@ -423,6 +422,8 @@ html {
       min-height: 100px !important;
       float: none;
       margin-left: 0px !important; }
+    html body #binder.fluid .row:not(.column):not(.rebound).pager {
+      width: 100% !important; }
     html body #binder.fluid main {
       margin-left: 0;
       margin-right: 0;
@@ -601,7 +602,11 @@ html {
 /* media */
 @media screen and (max-width: 1014px) {
   html body .main-menu {
-    font-size: 1em; } }
+    font-size: 1em; }
+  html body main .halves.gutter .column.one:not(.gutterless) {
+    padding-left: 0px; }
+  html body.single-wsuwp_uc_entity figure.featured-image {
+    margin-left: 80px; } }
 @media screen and (min-width: 2100px) {
   html body .main-menu {
     font-size: 1.5em; }

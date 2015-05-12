@@ -296,19 +296,21 @@ html {
     margin-right: 110px;
     border-top: 1px solid #EEEEEC;
     padding-top: 15px; }
-    html body.archive main .wsuwp_uc_entity .article-thumbnail {
+    html body.archive main .wsuwp_uc_entity figure.article-thumbnail {
       display: inline-block !important;
-      float: left;
+      vertical-align: middle;
+      float: none;
       width: 150px;
-      margin: 18px 18px 18px 0;
-      text-align: center; }
-      html body.archive main .wsuwp_uc_entity .article-thumbnail img {
+      margin: 18px 18px 18px 0; }
+      html body.archive main .wsuwp_uc_entity figure.article-thumbnail img {
         width: 100%; }
     html body.archive main .wsuwp_uc_entity p {
-      height: 60px;
+      float: none;
       vertical-align: middle;
-      padding-top: 15px;
       display: inline-block; }
+    html body.archive main .wsuwp_uc_entity .article-summary {
+      display: none;
+      clear: none; }
   html body.archive main .wsuwp_uc_entity:first-of-type {
     border-top: none; }
   html body.archive main .wsuwp_uc_project {
@@ -416,7 +418,7 @@ html {
     html body figure.featured-image {
       position: absolute !important;
       top: 0;
-      height: 300px !important;
+      height: 200px !important;
       display: block;
       width: 100% !important;
       min-height: 100px !important;
@@ -513,7 +515,7 @@ html {
     html body figure.featured-image {
       position: absolute !important;
       top: 0;
-      height: 300px !important;
+      height: 200px !important;
       display: block;
       width: 100% !important;
       min-height: 100px !important;

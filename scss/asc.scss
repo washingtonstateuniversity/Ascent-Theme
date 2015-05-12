@@ -382,21 +382,24 @@ html {
 				margin-right:110px;
 				border-top:1px solid $lightest-gray;
 				padding-top:15px;
-					.article-thumbnail {
+					figure.article-thumbnail {
 						display:inline-block !important;
-						float:left;
+						vertical-align:middle;
+						float:none;
 						width:150px;
 						margin:18px 18px 18px 0;
-						text-align: center;
 							img {
 								width:100%;
 							}
 					}
 					p { 
-						height:60px;
+						float:none;
 						vertical-align: middle;
-						padding-top:15px;
 						display:inline-block;
+					}
+					.article-summary {
+						display: none;
+						clear:none;
 					}
 			}
 			.wsuwp_uc_entity:first-of-type {
@@ -574,7 +577,7 @@ html {
 			figure.featured-image {
 				position:absolute !important;
 				top:0;
-				height:300px !important;
+				height:200px !important;
 				display: block;
 				width:100% !important;
 				min-height: 100px !important;
@@ -693,7 +696,7 @@ html {
 			figure.featured-image {
 				position:absolute !important;
 				top:0;
-				height:300px !important;
+				height:200px !important;
 				display: block;
 				width:100% !important;
 				min-height: 100px !important;

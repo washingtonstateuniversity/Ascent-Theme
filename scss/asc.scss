@@ -47,8 +47,10 @@ html {
 	background-color:white !important;
 	margin:0;
 	padding:0;
-	
 	body {
+		#binder:not(.fluid).max-1188 .row {
+			max-width:1188px;
+		}
 		margin:0;
 		padding:0;
 		height:100%;
@@ -218,12 +220,16 @@ html {
 								}
 						}
 				}
-			.type-page, .wsuwp_uc_project,.wsuwp_uc_entity {
+			.type-page, .wsuwp_uc_project,.wsuwp_uc_entity, .single-people-section {
 				width:50%;
 				@include body-styles;
 			}
-			.wsuwp_uc_project {
+			.wsuwp_uc_project  {
 				margin-right:120px;
+			}
+			.single-people-section {
+				margin-right:0;
+				width:80%;
 			}
 			.post, .wsuwp_uc_project, .wsuwp_uc_publication, .wsuwp_uc_person, .wsuwp_uc_entity, #tribe-events-pg-template {
 					.tribe-events-calendar {
@@ -333,7 +339,7 @@ html {
 			width:100%;
 			margin-top:47px;
 				.logo-container {
-					margin-top:70px;
+					margin-top:60px;
 					width:500px;
 					margin-left:auto;
 					margin-right:auto;
@@ -369,6 +375,11 @@ html {
 				margin-top:120px
 			}
 		}
+	}
+	body.single-wsuwp_uc_person {
+		#binder.fluid .row:not(.column):not(.rebound).pager {
+				width:100% !important;
+			}	
 	}
 	body.archive {
 		main {	

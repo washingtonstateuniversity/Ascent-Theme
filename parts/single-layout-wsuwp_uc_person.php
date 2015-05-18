@@ -1,4 +1,6 @@
+<figure class="featured-image"></figure>
 <?php while ( have_posts() ) : the_post(); ?>
+<article class="single-people-section">
 <section class="row halves gutter pad-ends">
 	<div class="column two">
 		<?php if ( function_exists( 'wsuwp_uc_get_meta' ) ) {
@@ -34,4 +36,5 @@
 	</div><!--/column-->
 
 </section>
+</article>
 <?php endwhile;

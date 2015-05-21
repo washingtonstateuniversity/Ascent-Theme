@@ -1,8 +1,8 @@
-<figure class="featured-image"></figure>
+<figure class="featured-image">sdsds</figure>
 <?php
 
 if ( is_post_type_archive( 'wsuwp_uc_entity' ) ) {
-	$archive_headline = 'University Partners';
+	$archive_headline = 'Universities';
 } elseif ( is_post_type_archive( 'wsuwp_uc_person' ) ) {
 	$archive_headline = 'Members';
 } elseif ( is_post_type_archive( 'wsuwp_uc_project' ) ) {

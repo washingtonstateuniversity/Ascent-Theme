@@ -4,10 +4,12 @@ html {
   background-color: white !important;
   margin: 0;
   padding: 0;
+  height: 100%;
   /* Take uc lists 100% */
   /* Take footer 100% */
   /* End foot at 100% */ }
   html body {
+    height: 100%;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -89,10 +91,12 @@ html {
             html body .main-menu ul li li a {
               padding: 14px; }
     html body main {
+      overflow: auto;
+      padding-bottom: 200px;
       margin-left: auto;
       margin-right: auto;
       margin-top: 47px;
-      margin-bottom: 3em; }
+      margin-bottom: 0; }
       html body main a {
         color: #0094ca;
         text-decoration: underline; }
@@ -151,7 +155,7 @@ html {
         background-color: transparent;
         height: 72px;
         text-align: right;
-        margin-top: 3em;
+        margin-top: 6em;
         position: absolute;
         right: 0; }
         html body main header.main-header h1 {
@@ -222,6 +226,9 @@ html {
       html body main .post .wsuwp-uc-entities, html body main .post .wsuwp-uc-people, html body main .wsuwp_uc_project .wsuwp-uc-entities, html body main .wsuwp_uc_project .wsuwp-uc-people, html body main .wsuwp_uc_publication .wsuwp-uc-entities, html body main .wsuwp_uc_publication .wsuwp-uc-people, html body main .wsuwp_uc_person .wsuwp-uc-entities, html body main .wsuwp_uc_person .wsuwp-uc-people, html body main .wsuwp_uc_entity .wsuwp-uc-entities, html body main .wsuwp_uc_entity .wsuwp-uc-people, html body main #tribe-events-pg-template .wsuwp-uc-entities, html body main #tribe-events-pg-template .wsuwp-uc-people {
         width: 100%; }
     html body footer.main-foot {
+      height: 100px;
+      margin-top: -100px;
+      clear: both;
       text-align: right !important;
       display: block;
       margin-bottom: 0;
@@ -229,7 +236,6 @@ html {
       width: 60%;
       padding-top: 1em;
       padding-left: 5%;
-      margin-top: 2em;
       border-top: 1px solid #EEEEEC;
       text-align: center;
       float: right; }
@@ -268,16 +274,18 @@ html {
       margin-top: 0; }
   html body.home .videobg {
     display: block;
-    width: 100%;
-    margin-top: 47px; }
-    html body.home .videobg .logo-container {
-      margin-top: 60px;
-      width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center; }
-      html body.home .videobg .logo-container img {
-        width: 100%; }
+    width: 100%; }
+    html body.home .videobg .videoBG_wrapper {
+      width: 100% !important;
+      padding-top: 8%; }
+      html body.home .videobg .videoBG_wrapper .banner-container .logo-container {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding-top: 4%; }
+        html body.home .videobg .videoBG_wrapper .banner-container .logo-container img {
+          width: 100%; }
   html body.home div.page {
     width: 100%;
     float: left; }
@@ -297,7 +305,7 @@ html {
   html body.archive main .row .column {
     float: right;
     width: 100%;
-    padding-left: 4rem !important; }
+    margin-left: 4rem; }
   html body.archive main .wsuwp_uc_entity {
     margin-top: 0;
     margin-right: 110px;
@@ -405,6 +413,10 @@ html {
         border-top: 1px solid #EEEEEC;
         padding-top: 1em;
         padding-bottom: 1em; }
+    html body #binder.fluid main {
+      margin-top: 18em !important; }
+    html body .wsuwp_uc_project {
+      margin-top: 0 !important; }
 
   /* html */ }
 /* media */
@@ -437,15 +449,20 @@ html {
     html body #binder.fluid main {
       margin-left: 0;
       margin-right: 0;
-      margin-top: 20em; }
+      margin-top: 18em; }
       html body #binder.fluid main header.main-header {
         position: relative; }
         html body #binder.fluid main header.main-header h1 .ascent-main-header {
           font-weight: 300;
           font-size: 75%; }
+    html .single-wsuwp_uc_project main section:first-of-type {
+      margin-top: 0 !important; }
 
   /* html */ }
 /* media */
+@media screen and (max-width: 989px) and (min-width: 791px) {
+  html body.archive section:first-of-type {
+    margin-top: 120px; } }
 @media screen and (max-width: 989px) {
   html {
     /* body */ }
@@ -538,7 +555,7 @@ html {
     html body.home #binder.fluid main {
       margin-top: 3em; }
     html body.tax-wsuwp_uc_entity_type section header {
-      margin-top: 90px !important; }
+      margin-top: 0px !important; }
     html body.archive main header.main-header {
       margin-top: 0px; }
     html body.archive main section header {
@@ -547,24 +564,26 @@ html {
       margin-top: 0px; }
       html body.archive main section header h1 {
         margin-left: 0 !important; }
+    html body.archive main .row .column {
+      margin-left: 0; }
     html body.archive .wsuwp_uc_entity {
       float: none;
       width: 100%;
+      height: 180px;
       margin-top: 0;
       margin-right: 110px;
       border-top: 1px solid #EEEEEC;
       padding-top: 15px; }
-      html body.archive .wsuwp_uc_entity .article-thumbnail {
+      html body.archive .wsuwp_uc_entity figure.article-thumbnail {
         display: inline-block !important;
         float: left;
-        width: 150px;
+        width: 100px !important;
         margin-bottom: 15px;
         text-align: center; }
       html body.archive .wsuwp_uc_entity p {
-        height: 60px;
         vertical-align: middle;
         margin-left: 8px;
-        padding-top: 15px;
+        padding-top: 0px;
         display: inline-block; }
     html body.archive .wsuwp_uc_entity:first-of-type {
       border-top: none; }
@@ -590,19 +609,30 @@ html {
             margin-top: 0 !important;
             float: none;
             width: 100% !important; }
-    html body .page, html body .wsuwp_uc_project {
+    html body .page {
       float: none;
       width: 100% !important;
       margin: 0 !important; }
-      html body .page header.article-header hgroup .ascent-num-box, html body .wsuwp_uc_project header.article-header hgroup .ascent-num-box {
+      html body .page header.article-header hgroup .ascent-num-box {
+        margin-top: 0px !important; }
+    html body .wsuwp_uc_project {
+      float: none;
+      width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      margin-bottom: 0 !important; }
+      html body .wsuwp_uc_project header.article-header hgroup .ascent-num-box {
         margin-top: 0px !important; }
     html body #binder.fluid main {
       margin-left: 0;
       margin-right: 0;
-      margin-top: 24em; }
+      margin-top: 18em; }
+    html body .halves.gutter .column.one:not(.gutterless) {
+      padding-left: 2rem !important; }
     html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
       margin-left: 0 !important; }
     html body footer.main-foot {
+      height: 100%;
       width: 100%;
       float: left;
       text-align: center !important;
@@ -610,6 +640,11 @@ html {
 
   /* html */ }
 /* media */
+@media screen and (max-width: 791px) and (min-width: 491px) {
+  html body .wsuwp_uc_project {
+    margin-top: 0 !important; }
+  html #binder.fluid main {
+    margin-top: 18em !important; } }
 @media screen and (max-width: 1014px) {
   html body .main-menu {
     font-size: 1em; }
@@ -617,16 +652,26 @@ html {
     padding-left: 0px; }
   html body.single-wsuwp_uc_entity figure.featured-image {
     margin-left: 80px; } }
+@media screen and (min-width: 1800px) {
+  html body #binder.fluid.max-1980 main .wsuwp_uc_project, html body #binder.fluid.max-1980 main .wsuwp_uc_entity {
+    margin-right: 10px !important; }
+  html body.archive main section header {
+    margin-right: 10px; } }
 @media screen and (min-width: 2100px) {
   html body .main-menu {
     font-size: 1.5em; }
   html body .fluid .row.single .column {
     width: 50%;
     float: right; }
+  html body #binder.fluid .row:not(.column):not(.rebound) {
+    width: 100%; }
   html body #binder.fluid.max-1980 {
     max-width: 3000px; }
+    html body #binder.fluid.max-1980 .row {
+      max-width: 3000px; }
     html body #binder.fluid.max-1980 main .wsuwp_uc_project, html body #binder.fluid.max-1980 main .wsuwp_uc_entity {
-      margin-right: -120px;
-      width: 100%; } }
+      margin-right: 10px;
+      width: 50%;
+      float: right; } }
 
 /*# sourceMappingURL=asc.css.map */

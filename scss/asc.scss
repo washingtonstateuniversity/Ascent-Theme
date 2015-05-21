@@ -47,7 +47,9 @@ html {
 	background-color:white !important;
 	margin:0;
 	padding:0;
+	height:100%;
 	body {
+		height:100%;
 		#binder:not(.fluid).max-1188 .row {
 			max-width:1188px;
 		}
@@ -144,10 +146,12 @@ html {
 				}
 			}
 		main {
+			overflow: auto;
+			padding-bottom:200px;
 			margin-left:auto;
 			margin-right:auto;
 			margin-top:47px;
-			margin-bottom:3em;
+			margin-bottom:0;
 				a {
 					color:$brand;
 					text-decoration: underline;
@@ -202,7 +206,7 @@ html {
 					background-color:transparent;
 					height:72px;
 					text-align:right;
-					margin-top:3em;
+					margin-top:6em;
 					position:absolute;
 					right:0;
 						& h1 {
@@ -270,6 +274,9 @@ html {
 			}
 		}
 		footer.main-foot {	
+			height:100px;
+			margin-top:-100px;
+			clear: both;
 			text-align:right !important;
 			display:block;
 			margin-bottom:0;
@@ -277,7 +284,6 @@ html {
 			width:60%;
 			padding-top:1em;
 			padding-left:5%;
-			margin-top:2em;
 			border-top:1px solid $lightest-gray;
 			text-align: center;
 			float:right;
@@ -337,17 +343,22 @@ html {
 		.videobg {
 			display:block;
 			width:100%;
-			margin-top:47px;
-				.logo-container {
-					margin-top:60px;
-					width:500px;
-					margin-left:auto;
-					margin-right:auto;
-					text-align: center;
-						img {
-							width:100%;
-						}
+			.videoBG_wrapper {
+				width:100% !important;
+				padding-top:8%;
+				.banner-container {
+					.logo-container {
+						width:400px;
+						margin-left:auto;
+						margin-right:auto;
+						text-align: center;
+						padding-top:4%;
+							img {
+								width:100%;
+							}
+					}
 				}
+			}
 		}
 		div.page {
 			width:100%;
@@ -386,7 +397,7 @@ html {
 			.row .column {
 				float:right;
 				width:100%;
-				padding-left:4rem !important;
+				margin-left:4rem;
 			}	
 			.wsuwp_uc_entity {
 				margin-top:0;
@@ -555,6 +566,12 @@ html {
 		 				}
 		 			}
 			}
+			#binder.fluid main {
+				margin-top:18em !important;
+			}
+			.wsuwp_uc_project {
+				margin-top:0 !important;
+			}
 		} /* body */
 	} /* html */
 } /* media */
@@ -602,7 +619,7 @@ html {
 			#binder.fluid main {
 				margin-left:0;
 				margin-right:0;
-				margin-top:20em;
+				margin-top:18em;
 					header.main-header {
 						position:relative;
 							& h1 {
@@ -612,10 +629,28 @@ html {
 								}
 							}
 					}
+
 			}
+
 		} /* body */
+		.single-wsuwp_uc_project {
+			main {
+				section:first-of-type {
+					margin-top:0 !important;
+				}
+			}
+		}
 	} /* html */
 } /* media */
+@media screen and (max-width:989px) and (min-width:791px) { 
+	html {
+		body.archive {
+			section:first-of-type {
+				margin-top:120px;
+			}
+		}
+	}
+}
 @media screen and (max-width : 989px) {
 	html {
 		body {
@@ -745,7 +780,7 @@ html {
 			&.tax-wsuwp_uc_entity_type {
 				section {
 		 				header {
-		 					margin-top:90px !important;
+		 					margin-top:0px !important;
 		 				}
 		 			}
 			}
@@ -764,26 +799,30 @@ html {
 		 						}
 		 				}
 		 			}
+					.row .column {
+						margin-left:0;
+					}
+
 		 		}
 				.wsuwp_uc_entity {
 					float:none;
 					width:100%;
+					height:180px;
 					margin-top:0;
 					margin-right:110px;
 					border-top:1px solid $lightest-gray;
 					padding-top:15px;
-						.article-thumbnail {
+						figure.article-thumbnail {
 							display:inline-block !important;
 							float:left;
-							width:150px;
+							width:100px !important;
 							margin-bottom:15px;
 							text-align: center;
 						}
 						p { 
-							height:60px;
 							vertical-align: middle;
 							margin-left:8px;
-							padding-top:15px;
+							padding-top:0px;
 							display:inline-block;
 						}
 				}
@@ -825,7 +864,7 @@ html {
 						}
 				}
 			}
-			.page, .wsuwp_uc_project {
+			.page {
 				float:none;
 				width:100% !important;
 				margin:0 !important;
@@ -833,15 +872,29 @@ html {
 						margin-top:0px !important;
 					}
 			}
+			.wsuwp_uc_project {
+				float:none;
+				width:100% !important;
+				margin-left:0 !important;
+				margin-right:0 !important;
+				margin-bottom:0 !important;
+					header.article-header hgroup .ascent-num-box {
+						margin-top:0px !important;
+					}
+			}
 			#binder.fluid main {
 				margin-left:0;
 				margin-right:0;
-				margin-top:24em;
+				margin-top:18em;
+			}
+			.halves.gutter .column.one:not(.gutterless) {
+				padding-left:2rem !important;
 			}
 			.post,.wsuwp_uc_project, .wsuwp_uc_publication, .wsuwp_uc_person, .wsuwp_uc_entity, #tribe-events-pg-template {
 				margin-left:0 !important;
 			}
 			footer.main-foot {
+				height:100%;
 				width:100%;
 				float:left;
 				text-align:center !important;
@@ -850,6 +903,18 @@ html {
 		} /* body */
 	}	/* html */						
 } /* media */
+@media screen and (max-width:791px) and (min-width:491px) {
+	html {
+		body {
+			.wsuwp_uc_project {
+				margin-top:0 !important;
+			}
+		}
+		#binder.fluid main {
+				margin-top:18em !important;
+			}
+	}
+} 
 @media screen and (max-width: 1014px) {
 	html {
 		body {
@@ -869,6 +934,28 @@ html {
 		}
 	}
 }
+@media screen and (min-width : 1800px) {
+	html {
+		body {
+			#binder.fluid.max-1980 {
+				main {
+					.wsuwp_uc_project,.wsuwp_uc_entity {
+						margin-right:10px !important;
+					}
+				}
+			}	
+		}
+		body.archive {
+			main {
+				section {
+					header {
+						margin-right:10px;
+					}
+				}
+			}
+		}
+	}
+}
 @media screen and (min-width : 2100px) {
 	html {
 		body {
@@ -879,12 +966,19 @@ html {
 				width:50%;
 				float:right;
 			}
+			#binder.fluid .row:not(.column):not(.rebound) {
+				width:100%;
+			}
 			#binder.fluid.max-1980 {
 				max-width:3000px;
+				.row {
+					max-width:3000px;
+				}
 					main {
 						.wsuwp_uc_project,.wsuwp_uc_entity{
-							margin-right:-120px;
-							width:100%;
+							margin-right:10px;
+							width:50%;
+							float:right;
 						}
 					}
 			}	

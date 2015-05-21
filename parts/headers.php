@@ -1,6 +1,6 @@
 <?php
 if ( is_post_type_archive( 'wsuwp_uc_entity' ) ) {
-	$header_headline = 'University Partners';
+	$header_headline = 'Universities';
 } elseif ( is_post_type_archive( 'wsuwp_uc_person' ) ) {
 	$header_headline = 'Members';
 } elseif ( is_post_type_archive( 'wsuwp_uc_project' ) || is_singular( 'wsuwp_uc_project' ) ) {

@@ -350,18 +350,18 @@ html {
 				 	margin-left:auto;
 				 	margin-right:auto;
 				 	text-align: center;
-				 	background:url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;
+				 	background:url(/wp-content/uploads/sites/192/2015/01/ascent-logo.png) no-repeat center center;
 				 	background-size:contain;
-				 	top:calc(-66% * 1.5);
+				 	top:calc(50% - 175px);
 				 }
-		}
-		.videoBG {
-			width:100% !important;
 		}
 		.videobg {
 			.videoBG_wrapper {
 				width:100% !important;
-				padding-top:66%;		
+			
+			}
+			.videoBG {
+				width:100% !important;
 			}
 		}
 		div.page {

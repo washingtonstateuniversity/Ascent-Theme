@@ -2,12 +2,9 @@
 <?php if( is_front_page() ) { ?>
 	<div id="videobg" class="videobg">
 		<div class="banner-container">
-			<div class="logo-container">
-				<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/ascent-logo-full.png' ); ?>" >
+			<div class="logo-hp-container">
+			
 			</div>
-			<?php if ( $cob_page_headline = swwrc_get_page_headline() ) : ?>
-				<h1><?php echo wp_kses_post( $cob_page_headline ); ?></h1>
-			<?php endif; ?>
 		</div>
 	</div>
 	<script type='text/javascript'>

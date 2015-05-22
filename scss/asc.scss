@@ -338,26 +338,30 @@ html {
 			margin-right:auto;
 				main {
 					margin-top:0;	
-				}	
+				}
+				
+		}
+		.banner-container {
+			position:relative;
+				.logo-hp-container {
+					position:absolute;
+				 	height:60%;
+				 	width:100%;
+				 	margin-left:auto;
+				 	margin-right:auto;
+				 	text-align: center;
+				 	background:url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;
+				 	background-size:contain;
+				 	top:calc(-66% * 1.5);
+				 }
+		}
+		.videoBG {
+			width:100% !important;
 		}
 		.videobg {
-			display:block;
-			width:100%;
 			.videoBG_wrapper {
 				width:100% !important;
-				padding-top:8%;
-				.banner-container {
-					.logo-container {
-						width:400px;
-						margin-left:auto;
-						margin-right:auto;
-						text-align: center;
-						padding-top:4%;
-							img {
-								width:100%;
-							}
-					}
-				}
+				padding-top:66%;		
 			}
 		}
 		div.page {

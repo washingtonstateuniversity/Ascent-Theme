@@ -9,6 +9,7 @@
 	$(document).ready(function() {
 		var menuul = $('.main-menu ul');
 		var newHeight = ( $(window).height() *.6 ) + "px";
+		
 		$(".banner-container").css("height", newHeight);
 
 		if ( 0 < $('.home').length ) {

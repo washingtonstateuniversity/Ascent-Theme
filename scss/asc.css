@@ -272,20 +272,23 @@ html {
     margin-right: auto; }
     html body.home #binder.fluid.max-1980 .row main {
       margin-top: 0; }
-  html body.home .videobg {
-    display: block;
-    width: 100%; }
-    html body.home .videobg .videoBG_wrapper {
-      width: 100% !important;
-      padding-top: 8%; }
-      html body.home .videobg .videoBG_wrapper .banner-container .logo-container {
-        width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        padding-top: 4%; }
-        html body.home .videobg .videoBG_wrapper .banner-container .logo-container img {
-          width: 100%; }
+  html body.home .banner-container {
+    position: relative; }
+    html body.home .banner-container .logo-hp-container {
+      position: absolute;
+      height: 60%;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      background: url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;
+      background-size: contain;
+      top: calc(-66% * 1.5); }
+  html body.home .videoBG {
+    width: 100% !important; }
+  html body.home .videobg .videoBG_wrapper {
+    width: 100% !important;
+    padding-top: 66%; }
   html body.home div.page {
     width: 100%;
     float: left; }

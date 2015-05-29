@@ -266,12 +266,12 @@ html {
       display: inline-block;
       font-size: 4em;
       color: #CBCBCB; }
+  html body.home main {
+    margin-top: 0 !important; }
   html body.home #binder.fluid.max-1980 .row {
     max-width: 918px;
     margin-left: auto;
     margin-right: auto; }
-    html body.home #binder.fluid.max-1980 .row main {
-      margin-top: 0; }
   html body.home .banner-container {
     position: relative; }
     html body.home .banner-container .logo-hp-container {
@@ -281,6 +281,7 @@ html {
       margin-left: auto;
       margin-right: auto;
       text-align: center;
+      /*background:url(/wp-content/uploads/sites/4/2015/04/ascent-logo-full.png) no-repeat center center;*/
       background: url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;
       background-size: contain;
       top: calc(50% - 175px); }
@@ -376,13 +377,18 @@ html {
   html body.blog main {
     margin-left: 200px;
     margin-top: 75px; }
+  html body.error404 #binder.fluid.max-1980 .row {
+    margin-top: 85px;
+    max-width: 918px;
+    margin-left: auto;
+    margin-right: auto; }
   html #binder.fluid .row:not(.column):not(.rebound).pager {
     width: 62% !important;
     float: right;
     text-align: center; }
   html .wsuwp-uc-entities, html .wsuwp-uc-people, html .wsuwp-uc-projects, html .wsuwp-uc-publications {
     width: 100%; }
-  html .home footer.main-foot, html .home footer.main-footer, html .single-wsuwp_uc_entity footer.main-foot, html .single-wsuwp_uc_entity footer.main-footer, html .single-wsuwp_uc_person footer.main-foot, html .single-wsuwp_uc_person footer.main-footer {
+  html .home footer.main-foot, html .home footer.main-footer, html .single-wsuwp_uc_entity footer.main-foot, html .single-wsuwp_uc_entity footer.main-footer, html .single-wsuwp_uc_person footer.main-foot, html .single-wsuwp_uc_person footer.main-footer, html .error404 footer.main-foot, html .error404 footer.main-footer {
     text-align: center !important;
     width: 80%;
     margin-left: auto;
@@ -415,10 +421,8 @@ html {
         border-top: 1px solid #EEEEEC;
         padding-top: 1em;
         padding-bottom: 1em; }
-    html body #binder.fluid main {
-      margin-top: 18em !important; }
     html body .wsuwp_uc_project {
-      margin-top: 0 !important; }
+      margin-top: 20px !important; }
 
   /* html */ }
 /* media */
@@ -450,15 +454,16 @@ html {
       width: 100% !important; }
     html body #binder.fluid main {
       margin-left: 0;
-      margin-right: 0;
-      margin-top: 18em; }
+      margin-right: 0; }
       html body #binder.fluid main header.main-header {
         position: relative; }
         html body #binder.fluid main header.main-header h1 .ascent-main-header {
           font-weight: 300;
           font-size: 75%; }
-    html .single-wsuwp_uc_project main section:first-of-type {
+    html body.single-wsuwp_uc_project main section:first-of-type {
       margin-top: 0 !important; }
+    html body.home #binder.fluid main {
+      margin-top: 4em !important; }
 
   /* html */ }
 /* media */
@@ -550,6 +555,8 @@ html {
       margin-left: 0px !important; }
     html body.tax-wsuwp_uc_topics main header.article-header hgroup .ascent-num-box, html body.post-type-archive-wsuwp_uc_project main header.article-header hgroup .ascent-num-box {
       margin-top: 1em; }
+    html body.post-type-archive main header.main-header, html body.single-wsuwp_uc_person main header.main-header, html body.single-wsuwp_uc_project main header.main-header {
+      margin-top: 0; }
     html body.post-type-archive main h1, html body.single-wsuwp_uc_person main h1, html body.single-wsuwp_uc_project main h1 {
       margin-left: 0px; }
     html body.post-type-archive main h2.ascent-num, html body.single-wsuwp_uc_person main h2.ascent-num, html body.single-wsuwp_uc_project main h2.ascent-num {
@@ -663,7 +670,7 @@ html {
   html body .main-menu {
     font-size: 1.5em; }
   html body .fluid .row.single .column {
-    width: 50%;
+    width: 100%;
     float: right; }
   html body #binder.fluid .row:not(.column):not(.rebound) {
     width: 100%; }

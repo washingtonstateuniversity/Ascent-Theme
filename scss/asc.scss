@@ -332,13 +332,13 @@ html {
 		}
 	}
 	body.home {
+		main {
+			margin-top:0 !important;	
+		}
 		#binder.fluid.max-1980 .row {
 			max-width:918px;
 			margin-left:auto;
 			margin-right:auto;
-				main {
-					margin-top:0;	
-				}
 				
 		}
 		.banner-container {
@@ -350,6 +350,7 @@ html {
 				 	margin-left:auto;
 				 	margin-right:auto;
 				 	text-align: center;
+				 	/*background:url(/wp-content/uploads/sites/4/2015/04/ascent-logo-full.png) no-repeat center center;*/
 				 	background:url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;
 				 	background-size:contain;
 				 	top:calc(50% - 175px);
@@ -503,6 +504,16 @@ html {
 			margin-top:75px;
 		}
 	}
+	body.error404 {
+
+		#binder.fluid.max-1980 .row {
+			margin-top:85px;
+			max-width:918px;
+			margin-left:auto;
+			margin-right:auto;
+				
+		}
+	}
 	#binder.fluid .row:not(.column):not(.rebound).pager {
 			width:62% !important;
 			float:right;
@@ -513,7 +524,7 @@ html {
 		width:100%;
 	}
 	/* Take footer 100% */
-	.home, .single-wsuwp_uc_entity, .single-wsuwp_uc_person {
+	.home, .single-wsuwp_uc_entity, .single-wsuwp_uc_person, .error404 {
 		footer.main-foot, footer.main-footer {
 			text-align: center !important;
 			width:80%;
@@ -570,11 +581,8 @@ html {
 		 				}
 		 			}
 			}
-			#binder.fluid main {
-				margin-top:18em !important;
-			}
 			.wsuwp_uc_project {
-				margin-top:0 !important;
+				margin-top:20px !important;
 			}
 		} /* body */
 	} /* html */
@@ -623,7 +631,6 @@ html {
 			#binder.fluid main {
 				margin-left:0;
 				margin-right:0;
-				margin-top:18em;
 					header.main-header {
 						position:relative;
 							& h1 {
@@ -637,10 +644,17 @@ html {
 			}
 
 		} /* body */
-		.single-wsuwp_uc_project {
+		body.single-wsuwp_uc_project {
 			main {
 				section:first-of-type {
 					margin-top:0 !important;
+				}
+			}
+		}
+		body.home {
+			#binder.fluid {
+				main {
+					margin-top:4em !important;
 				}
 			}
 		}
@@ -768,6 +782,9 @@ html {
 			}
 			&.post-type-archive, &.single-wsuwp_uc_person, &.single-wsuwp_uc_project {
 				main {
+					header.main-header {
+						margin-top:0;
+					}
 					h1 {
 						margin-left:0px;
 					}
@@ -967,7 +984,7 @@ html {
 				font-size:1.5em;		
 			}
 			.fluid .row.single .column {
-				width:50%;
+				width:100%;
 				float:right;
 			}
 			#binder.fluid .row:not(.column):not(.rebound) {

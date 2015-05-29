@@ -3,7 +3,7 @@
 	<?php
 
 			if ( has_post_thumbnail() ) {
-				?><figure class="article-thumbnail"><?php the_post_thumbnail( array( 132, 132, true ) ); ?></figure><?php
+				?><figure class="article-thumbnail"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( array( 132, 132, true ) ); ?></a></figure><?php
 			}
 
 			// If a manual excerpt is available, display this. Otherwise, only the most basic information is needed.

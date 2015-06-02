@@ -2,12 +2,12 @@
 
 class Ascent_UC_Project {
 	/**
-	 * @var string Slug for tracking the assignment of FAA Advisors to projects.
+	 * @var string Slug for tracking the assignment of FAA Advisers to projects.
 	 */
 	var $advisor_content_slug = 'faa_advisors';
 
 	/**
-	 * @var string Slug for tracking the assigment of project leads to projects.
+	 * @var string Slug for tracking the assignment of project leads to projects.
 	 */
 	var $project_lead_content_slug = 'project_leads';
 
@@ -23,6 +23,7 @@ class Ascent_UC_Project {
 		add_action( 'manage_wsuwp_uc_project_posts_custom_column', array( $this, 'manage_project_posts_custom_column' ), 10, 2 );
 		add_action( 'manage_edit-wsuwp_uc_project_sortable_columns', array( $this, 'sort_columns' ), 10, 1 );
 		add_filter( 'request', array( $this, 'sort_project_number' ) );
+		add_filter( 'wsuwp_uc_people_to_add_to_content', array( $this, 'modify_content_people' ), 10, 2 );
 		add_filter( 'the_content', array( $this, 'add_content' ), 998, 1 );
 	}
 
@@ -239,6 +240,30 @@ class Ascent_UC_Project {
 	}
 
 	/**
+	 * Ensure FAA Advisers and Project Leads are not double listed as people in generated content.
+	 *
+	 * @param array $people  List of current people assigned to the project.
+	 * @param int   $post_id ID of the post (project) being modified.
+	 *
+	 * @return array Modified list of current people assigned to the project.
+	 */
+	public function modify_content_people( $people, $post_id ) {
+		if ( is_singular( wsuwp_uc_get_object_type_slug( 'project' ) ) ) {
+			$faa_advisors = wsuwp_uc_get_object_objects( $post_id, $this->advisor_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
+			$leads = wsuwp_uc_get_object_objects( $post_id, $this->project_lead_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
+			foreach( $faa_advisors as $k => $v ) {
+				unset( $people[ $k ] );
+			}
+
+			foreach( $leads as $k => $v ) {
+				unset( $people[ $k ] );
+			}
+		}
+
+		return $people;
+	}
+
+	/**
 	 * Add FAA Advisers and Project Leads to project content.
 	 *
 	 * @param string $content Current object content.
@@ -276,12 +301,19 @@ class Ascent_UC_Project {
 }
 $ascent_uc_project = new Ascent_UC_Project();
 
+/**
+ * Retrieve the project number associated with a project.
+ *
+ * @param int $post_id
+ *
+ * @return string
+ */
 function ascent_get_project_number( $post_id = 0 ) {
 	global $ascent_uc_project;
 
 	if ( 0 === $post_id ) {
 		$post_id = get_the_ID();
 	}
-	return $ascent_uc_project->get_project_number( $post_id );
 
+	return $ascent_uc_project->get_project_number( $post_id );
 }

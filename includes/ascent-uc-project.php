@@ -23,6 +23,7 @@ class Ascent_UC_Project {
 		add_action( 'manage_wsuwp_uc_project_posts_custom_column', array( $this, 'manage_project_posts_custom_column' ), 10, 2 );
 		add_action( 'manage_edit-wsuwp_uc_project_sortable_columns', array( $this, 'sort_columns' ), 10, 1 );
 		add_filter( 'request', array( $this, 'sort_project_number' ) );
+		add_filter( 'wsuwp_uc_people_to_add_to_content', array( $this, 'modify_content_people' ), 10, 2 );
 		add_filter( 'the_content', array( $this, 'add_content' ), 998, 1 );
 	}
 
@@ -236,6 +237,30 @@ class Ascent_UC_Project {
 	public function get_project_number( $post_id ) {
 		$project_number = get_post_meta( $post_id, '_ascent_uc_project_number', true );
 		return $project_number;
+	}
+
+	/**
+	 * Ensure FAA Advisers and Project Leads are not double listed as people in generated content.
+	 *
+	 * @param array $people  List of current people assigned to the project.
+	 * @param int   $post_id ID of the post (project) being modified.
+	 *
+	 * @return array Modified list of current people assigned to the project.
+	 */
+	public function modify_content_people( $people, $post_id ) {
+		if ( is_singular( wsuwp_uc_get_object_type_slug( 'project' ) ) ) {
+			$faa_advisors = wsuwp_uc_get_object_objects( $post_id, $this->advisor_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
+			$leads = wsuwp_uc_get_object_objects( $post_id, $this->project_lead_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
+			foreach( $faa_advisors as $k => $v ) {
+				unset( $people[ $k ] );
+			}
+
+			foreach( $leads as $k => $v ) {
+				unset( $people[ $k ] );
+			}
+		}
+
+		return $people;
 	}
 
 	/**

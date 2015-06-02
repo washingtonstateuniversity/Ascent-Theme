@@ -2,12 +2,12 @@
 
 class Ascent_UC_Project {
 	/**
-	 * @var string Slug for tracking the assignment of FAA Advisors to projects.
+	 * @var string Slug for tracking the assignment of FAA Advisers to projects.
 	 */
 	var $advisor_content_slug = 'faa_advisors';
 
 	/**
-	 * @var string Slug for tracking the assigment of project leads to projects.
+	 * @var string Slug for tracking the assignment of project leads to projects.
 	 */
 	var $project_lead_content_slug = 'project_leads';
 

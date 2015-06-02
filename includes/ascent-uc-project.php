@@ -301,12 +301,19 @@ class Ascent_UC_Project {
 }
 $ascent_uc_project = new Ascent_UC_Project();
 
+/**
+ * Retrieve the project number associated with a project.
+ *
+ * @param int $post_id
+ *
+ * @return string
+ */
 function ascent_get_project_number( $post_id = 0 ) {
 	global $ascent_uc_project;
 
 	if ( 0 === $post_id ) {
 		$post_id = get_the_ID();
 	}
-	return $ascent_uc_project->get_project_number( $post_id );
 
+	return $ascent_uc_project->get_project_number( $post_id );
 }

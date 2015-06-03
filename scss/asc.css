@@ -281,8 +281,8 @@ html {
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      /*background:url(/wp-content/uploads/sites/4/2015/04/ascent-logo-full.png) no-repeat center center;*/
-      background: url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;
+      background: url(/wp-content/uploads/sites/4/2015/04/ascent-logo-full.png) no-repeat center center;
+      /*background:url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;*/
       background-size: contain;
       top: calc(50% - 175px); }
   html body.home .videobg .videoBG_wrapper {
@@ -423,6 +423,8 @@ html {
         padding-bottom: 1em; }
     html body .wsuwp_uc_project {
       margin-top: 20px !important; }
+    html body.home .banner-container .logo-hp-container {
+      top: 28% !important; }
 
   /* html */ }
 /* media */
@@ -464,6 +466,8 @@ html {
       margin-top: 0 !important; }
     html body.home #binder.fluid main {
       margin-top: 4em !important; }
+    html body.home .banner-container .logo-hp-container {
+      top: 24%; }
 
   /* html */ }
 /* media */

@@ -24,6 +24,7 @@ class Ascent_UC_Project {
 		add_action( 'manage_edit-wsuwp_uc_project_sortable_columns', array( $this, 'sort_columns' ), 10, 1 );
 		add_filter( 'request', array( $this, 'sort_project_number' ) );
 		add_filter( 'wsuwp_uc_people_to_add_to_content', array( $this, 'modify_content_people' ), 10, 2 );
+		add_action( 'wp', array( $this, 'remove_default_project_content' ), 100, 1 );
 		add_filter( 'the_content', array( $this, 'add_content' ), 998, 1 );
 	}
 
@@ -109,8 +110,8 @@ class Ascent_UC_Project {
 		}
 
 		add_meta_box( 'ascent-project-number', 'Project Number', array( $this, 'display_project_number_meta_box' ), null, 'normal', 'default' );
-		add_meta_box( 'ascent-assign-advisors', 'Assign FAA Advisors', array( $this, 'display_assign_advisors_meta_box' ), null, 'normal', 'default' );
-		add_meta_box( 'ascent-assign-project-leads', 'Assign Project Leads', array( $this, 'display_assign_project_leads_meta_box' ), null, 'normal', 'default' );
+		add_meta_box( 'ascent-assign-advisors', 'Assign Program Managers', array( $this, 'display_assign_advisors_meta_box' ), null, 'normal', 'default' );
+		add_meta_box( 'ascent-assign-project-leads', 'Assign Project Coordinator', array( $this, 'display_assign_project_leads_meta_box' ), null, 'normal', 'default' );
 	}
 
 	/**
@@ -129,7 +130,7 @@ class Ascent_UC_Project {
 	}
 
 	/**
-	 * Display a meta box used to assign FAA advisors to projects.
+	 * Display a meta box used to assign Program Managers to projects.
 	 *
 	 * @param WP_Post $post Currently displayed post object.
 	 */
@@ -146,7 +147,7 @@ class Ascent_UC_Project {
 	}
 
 	/**
-	 * Display a meta box used to assign project leads to projects.
+	 * Display a meta box used to assign project coordinator to projects.
 	 *
 	 * @param WP_Post $post Currently displayed post object.
 	 */
@@ -240,7 +241,7 @@ class Ascent_UC_Project {
 	}
 
 	/**
-	 * Ensure FAA Advisers and Project Leads are not double listed as people in generated content.
+	 * Ensure Program Managers and Project Coordinator are not double listed as people in generated content.
 	 *
 	 * @param array $people  List of current people assigned to the project.
 	 * @param int   $post_id ID of the post (project) being modified.
@@ -264,7 +265,19 @@ class Ascent_UC_Project {
 	}
 
 	/**
-	 * Add FAA Advisers and Project Leads to project content.
+	 * Do not apply the default content normally added by the core University Center Objects plugin
+	 * to individual project pages.
+	 */
+	public function remove_default_project_content() {
+		global $wsuwp_university_center;
+
+		if ( is_singular( $wsuwp_university_center->project_content_type ) ) {
+			remove_filter( 'the_content', array( $wsuwp_university_center, 'add_object_content' ), 999, 1 );
+		}
+	}
+
+	/**
+	 * Add Program Managers and Project Coordinator to project content.
 	 *
 	 * @param string $content Current object content.
 	 *
@@ -278,20 +291,69 @@ class Ascent_UC_Project {
 		$advisers = wsuwp_uc_get_object_objects( get_the_ID(), $this->advisor_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
 		$leads    = wsuwp_uc_get_object_objects( get_the_ID(), $this->project_lead_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
 
+		$entities = wsuwp_uc_get_object_objects( get_the_ID(), wsuwp_uc_get_object_type_slug( 'entity' ) );
+		$projects = wsuwp_uc_get_object_objects( get_the_ID(), wsuwp_uc_get_object_type_slug( 'project' ) );
+		$people = wsuwp_uc_get_object_objects( get_the_ID(), wsuwp_uc_get_object_type_slug( 'people' ) );
+		$publications = wsuwp_uc_get_object_objects( get_the_ID(), wsuwp_uc_get_object_type_slug( 'publication' ) );
+
 		$added_html = '';
 
+		// Participants.
+		if ( false !== $entities && ! empty( $entities )) {
+			$labels = get_post_type_object( wsuwp_uc_get_object_type_slug( 'entity' ) );
+			$added_html .= '<div class="wsuwp-uc-entities"><h3>' . $labels->labels->name . '</h3><ul>';
+			foreach( $entities as $entity ) {
+				$added_html .= '<li><a href="' . esc_url( $entity['url'] ) . '">' . esc_html( $entity['name'] ) . '</a></li>';
+			}
+			$added_html .= '</ul></div>';
+
+		}
+
+		// Project Coordinator
+		if ( false !== $leads && ! empty( $leads ) ) {
+			$added_html .= '<div class="wsuwp-uc-project-leads"><h3>Project Coordinator</h3><ul>';
+			foreach( $leads as $lead ) {
+				$added_html .= '<li><a href="' . esc_url( $lead['url'] ) . '">' . esc_html( $lead['name'] ) . '</a></li>';
+			}
+			$added_html .= '</ul></div>';
+		}
+
+		// Projects.
+		if ( false !== $projects && ! empty( $projects ) ) {
+			$labels = get_post_type_object( wsuwp_uc_get_object_type_slug( 'project' ) );
+			$added_html .= '<div class="wsuwp-uc-projects"><h3>' . $labels->labels->name . '</h3><ul>';
+			foreach ( $projects as $project ) {
+				$added_html .= '<li><a href="' . esc_url( $project['url'] ) . '">' . esc_html( $project['name'] ) . '</a></li>';
+			}
+			$added_html .= '</ul></div>';
+		}
+
+		// Lead Investigators (People)
+		$people = apply_filters( 'wsuwp_uc_people_to_add_to_content', $people, get_the_ID() );
+		if ( false !== $people && ! empty( $people ) ) {
+			$labels = get_post_type_object( wsuwp_uc_get_object_type_slug( 'people' ) );
+			$added_html .= '<div class="wsuwp-uc-people"><h3>' . $labels->labels->name . '</h3><ul>';
+			foreach( $people as  $person ) {
+				$added_html .= '<li><a href="' . esc_url( $person['url'] ) . '">' . esc_html( $person['name'] ) . '</a></li>';
+			}
+			$added_html .= '<ul></div>';
+		}
+
+		// Program Managers.
 		if ( false !== $advisers && ! empty( $advisers ) ) {
-			$added_html .= '<div class="wsuwp-uc-advisers"><h3>FAA Advisers</h3><ul>';
+			$added_html .= '<div class="wsuwp-uc-advisers"><h3>Program Managers</h3><ul>';
 			foreach( $advisers as $adviser ) {
 				$added_html .= '<li><a href="' . esc_url( $adviser['url'] ) . '">' . esc_html( $adviser['name'] ) . '</a></li>';
 			}
 			$added_html .= '</ul></div>';
 		}
 
-		if ( false !== $leads && ! empty( $leads ) ) {
-			$added_html .= '<div class="wsuwp-uc-project-leads"><h3>Project Leads</h3><ul>';
-			foreach( $leads as $lead ) {
-				$added_html .= '<li><a href="' . esc_url( $lead['url'] ) . '">' . esc_html( $lead['name'] ) . '</a></li>';
+		// Publications.
+		if ( false !== $publications && ! empty( $publications ) ) {
+			$labels = get_post_type_object( wsuwp_uc_get_object_type_slug( 'publication' ) );
+			$added_html .= '<div class="wsuwp-uc-publications"><h3>' . $labels->labels->name . '</h3><ul>';
+			foreach( $publications as $publication ) {
+				$added_html .= '<li><a href="' . esc_url( $publication['url'] ) . '">' . esc_html( $publication['name'] ) . '</a></li>';
 			}
 			$added_html .= '</ul></div>';
 		}

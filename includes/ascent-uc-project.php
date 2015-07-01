@@ -291,8 +291,55 @@ class Ascent_UC_Project {
 		$advisers = wsuwp_uc_get_object_objects( get_the_ID(), $this->advisor_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
 		$leads    = wsuwp_uc_get_object_objects( get_the_ID(), $this->project_lead_content_slug, wsuwp_uc_get_object_type_slug( 'people' ) );
 
+		$entities = wsuwp_uc_get_object_objects( get_the_ID(), wsuwp_uc_get_object_type_slug( 'entity' ) );
+		$projects = wsuwp_uc_get_object_objects( get_the_ID(), wsuwp_uc_get_object_type_slug( 'project' ) );
+		$people = wsuwp_uc_get_object_objects( get_the_ID(), wsuwp_uc_get_object_type_slug( 'people' ) );
+		$publications = wsuwp_uc_get_object_objects( get_the_ID(), wsuwp_uc_get_object_type_slug( 'publication' ) );
+
 		$added_html = '';
 
+		// Participants.
+		if ( false !== $entities && ! empty( $entities )) {
+			$labels = get_post_type_object( wsuwp_uc_get_object_type_slug( 'entity' ) );
+			$added_html .= '<div class="wsuwp-uc-entities"><h3>' . $labels->labels->name . '</h3><ul>';
+			foreach( $entities as $entity ) {
+				$added_html .= '<li><a href="' . esc_url( $entity['url'] ) . '">' . esc_html( $entity['name'] ) . '</a></li>';
+			}
+			$added_html .= '</ul></div>';
+
+		}
+
+		// Project Coordinator
+		if ( false !== $leads && ! empty( $leads ) ) {
+			$added_html .= '<div class="wsuwp-uc-project-leads"><h3>Project Coordinator</h3><ul>';
+			foreach( $leads as $lead ) {
+				$added_html .= '<li><a href="' . esc_url( $lead['url'] ) . '">' . esc_html( $lead['name'] ) . '</a></li>';
+			}
+			$added_html .= '</ul></div>';
+		}
+
+		// Projects.
+		if ( false !== $projects && ! empty( $projects ) ) {
+			$labels = get_post_type_object( wsuwp_uc_get_object_type_slug( 'project' ) );
+			$added_html .= '<div class="wsuwp-uc-projects"><h3>' . $labels->labels->name . '</h3><ul>';
+			foreach ( $projects as $project ) {
+				$added_html .= '<li><a href="' . esc_url( $project['url'] ) . '">' . esc_html( $project['name'] ) . '</a></li>';
+			}
+			$added_html .= '</ul></div>';
+		}
+
+		// Lead Investigators (People)
+		$people = apply_filters( 'wsuwp_uc_people_to_add_to_content', $people, get_the_ID() );
+		if ( false !== $people && ! empty( $people ) ) {
+			$labels = get_post_type_object( wsuwp_uc_get_object_type_slug( 'people' ) );
+			$added_html .= '<div class="wsuwp-uc-people"><h3>' . $labels->labels->name . '</h3><ul>';
+			foreach( $people as  $person ) {
+				$added_html .= '<li><a href="' . esc_url( $person['url'] ) . '">' . esc_html( $person['name'] ) . '</a></li>';
+			}
+			$added_html .= '<ul></div>';
+		}
+
+		// Program Managers.
 		if ( false !== $advisers && ! empty( $advisers ) ) {
 			$added_html .= '<div class="wsuwp-uc-advisers"><h3>Program Managers</h3><ul>';
 			foreach( $advisers as $adviser ) {
@@ -301,10 +348,12 @@ class Ascent_UC_Project {
 			$added_html .= '</ul></div>';
 		}
 
-		if ( false !== $leads && ! empty( $leads ) ) {
-			$added_html .= '<div class="wsuwp-uc-project-leads"><h3>Project Coordinator</h3><ul>';
-			foreach( $leads as $lead ) {
-				$added_html .= '<li><a href="' . esc_url( $lead['url'] ) . '">' . esc_html( $lead['name'] ) . '</a></li>';
+		// Publications.
+		if ( false !== $publications && ! empty( $publications ) ) {
+			$labels = get_post_type_object( wsuwp_uc_get_object_type_slug( 'publication' ) );
+			$added_html .= '<div class="wsuwp-uc-publications"><h3>' . $labels->labels->name . '</h3><ul>';
+			foreach( $publications as $publication ) {
+				$added_html .= '<li><a href="' . esc_url( $publication['url'] ) . '">' . esc_html( $publication['name'] ) . '</a></li>';
 			}
 			$added_html .= '</ul></div>';
 		}

@@ -110,7 +110,7 @@ class Ascent_UC_Project {
 
 		add_meta_box( 'ascent-project-number', 'Project Number', array( $this, 'display_project_number_meta_box' ), null, 'normal', 'default' );
 		add_meta_box( 'ascent-assign-advisors', 'Assign Program Managers', array( $this, 'display_assign_advisors_meta_box' ), null, 'normal', 'default' );
-		add_meta_box( 'ascent-assign-project-leads', 'Assign Project Leads', array( $this, 'display_assign_project_leads_meta_box' ), null, 'normal', 'default' );
+		add_meta_box( 'ascent-assign-project-leads', 'Assign Project Coordinator', array( $this, 'display_assign_project_leads_meta_box' ), null, 'normal', 'default' );
 	}
 
 	/**
@@ -146,7 +146,7 @@ class Ascent_UC_Project {
 	}
 
 	/**
-	 * Display a meta box used to assign project leads to projects.
+	 * Display a meta box used to assign project coordinator to projects.
 	 *
 	 * @param WP_Post $post Currently displayed post object.
 	 */
@@ -240,7 +240,7 @@ class Ascent_UC_Project {
 	}
 
 	/**
-	 * Ensure FAA Advisers and Project Leads are not double listed as people in generated content.
+	 * Ensure Program Managers and Project Coordinator are not double listed as people in generated content.
 	 *
 	 * @param array $people  List of current people assigned to the project.
 	 * @param int   $post_id ID of the post (project) being modified.
@@ -264,7 +264,7 @@ class Ascent_UC_Project {
 	}
 
 	/**
-	 * Add FAA Advisers and Project Leads to project content.
+	 * Add Program Managers and Project Coordinator to project content.
 	 *
 	 * @param string $content Current object content.
 	 *
@@ -289,7 +289,7 @@ class Ascent_UC_Project {
 		}
 
 		if ( false !== $leads && ! empty( $leads ) ) {
-			$added_html .= '<div class="wsuwp-uc-project-leads"><h3>Project Leads</h3><ul>';
+			$added_html .= '<div class="wsuwp-uc-project-leads"><h3>Project Coordinator</h3><ul>';
 			foreach( $leads as $lead ) {
 				$added_html .= '<li><a href="' . esc_url( $lead['url'] ) . '">' . esc_html( $lead['name'] ) . '</a></li>';
 			}

@@ -109,7 +109,7 @@ class Ascent_UC_Project {
 		}
 
 		add_meta_box( 'ascent-project-number', 'Project Number', array( $this, 'display_project_number_meta_box' ), null, 'normal', 'default' );
-		add_meta_box( 'ascent-assign-advisors', 'Assign FAA Advisors', array( $this, 'display_assign_advisors_meta_box' ), null, 'normal', 'default' );
+		add_meta_box( 'ascent-assign-advisors', 'Assign Program Managers', array( $this, 'display_assign_advisors_meta_box' ), null, 'normal', 'default' );
 		add_meta_box( 'ascent-assign-project-leads', 'Assign Project Leads', array( $this, 'display_assign_project_leads_meta_box' ), null, 'normal', 'default' );
 	}
 
@@ -129,7 +129,7 @@ class Ascent_UC_Project {
 	}
 
 	/**
-	 * Display a meta box used to assign FAA advisors to projects.
+	 * Display a meta box used to assign Program Managers to projects.
 	 *
 	 * @param WP_Post $post Currently displayed post object.
 	 */
@@ -281,7 +281,7 @@ class Ascent_UC_Project {
 		$added_html = '';
 
 		if ( false !== $advisers && ! empty( $advisers ) ) {
-			$added_html .= '<div class="wsuwp-uc-advisers"><h3>FAA Advisers</h3><ul>';
+			$added_html .= '<div class="wsuwp-uc-advisers"><h3>Program Managers</h3><ul>';
 			foreach( $advisers as $adviser ) {
 				$added_html .= '<li><a href="' . esc_url( $adviser['url'] ) . '">' . esc_html( $adviser['name'] ) . '</a></li>';
 			}

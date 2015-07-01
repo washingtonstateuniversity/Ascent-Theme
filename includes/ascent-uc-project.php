@@ -24,6 +24,7 @@ class Ascent_UC_Project {
 		add_action( 'manage_edit-wsuwp_uc_project_sortable_columns', array( $this, 'sort_columns' ), 10, 1 );
 		add_filter( 'request', array( $this, 'sort_project_number' ) );
 		add_filter( 'wsuwp_uc_people_to_add_to_content', array( $this, 'modify_content_people' ), 10, 2 );
+		add_action( 'wp', array( $this, 'remove_default_project_content' ), 100, 1 );
 		add_filter( 'the_content', array( $this, 'add_content' ), 998, 1 );
 	}
 
@@ -261,6 +262,18 @@ class Ascent_UC_Project {
 		}
 
 		return $people;
+	}
+
+	/**
+	 * Do not apply the default content normally added by the core University Center Objects plugin
+	 * to individual project pages.
+	 */
+	public function remove_default_project_content() {
+		global $wsuwp_university_center;
+
+		if ( is_singular( $wsuwp_university_center->project_content_type ) ) {
+			remove_filter( 'the_content', array( $wsuwp_university_center, 'add_object_content' ), 999, 1 );
+		}
 	}
 
 	/**

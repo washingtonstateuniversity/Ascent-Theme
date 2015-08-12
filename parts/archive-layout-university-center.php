@@ -1,4 +1,4 @@
-<figure class="featured-image">sdsds</figure>
+<figure class="featured-image"></figure>
 <?php
 
 if ( is_post_type_archive( 'wsuwp_uc_entity' ) ) {

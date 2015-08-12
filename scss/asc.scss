@@ -7,7 +7,6 @@ $light-gray:#747270;
 $lightest-gray:#EEEEEC;
 $heavy-color:#fff;
 $webfont:'Roboto', sans-serif;
-
 /* Mixins */
 
 @mixin heading-styles($size, $lh, $hcolor) {
@@ -122,11 +121,17 @@ html {
 									ul {
 										display:none;
 										visibility: hidden;
+										width:185px;
 										text-align:left;
 										position: absolute;
 										background-color:$darkest-gray;
-										border-left:1px solid $brand;
 										top:78px;
+										 ul.sub-menu {
+										 	width:185px;
+										 	left:185px;
+										 	top:51px;
+										 	border-left:none;
+										 }
 									}
 								&:hover ul {
 									padding:0;
@@ -359,6 +364,10 @@ html {
 		.videobg {
 			.videoBG_wrapper {
 				width:100% !important;
+				display:block;
+				height:calc(100vh - 25%) !important;
+				clear:right;
+				position:static !important;
 			
 			}
 			.videoBG {

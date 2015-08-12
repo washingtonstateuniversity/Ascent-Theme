@@ -74,11 +74,16 @@ html {
           html body .main-menu ul li ul {
             display: none;
             visibility: hidden;
+            width: 185px;
             text-align: left;
             position: absolute;
             background-color: #343232;
-            border-left: 1px solid #0094ca;
             top: 78px; }
+            html body .main-menu ul li ul ul.sub-menu {
+              width: 185px;
+              left: 185px;
+              top: 51px;
+              border-left: none; }
           html body .main-menu ul li:hover ul {
             padding: 0;
             background-color: #4e4c4b;
@@ -286,7 +291,11 @@ html {
       background-size: contain;
       top: calc(50% - 175px); }
   html body.home .videobg .videoBG_wrapper {
-    width: 100% !important; }
+    width: 100% !important;
+    display: block;
+    height: calc(100vh - 25%) !important;
+    clear: right;
+    position: static !important; }
   html body.home .videobg .videoBG {
     width: 100% !important; }
   html body.home div.page {

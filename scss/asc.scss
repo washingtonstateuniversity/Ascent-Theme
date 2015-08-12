@@ -741,12 +741,32 @@ html {
 									display: block;
 										li {
 											margin-left:4px;
-											background-color:$lightest-gray;
+											background-color:$medium-gray;
 											text-align: center;
 											border:none;
 												a {
 													color:$heavy-gray;
 													border-bottom:1px solid $heavy-color;
+												}
+												ul.sub-menu {
+													top: 0;
+													width: 100%;
+													margin:0;
+													padding:0;
+													display: block;
+													left:0;
+													border-left:none;
+													position: relative;
+														li {
+															margin-left:0;
+															background-color:$lightest-gray;
+															text-align: center;
+															border-left:none;
+																a {
+																	color:$heavy-gray;
+																	border-bottom:1px solid $heavy-color;
+																}
+														}
 												}
 										}
 								}

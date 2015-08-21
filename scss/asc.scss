@@ -355,8 +355,8 @@ html {
 				 	margin-left:auto;
 				 	margin-right:auto;
 				 	text-align: center;
-				 	/*background:url(/wp-content/uploads/sites/4/2015/04/ascent-logo-full.png) no-repeat center center;*/
-				 	background:url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;
+				 	background:url(/wp-content/uploads/sites/4/2015/04/ascent-logo-full.png) no-repeat center center;
+				 	/*background:url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;*/
 				 	background-size:contain;
 				 	top:calc(50% - 175px);
 				 }
@@ -364,11 +364,6 @@ html {
 		.videobg {
 			.videoBG_wrapper {
 				width:100% !important;
-				display:block;
-				height:calc(100vh - 25%) !important;
-				clear:right;
-				position:static !important;
-			
 			}
 			.videoBG {
 				width:100% !important;
@@ -731,14 +726,16 @@ html {
 								a {
 									font-size:150%;
 								}
-								ul {
+								ul.sub-menu {
 									top: 0;
 									width: 100%;
 									margin-top: 14px;
-									margin-bottom:0;
-									margin-right:0;
+									margin:0;
 									padding:0;
-									display: block;
+									display:none;
+										&.shownav {
+											display: block;
+										}
 										li {
 											margin-left:4px;
 											background-color:$medium-gray;
@@ -747,16 +744,22 @@ html {
 												a {
 													color:$heavy-gray;
 													border-bottom:1px solid $heavy-color;
+													&:hover {
+														color:$brand;
+													}
 												}
 												ul.sub-menu {
 													top: 0;
 													width: 100%;
 													margin:0;
 													padding:0;
-													display: block;
 													left:0;
+													display:none;
 													border-left:none;
 													position: relative;
+														&.shownav {
+															display: block;
+														}
 														li {
 															margin-left:0;
 															background-color:$lightest-gray;
@@ -765,6 +768,9 @@ html {
 																a {
 																	color:$heavy-gray;
 																	border-bottom:1px solid $heavy-color;
+																		&:hover {
+																			color:$brand;
+																		}
 																}
 														}
 												}

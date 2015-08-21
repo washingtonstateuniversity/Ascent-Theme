@@ -286,16 +286,12 @@ html {
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      /*background:url(/wp-content/uploads/sites/4/2015/04/ascent-logo-full.png) no-repeat center center;*/
-      background: url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;
+      background: url(/wp-content/uploads/sites/4/2015/04/ascent-logo-full.png) no-repeat center center;
+      /*background:url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;*/
       background-size: contain;
       top: calc(50% - 175px); }
   html body.home .videobg .videoBG_wrapper {
-    width: 100% !important;
-    display: block;
-    height: calc(100vh - 25%) !important;
-    clear: right;
-    position: static !important; }
+    width: 100% !important; }
   html body.home .videobg .videoBG {
     width: 100% !important; }
   html body.home div.page {
@@ -519,39 +515,46 @@ html {
             margin: 0; }
           html body nav.main-menu ul li a {
             font-size: 150%; }
-          html body nav.main-menu ul li ul {
+          html body nav.main-menu ul li ul.sub-menu {
             top: 0;
             width: 100%;
             margin-top: 14px;
-            margin-bottom: 0;
-            margin-right: 0;
+            margin: 0;
             padding: 0;
-            display: block; }
-            html body nav.main-menu ul li ul li {
+            display: none; }
+            html body nav.main-menu ul li ul.sub-menu.shownav {
+              display: block; }
+            html body nav.main-menu ul li ul.sub-menu li {
               margin-left: 4px;
               background-color: #CBCBCB;
               text-align: center;
               border: none; }
-              html body nav.main-menu ul li ul li a {
+              html body nav.main-menu ul li ul.sub-menu li a {
                 color: #4e4c4b;
                 border-bottom: 1px solid #fff; }
-              html body nav.main-menu ul li ul li ul.sub-menu {
+                html body nav.main-menu ul li ul.sub-menu li a:hover {
+                  color: #0094ca; }
+              html body nav.main-menu ul li ul.sub-menu li ul.sub-menu {
                 top: 0;
                 width: 100%;
                 margin: 0;
                 padding: 0;
-                display: block;
                 left: 0;
+                display: none;
                 border-left: none;
                 position: relative; }
-                html body nav.main-menu ul li ul li ul.sub-menu li {
+                html body nav.main-menu ul li ul.sub-menu li ul.sub-menu.shownav {
+                  display: block; }
+                html body nav.main-menu ul li ul.sub-menu li ul.sub-menu li {
                   margin-left: 0;
                   background-color: #EEEEEC;
                   text-align: center;
                   border-left: none; }
-                  html body nav.main-menu ul li ul li ul.sub-menu li a {
+                  html body nav.main-menu ul li ul.sub-menu li ul.sub-menu li a {
                     color: #4e4c4b;
                     border-bottom: 1px solid #fff; }
+                    html body nav.main-menu ul li ul.sub-menu li ul.sub-menu li a:hover {
+                      color: #0094ca; }
     html body .mobilenav {
       width: 100% !important;
       border-top: none;

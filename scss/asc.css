@@ -281,15 +281,14 @@ html {
     position: relative; }
     html body.home .banner-container .logo-hp-container {
       position: absolute;
-      height: 60%;
+      height: 50%;
       width: 100%;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      background: url(/wp-content/uploads/sites/4/2015/04/ascent-logo-full.png) no-repeat center center;
-      /*background:url(/wp-content/uploads/sites/192/2015/04/ascent-logo-full.png) no-repeat center center;*/
+      background: url(../images/ascent-logo-full.png) no-repeat center center;
       background-size: contain;
-      top: calc(50% - 175px); }
+      top: calc(50% - 110px); }
   html body.home .videobg .videoBG_wrapper {
     width: 100% !important; }
   html body.home .videobg .videoBG {

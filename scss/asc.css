@@ -257,17 +257,17 @@ html {
         border-right: 1px solid #EEEEEC; }
         html body footer.main-foot ul li:last-of-type {
           border-right: none; }
-  html body.single-wsuwp_uc_project main section:first-of-type {
+  html body.single-wsuwp_uc_project main section:first-of-type, html body.single-post main section:first-of-type {
     margin-top: 3em; }
-  html body.single-wsuwp_uc_project main header.article-header hgroup .ascent-num-box {
+  html body.single-wsuwp_uc_project main header.article-header hgroup .ascent-num-box, html body.single-post main header.article-header hgroup .ascent-num-box {
     border-bottom: 1px solid #EEEEEC;
     margin-bottom: 1.4em; }
-    html body.single-wsuwp_uc_project main header.article-header hgroup .ascent-num-box h3.ascent-num-title {
+    html body.single-wsuwp_uc_project main header.article-header hgroup .ascent-num-box h3.ascent-num-title, html body.single-post main header.article-header hgroup .ascent-num-box h3.ascent-num-title {
       font-weight: 300;
       display: inline-block;
       font-size: 1.2em;
       color: #CBCBCB; }
-    html body.single-wsuwp_uc_project main header.article-header hgroup .ascent-num-box h2.ascent-num {
+    html body.single-wsuwp_uc_project main header.article-header hgroup .ascent-num-box h2.ascent-num, html body.single-post main header.article-header hgroup .ascent-num-box h2.ascent-num {
       display: inline-block;
       font-size: 4em;
       color: #CBCBCB; }
@@ -392,7 +392,7 @@ html {
     text-align: center; }
   html .wsuwp-uc-entities, html .wsuwp-uc-people, html .wsuwp-uc-projects, html .wsuwp-uc-publications {
     width: 100%; }
-  html .home footer.main-foot, html .home footer.main-footer, html .single-wsuwp_uc_entity footer.main-foot, html .single-wsuwp_uc_entity footer.main-footer, html .single-wsuwp_uc_person footer.main-foot, html .single-wsuwp_uc_person footer.main-footer, html .error404 footer.main-foot, html .error404 footer.main-footer {
+  html .home footer.main-foot, html .home footer.main-footer, html .single-wsuwp_uc_entity footer.main-foot, html .single-wsuwp_uc_entity footer.main-footer, html .single-wsuwp_uc_person footer.main-foot, html .single-wsuwp_uc_person footer.main-footer, html .error404 footer.main-foot, html .error404 footer.main-footer, html .single-post footer.main-foot, html .single-post footer.main-footer {
     text-align: center !important;
     width: 80%;
     margin-left: auto;
@@ -468,9 +468,9 @@ html {
           font-size: 75%; }
     html body.single-wsuwp_uc_project main section:first-of-type {
       margin-top: 0 !important; }
-    html body.home #binder.fluid main {
+    html body.home #binder.fluid main, html body.single-post #binder.fluid main {
       margin-top: 4em !important; }
-    html body.home .banner-container .logo-hp-container {
+    html body.home .banner-container .logo-hp-container, html body.single-post .banner-container .logo-hp-container {
       top: 24%; }
 
   /* html */ }
@@ -666,7 +666,8 @@ html {
         margin-top: 0px !important; }
     html body #binder.fluid main {
       margin-left: 0;
-      margin-right: 0;
+      margin-right: 0; }
+    html body #binder.fluid main figure.featured-image + section {
       margin-top: 18em; }
     html body .halves.gutter .column.one:not(.gutterless) {
       padding-left: 2rem !important; }

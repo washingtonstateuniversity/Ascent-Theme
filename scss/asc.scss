@@ -313,7 +313,7 @@ html {
 			}
 		}
 	}
-	body.single-wsuwp_uc_project {
+	body.single-wsuwp_uc_project,body.single-post {
 		main {
 			section:first-of-type {
 				margin-top:3em;
@@ -527,7 +527,7 @@ html {
 		width:100%;
 	}
 	/* Take footer 100% */
-	.home, .single-wsuwp_uc_entity, .single-wsuwp_uc_person, .error404 {
+	.home, .single-wsuwp_uc_entity, .single-wsuwp_uc_person, .error404, .single-post {
 		footer.main-foot, footer.main-footer {
 			text-align: center !important;
 			width:80%;
@@ -654,14 +654,14 @@ html {
 			}
 
 		} /* body */
-		body.single-wsuwp_uc_project {
+		body.single-wsuwp_uc_project{
 			main {
 				section:first-of-type {
 					margin-top:0 !important;
 				}
 			}
 		}
-		body.home {
+		body.home,body.single-post  {
 			#binder.fluid {
 				main {
 					margin-top:4em !important;
@@ -682,6 +682,7 @@ html {
 				margin-top:120px;
 			}
 		}
+
 	}
 }
 @media screen and (max-width : 989px) {
@@ -952,6 +953,8 @@ html {
 			#binder.fluid main {
 				margin-left:0;
 				margin-right:0;
+			}
+			#binder.fluid main figure.featured-image + section{
 				margin-top:18em;
 			}
 			.halves.gutter .column.one:not(.gutterless) {

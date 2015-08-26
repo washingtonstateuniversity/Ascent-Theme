@@ -84,7 +84,7 @@ html {
               left: 185px;
               top: 51px;
               border-left: none; }
-          html body .main-menu ul li:hover ul {
+          html body .main-menu ul li:hover > ul {
             padding: 0;
             background-color: #4e4c4b;
             display: block;
@@ -234,11 +234,10 @@ html {
       height: 100px;
       margin-top: -100px;
       clear: both;
-      text-align: right !important;
       display: block;
       margin-bottom: 0;
       color: #747270;
-      width: 60%;
+      width: 68%;
       padding-top: 1em;
       padding-left: 5%;
       border-top: 1px solid #EEEEEC;
@@ -250,13 +249,16 @@ html {
         html body footer.main-foot a:hover {
           color: #747270;
           transition: color .3s ease; }
-      html body footer.main-foot ul li {
-        display: inline-block;
-        padding-right: .4em;
-        padding-left: .2em;
-        border-right: 1px solid #EEEEEC; }
-        html body footer.main-foot ul li:last-of-type {
-          border-right: none; }
+      html body footer.main-foot ul {
+        padding-top: 8px;
+        padding-bottom: 8px; }
+        html body footer.main-foot ul li {
+          display: inline-block;
+          padding-right: .4em;
+          padding-left: .2em;
+          border-right: 1px solid #EEEEEC; }
+          html body footer.main-foot ul li:last-of-type {
+            border-right: none; }
   html body.single-wsuwp_uc_project main section:first-of-type, html body.single-post main section:first-of-type {
     margin-top: 3em; }
   html body.single-wsuwp_uc_project main header.article-header hgroup .ascent-num-box, html body.single-post main header.article-header hgroup .ascent-num-box {
@@ -276,7 +278,8 @@ html {
   html body.home #binder.fluid.max-1980 .row {
     max-width: 918px;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-top: 2em; }
   html body.home .banner-container {
     position: relative; }
     html body.home .banner-container .logo-hp-container {

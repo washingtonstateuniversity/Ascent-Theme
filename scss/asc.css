@@ -307,7 +307,7 @@ html {
     background-size: contain;
     position: absolute;
     max-height: 250px;
-    width: calc(50% - 170px);
+    width: 20%;
     margin-left: calc(50% - 500px);
     margin-top: 120px; }
   html body.single-wsuwp_uc_person #binder.fluid .row:not(.column):not(.rebound).pager {

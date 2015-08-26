@@ -311,28 +311,33 @@ html {
     margin-top: 120px; }
   html body.single-wsuwp_uc_person #binder.fluid .row:not(.column):not(.rebound).pager {
     width: 100% !important; }
-  html body.term-advisory-committee main section .column {
+  html body.term-advisory-committee main section .column, html body.term-universities main section .column {
     margin-left: 0 !important;
     float: none !important; }
-  html body.term-advisory-committee main section header {
+  html body.term-advisory-committee main section header, html body.term-universities main section header {
     float: none !important;
     width: 100% !important;
     margin-right: 0 !important; }
-  html body.term-advisory-committee main section .wsuwp_uc_entity {
-    width: 25%;
+  html body.term-advisory-committee main section .wsuwp_uc_entity, html body.term-universities main section .wsuwp_uc_entity {
+    width: 50%;
     float: left;
     min-height: 250px;
     border-top: none;
     border-bottom: 1px solid #EEEEEC;
-    text-align: center; }
-    html body.term-advisory-committee main section .wsuwp_uc_entity p {
+    text-align: center;
+    margin-right: 0; }
+    html body.term-advisory-committee main section .wsuwp_uc_entity p, html body.term-universities main section .wsuwp_uc_entity p {
       display: block;
       max-width: 100%; }
-    html body.term-advisory-committee main section .wsuwp_uc_entity figure.article-thumbnail {
+    html body.term-advisory-committee main section .wsuwp_uc_entity figure.article-thumbnail, html body.term-universities main section .wsuwp_uc_entity figure.article-thumbnail {
       margin-left: auto;
       margin-right: auto; }
-  html body.term-advisory-committee main section.entity-section {
-    margin-left: calc(50% - 170px); }
+  html body.term-advisory-committee main .wsuwp_uc_entity:nth-last-child(2), html body.term-advisory-committee main .wsuwp_uc_entity:last-child, html body.term-universities main .wsuwp_uc_entity:nth-last-child(2), html body.term-universities main .wsuwp_uc_entity:last-child {
+    border-bottom: none; }
+  html body.term-advisory-committee main section.entity-section, html body.term-universities main section.entity-section {
+    padding-left: calc(50% - 170px); }
+  html body.term-advisory-committee main .pager, html body.term-universities main .pager {
+    margin-top: 2em; }
   html body.archive main .row .column {
     float: right;
     width: 100%;

@@ -400,37 +400,44 @@ html {
 				width:100% !important;
 			}	
 	}
-	body.term-advisory-committee {
+	body.term-advisory-committee, body.term-universities {
 		main {
 			section {
-			.column {
-				margin-left:0 !important;
+				.column {
+					margin-left:0 !important;
+					float:none !important;
+				}
+			header {
 				float:none !important;
+				width:100% !important;
+				margin-right:0 !important;
 			}
-		header {
-			float:none !important;
-			width:100% !important;
-			margin-right:0 !important;
-		}
-		.wsuwp_uc_entity {
-			width:25%;
-			float:left;
-			min-height:250px;
-			border-top:none;
-			border-bottom:1px solid $lightest-gray;
-			text-align:center;
-				p {
-					display:block;
-					max-width:100%;
-				}
-				figure.article-thumbnail {
-					margin-left:auto;
-					margin-right:auto;
+			.wsuwp_uc_entity {
+				width:50%;
+				float:left;
+				min-height:250px;
+				border-top:none;
+				border-bottom:1px solid $lightest-gray;
+				text-align:center;
+				margin-right:0;
+					p {
+						display:block;
+						max-width:100%;
+					}
+					figure.article-thumbnail {
+						margin-left:auto;
+						margin-right:auto;
+					}
 				}
 			}
+			.wsuwp_uc_entity:nth-last-child(2),.wsuwp_uc_entity:last-child {
+				border-bottom:none;
+			}
+			section.entity-section {
+				padding-left:calc(50% - 170px);
 		}
-		section.entity-section {
-			margin-left:calc(50% - 170px);
+		.pager {
+			margin-top:2em;
 		}
 	}
 	}

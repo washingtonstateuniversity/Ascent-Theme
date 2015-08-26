@@ -389,8 +389,7 @@ html {
 			&.featured-image {
 				background-size:contain;
 				position:absolute;
-				width:200px;
-				height: 300px;
+				height: 200px;
 				margin-left:130px;
 				margin-top:120px
 			}
@@ -404,7 +403,10 @@ html {
 	body.term-advisory-committee {
 		main {
 			section {
-		
+			.column {
+				margin-left:0 !important;
+				float:none !important;
+			}
 		header {
 			float:none !important;
 			width:100% !important;
@@ -413,10 +415,22 @@ html {
 		.wsuwp_uc_entity {
 			width:25%;
 			float:left;
+			min-height:250px;
+			border-top:none;
+			border-bottom:1px solid $lightest-gray;
+			text-align:center;
+				p {
+					display:block;
+					max-width:100%;
+				}
+				figure.article-thumbnail {
+					margin-left:auto;
+					margin-right:auto;
+				}
 			}
 		}
 		section.entity-section {
-			margin-left:calc(50% - 175px);
+			margin-left:calc(50% - 170px);
 		}
 	}
 	}
@@ -438,9 +452,6 @@ html {
 						float:none;
 						width:150px;
 						margin:18px 18px 18px 0;
-							img {
-								width:100%;
-							}
 					}
 					p { 
 						float:none;

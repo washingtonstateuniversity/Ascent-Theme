@@ -306,21 +306,33 @@ html {
   html body.single-wsuwp_uc_entity figure.featured-image, html body.single-wsuwp_uc_person figure.featured-image {
     background-size: contain;
     position: absolute;
-    width: 200px;
-    height: 300px;
+    height: 200px;
     margin-left: 130px;
     margin-top: 120px; }
   html body.single-wsuwp_uc_person #binder.fluid .row:not(.column):not(.rebound).pager {
     width: 100% !important; }
+  html body.term-advisory-committee main section .column {
+    margin-left: 0 !important;
+    float: none !important; }
   html body.term-advisory-committee main section header {
     float: none !important;
     width: 100% !important;
     margin-right: 0 !important; }
   html body.term-advisory-committee main section .wsuwp_uc_entity {
     width: 25%;
-    float: left; }
+    float: left;
+    min-height: 250px;
+    border-top: none;
+    border-bottom: 1px solid #EEEEEC;
+    text-align: center; }
+    html body.term-advisory-committee main section .wsuwp_uc_entity p {
+      display: block;
+      max-width: 100%; }
+    html body.term-advisory-committee main section .wsuwp_uc_entity figure.article-thumbnail {
+      margin-left: auto;
+      margin-right: auto; }
   html body.term-advisory-committee main section.entity-section {
-    margin-left: calc(50% - 175px); }
+    margin-left: calc(50% - 170px); }
   html body.archive main .row .column {
     float: right;
     width: 100%;
@@ -336,8 +348,6 @@ html {
       float: none;
       width: 150px;
       margin: 18px 18px 18px 0; }
-      html body.archive main .wsuwp_uc_entity figure.article-thumbnail img {
-        width: 100%; }
     html body.archive main .wsuwp_uc_entity p {
       float: none;
       vertical-align: middle;

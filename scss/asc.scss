@@ -401,6 +401,25 @@ html {
 				width:100% !important;
 			}	
 	}
+	body.term-advisory-committee {
+		main {
+			section {
+		
+		header {
+			float:none !important;
+			width:100% !important;
+			margin-right:0 !important;
+		}
+		.wsuwp_uc_entity {
+			width:25%;
+			float:left;
+			}
+		}
+		section.entity-section {
+			margin-left:calc(50% - 175px);
+		}
+	}
+	}
 	body.archive {
 		main {	
 			.row .column {
@@ -433,9 +452,6 @@ html {
 						display: none;
 						clear:none;
 					}
-			}
-			.wsuwp_uc_entity:first-of-type {
-				border-top:none;
 			}
 			.wsuwp_uc_project {
 				margin-top:0;

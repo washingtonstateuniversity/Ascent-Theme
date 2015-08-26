@@ -312,6 +312,15 @@ html {
     margin-top: 120px; }
   html body.single-wsuwp_uc_person #binder.fluid .row:not(.column):not(.rebound).pager {
     width: 100% !important; }
+  html body.term-advisory-committee main section header {
+    float: none !important;
+    width: 100% !important;
+    margin-right: 0 !important; }
+  html body.term-advisory-committee main section .wsuwp_uc_entity {
+    width: 25%;
+    float: left; }
+  html body.term-advisory-committee main section.entity-section {
+    margin-left: calc(50% - 175px); }
   html body.archive main .row .column {
     float: right;
     width: 100%;
@@ -337,8 +346,6 @@ html {
     html body.archive main .wsuwp_uc_entity .article-summary {
       display: none;
       clear: none; }
-  html body.archive main .wsuwp_uc_entity:first-of-type {
-    border-top: none; }
   html body.archive main .wsuwp_uc_project {
     margin-top: 0;
     margin-bottom: 0; }

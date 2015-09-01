@@ -70,7 +70,8 @@ html {
               color: #0094ca;
               background-color: #343232; }
           html body .main-menu ul li.current a {
-            background-color: #343232; }
+            background-color: #747270;
+            color: #343232 !important; }
           html body .main-menu ul li ul {
             display: none;
             visibility: hidden;
@@ -291,7 +292,7 @@ html {
       text-align: center;
       background: url(../images/ascent-logo-full.png) no-repeat center center;
       background-size: contain;
-      top: calc(50% - 110px); }
+      top: 30%; }
   html body.home .videobg .videoBG_wrapper {
     width: 100% !important; }
   html body.home .videobg .videoBG {
@@ -431,6 +432,8 @@ html {
 @media screen and (max-width: 491px) {
   html {
     /* body */ }
+    html body #binder.fluid main figure.featured-image + section {
+      margin-top: 10em; }
     html body main header.main-header {
       float: left;
       margin-top: 0 !important;
@@ -461,6 +464,10 @@ html {
 @media screen and (max-width: 791px) {
   html {
     /* body */ }
+    html body.term-universities section .wsuwp_uc_entity, html body.term-advisory-committee section .wsuwp_uc_entity {
+      width: 100% !important;
+      text-align: left !important;
+      min-height: 170px !important; }
     html body.single-wsuwp_uc_entity main section.row:not(.boundless):not(.rebound) {
       width: 100% !important;
       margin-top: 2em !important; }
@@ -502,8 +509,8 @@ html {
   /* html */ }
 /* media */
 @media screen and (max-width: 989px) and (min-width: 791px) {
-  html body.archive section:first-of-type {
-    margin-top: 120px; } }
+  html body.term-advisory-committee section, html body.term-universities section {
+    margin-top: 18em; } }
 @media screen and (max-width: 989px) {
   html {
     /* body */ }
@@ -534,7 +541,7 @@ html {
           border-bottom: 1px solid #343232; }
           html body nav.main-menu ul li:last-of-type {
             border-bottom: none; }
-          html body nav.main-menu ul li:hover ul {
+          html body nav.main-menu ul li:hover > ul {
             position: relative;
             padding: 0;
             margin: 0; }
@@ -565,9 +572,8 @@ html {
                 margin: 0;
                 padding: 0;
                 left: 0;
-                display: none;
                 border-left: none;
-                position: relative; }
+                display: none; }
                 html body nav.main-menu ul li ul.sub-menu li ul.sub-menu.shownav {
                   display: block; }
                 html body nav.main-menu ul li ul.sub-menu li ul.sub-menu li {
@@ -693,8 +699,6 @@ html {
     html body #binder.fluid main {
       margin-left: 0;
       margin-right: 0; }
-    html body #binder.fluid main figure.featured-image + section {
-      margin-top: 18em; }
     html body .halves.gutter .column.one:not(.gutterless) {
       padding-left: 2rem !important; }
     html body .post, html body .wsuwp_uc_project, html body .wsuwp_uc_publication, html body .wsuwp_uc_person, html body .wsuwp_uc_entity, html body #tribe-events-pg-template {
@@ -704,6 +708,8 @@ html {
       width: 100%;
       float: left;
       text-align: center !important;
+      padding-left: 0 !important; }
+    html body.term-advisory-committee section, html body.term-universities section {
       padding-left: 0 !important; }
 
   /* html */ }

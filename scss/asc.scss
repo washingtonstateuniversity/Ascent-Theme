@@ -117,7 +117,7 @@ html {
 							}
 								&.current a {
 									background-color:$darkest-gray;
-									color:$brand !important;
+									
 
 								}
 									ul {
@@ -126,7 +126,7 @@ html {
 										width:185px;
 										text-align:left;
 										position: absolute;
-										background-color:$darkest-gray;
+										background-color:$heavy-gray;
 										top:78px;
 										 ul.sub-menu {
 										 	width:185px;
@@ -530,6 +530,13 @@ html {
 					}
 				}
 			}
+			.description {
+				float:right;
+				margin-right:120px;
+				width:50%;
+				padding-bottom:1.2em;
+			}
+
 			p {
 				font-size:1.2em;
 				padding-bottom:8px;

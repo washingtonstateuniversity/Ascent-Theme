@@ -9,7 +9,7 @@
 			<header>
 				<h1><?php echo esc_html( single_term_title( '', false ) ); ?></h1>
 			</header>
-			<p><?php echo wp_kses_post( term_description() ); ?></p>
+			<div class="description"><?php echo wp_kses_post( term_description() ); ?></div>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'articles/post', get_post_type() ); ?>

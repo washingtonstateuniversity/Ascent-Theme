@@ -70,15 +70,14 @@ html {
               color: #0094ca;
               background-color: #343232; }
           html body .main-menu ul li.current a {
-            background-color: #343232;
-            color: #0094ca !important; }
+            background-color: #343232; }
           html body .main-menu ul li ul {
             display: none;
             visibility: hidden;
             width: 185px;
             text-align: left;
             position: absolute;
-            background-color: #343232;
+            background-color: #4e4c4b;
             top: 78px; }
             html body .main-menu ul li ul ul.sub-menu {
               width: 185px;
@@ -400,6 +399,11 @@ html {
       font-size: 1.3em;
       color: #CBCBCB;
       padding-right: 0; }
+  html body.archive main .description {
+    float: right;
+    margin-right: 120px;
+    width: 50%;
+    padding-bottom: 1.2em; }
   html body.archive main p {
     font-size: 1.2em;
     padding-bottom: 8px; }

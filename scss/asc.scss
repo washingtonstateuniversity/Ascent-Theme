@@ -179,7 +179,7 @@ html {
 					@include heading-styles (2.2em, 1.1em, $heavy-gray);
 				}
 				h3 {
-					@include heading-styles (1.8em, 1.1em, $heavy-gray);
+					@include heading-styles (1.8em, 1.3em, $heavy-gray);
 					font-weight:400;
 				}
 				h4 {
@@ -347,7 +347,6 @@ html {
 			max-width:918px;
 			margin-left:auto;
 			margin-right:auto;
-			margin-top:2em;
 		}
 		.banner-container {
 			position:relative;
@@ -590,7 +589,7 @@ html {
 @media screen and (max-width : 491px) {
 	html {
 		body {
-			#binder.fluid main figure.featured-image + section{
+			#binder.fluid main figure.featured-image + section {
 				margin-top:10em;
 			}
 			main {
@@ -719,7 +718,7 @@ html {
 				}
 			}
 		}
-		body.home,body.single-post  {
+		body.single-post  {
 			#binder.fluid {
 				main {
 					margin-top:4em !important;

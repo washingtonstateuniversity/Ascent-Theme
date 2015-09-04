@@ -681,16 +681,7 @@ html {
 					}
 				}
 			}
-			figure.featured-image {
-				position:absolute !important;
-				top:0;
-				height:200px !important;
-				display: block;
-				width:100% !important;
-				min-height: 100px !important;
-				float:none;
-				margin-left:0px !important;
-			}
+		
 			#binder.fluid .row:not(.column):not(.rebound).pager {
 				width:100% !important;
 			}
@@ -865,7 +856,7 @@ html {
 					}
 			}
 			figure.featured-image {
-				position:absolute !important;
+				position:initial !important;
 				top:0;
 				height:200px !important;
 				display: block;

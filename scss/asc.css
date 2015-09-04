@@ -609,7 +609,7 @@ html {
           height: 45px; }
     html body header.main-header {
       margin-top: 0px;
-      position: initial; }
+      position: initial !important; }
     html body figure.featured-image {
       position: initial !important;
       top: 0;

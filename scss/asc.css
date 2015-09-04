@@ -607,6 +607,9 @@ html {
           margin-left: 2em;
           margin-top: 10px;
           height: 45px; }
+    html body header.main-header {
+      margin-top: 0px;
+      position: initial; }
     html body figure.featured-image {
       position: initial !important;
       top: 0;
@@ -628,8 +631,6 @@ html {
       margin-top: 3em; }
     html body.tax-wsuwp_uc_entity_type section header {
       margin-top: 0px !important; }
-    html body.archive main header.main-header {
-      margin-top: 0px; }
     html body.archive main .description {
       width: 100%;
       float: initial; }

@@ -862,6 +862,10 @@ html {
 						}
 					}
 			}
+			header.main-header {
+				margin-top:0px;
+				position: initial;
+			}
 			figure.featured-image {
 				position:initial !important;
 				top:0;
@@ -911,9 +915,6 @@ html {
 			}
 			&.archive {
 				main {
-					header.main-header {
-						margin-top:0px;
-					}
 					.description {
 						width:100%;
 						float:initial;

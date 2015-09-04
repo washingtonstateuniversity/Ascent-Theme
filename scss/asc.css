@@ -452,6 +452,9 @@ html {
       margin-top: 0px !important; }
     html body footer.main-foot {
       border-top: none; }
+      html body footer.main-foot span {
+        padding-left: .5em;
+        padding-right: .5em; }
       html body footer.main-foot ul li {
         border-right: none;
         border-top: 1px solid #EEEEEC;
@@ -471,6 +474,8 @@ html {
       width: 100% !important;
       text-align: left !important;
       min-height: 170px !important; }
+    html body main {
+      margin-top: 100px; }
     html body.single-wsuwp_uc_entity main section.row:not(.boundless):not(.rebound) {
       width: 100% !important;
       margin-top: 2em !important; }
@@ -625,6 +630,9 @@ html {
       margin-top: 0px !important; }
     html body.archive main header.main-header {
       margin-top: 0px; }
+    html body.archive main .description {
+      width: 100%;
+      float: initial; }
     html body.archive main section header {
       width: 100%;
       margin-right: 0px;

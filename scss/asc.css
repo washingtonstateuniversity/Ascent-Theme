@@ -683,12 +683,14 @@ html {
           margin-top: 0 !important;
           float: none;
           width: 100% !important; }
-    html body .page {
+    html body.page {
       float: none;
       width: 100% !important;
       margin: 0 !important; }
-      html body .page header.article-header hgroup .ascent-num-box {
-        margin-top: 0px !important; }
+      html body.page main {
+        margin-top: 0 !important; }
+        html body.page main header.article-header hgroup .ascent-num-box {
+          margin-top: 0px !important; }
     html body .wsuwp_uc_project {
       float: none;
       width: 100% !important;

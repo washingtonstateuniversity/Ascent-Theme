@@ -906,6 +906,10 @@ html {
 					margin-top:3em;
 				}
 			}
+			&.page {
+				main {
+					margin-top:0 !important;
+			}
 			&.tax-wsuwp_uc_entity_type {
 				section {
 		 				header {
@@ -993,16 +997,14 @@ html {
 						}
 				}
 			}
-			&.page {
+			.page {
 				float:none;
 				width:100% !important;
 				margin:0 !important;
-				main {
-					margin-top:0 !important;
+				
 					header.article-header hgroup .ascent-num-box {
 						margin-top:0px !important;
 					}
-				}
 			}
 			.wsuwp_uc_project {
 				float:none;

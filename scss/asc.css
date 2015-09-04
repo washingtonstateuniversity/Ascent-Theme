@@ -474,8 +474,6 @@ html {
       width: 100% !important;
       text-align: left !important;
       min-height: 170px !important; }
-    html body main {
-      margin-top: 100px; }
     html body.single-wsuwp_uc_entity main section.row:not(.boundless):not(.rebound) {
       width: 100% !important;
       margin-top: 2em !important; }
@@ -513,6 +511,8 @@ html {
 @media screen and (max-width: 989px) {
   html {
     /* body */ }
+    html body main {
+      margin-top: 8em !important; }
     html body nav.main-menu {
       position: fixed;
       margin: 0;
@@ -666,24 +666,22 @@ html {
       margin-top: 140px; }
       html body.archive section header h1 {
         margin-left: 50px !important; }
-    html body.single-wsuwp_uc_entity main {
-      margin-top: 8em !important; }
-      html body.single-wsuwp_uc_entity main figure.featured-image {
-        position: relative !important;
-        width: 25% !important;
-        display: inline-block;
-        margin-left: 5% !important; }
-      html body.single-wsuwp_uc_entity main .row:not(.boundless):not(.rebound) {
-        width: 50%;
-        margin-top: 10em !important; }
-      html body.single-wsuwp_uc_entity main section.row {
-        display: inline-block; }
-        html body.single-wsuwp_uc_entity main section.row .column {
-          padding-top: 0 !important; }
-          html body.single-wsuwp_uc_entity main section.row .column article.wsuwp_uc_entity {
-            margin-top: 0 !important;
-            float: none;
-            width: 100% !important; }
+    html body.single-wsuwp_uc_entity main figure.featured-image {
+      position: relative !important;
+      width: 25% !important;
+      display: inline-block;
+      margin-left: 5% !important; }
+    html body.single-wsuwp_uc_entity main .row:not(.boundless):not(.rebound) {
+      width: 50%;
+      margin-top: 10em !important; }
+    html body.single-wsuwp_uc_entity main section.row {
+      display: inline-block; }
+      html body.single-wsuwp_uc_entity main section.row .column {
+        padding-top: 0 !important; }
+        html body.single-wsuwp_uc_entity main section.row .column article.wsuwp_uc_entity {
+          margin-top: 0 !important;
+          float: none;
+          width: 100% !important; }
     html body .page {
       float: none;
       width: 100% !important;
@@ -718,9 +716,7 @@ html {
 /* media */
 @media screen and (max-width: 791px) and (min-width: 491px) {
   html body .wsuwp_uc_project {
-    margin-top: 0 !important; }
-  html #binder.fluid main {
-    margin-top: 18em !important; } }
+    margin-top: 0 !important; } }
 @media screen and (max-width: 1014px) {
   html body .main-menu {
     font-size: 1em; }

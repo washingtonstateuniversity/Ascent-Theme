@@ -660,9 +660,6 @@ html {
 					}
 				}	
 			}
-			main {
-				margin-top:100px;
-			}
 			&.single-wsuwp_uc_entity {
 				main {
 					section.row:not(.boundless):not(.rebound) {
@@ -744,7 +741,9 @@ html {
 @media screen and (max-width : 989px) {
 	html {
 		body {
-
+			main {
+				margin-top:8em !important;
+			}
 			nav.main-menu {
 				position: fixed;
 				margin: 0;
@@ -970,7 +969,6 @@ html {
 			}
 			&.single-wsuwp_uc_entity {
 				main {
-					margin-top:8em !important;
 						figure.featured-image {
 							position:relative !important;
 							width:25% !important;
@@ -1047,10 +1045,6 @@ html {
 			}
 
 		}
-
-		#binder.fluid main {
-				margin-top:18em !important;
-			}
 	}
 } 
 @media screen and (max-width: 1014px) {

@@ -291,10 +291,13 @@ html {
       background: url(../images/ascent-logo-full.png) no-repeat center center;
       background-size: contain;
       top: 30%; }
-  html body.home .videobg .videoBG_wrapper {
-    width: 100% !important; }
-  html body.home .videobg .videoBG {
-    width: 100% !important; }
+  html body.home .videobg {
+    display: block;
+    height: 70vh; }
+    html body.home .videobg .videoBG_wrapper {
+      width: 100% !important; }
+    html body.home .videobg .videoBG {
+      width: 100% !important; }
   html body.home div.page {
     width: 100%;
     float: left; }
@@ -630,7 +633,7 @@ html {
     html body.home #binder.fluid main {
       margin-top: 3em; }
     html body.page main {
-      margin-top: 0 !important; }
+      margin-top: 4em !important; }
     html body.tax-wsuwp_uc_entity_type section header {
       margin-top: 0px !important; }
     html body.archive main .description {

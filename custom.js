@@ -1,10 +1,4 @@
 (function($){
-	//Dynamically assign height
-	function sizeContent() {
-		var newHeight = ( $(window).height() *.7 ) + "px";
-		$(".banner-container").css("height", newHeight);
-		$("#videobg" ).css('height',newHeight );
-	}
 
 	$(document).ready(function() {
 		var menuul = $('.main-menu ul');

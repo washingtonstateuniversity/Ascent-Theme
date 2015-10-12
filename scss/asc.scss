@@ -363,6 +363,8 @@ html {
 				 }
 		}
 		.videobg {
+			display:block;
+			height:70vh;
 			.videoBG_wrapper {
 				width:100% !important;
 			}
@@ -908,7 +910,7 @@ html {
 			}
 			&.page {
 				main {
-					margin-top:0 !important;
+					margin-top:4em !important;
 				}
 			}
 			&.tax-wsuwp_uc_entity_type {

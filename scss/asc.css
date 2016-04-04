@@ -97,7 +97,7 @@ html {
               padding: 14px; }
     html body main {
       overflow: auto;
-      padding-bottom: 200px;
+      padding-bottom: 60px;
       margin-left: auto;
       margin-right: auto;
       margin-top: 47px;
@@ -232,7 +232,6 @@ html {
         width: 100%; }
     html body footer.main-foot {
       height: 100px;
-      margin-top: -100px;
       clear: both;
       display: block;
       margin-bottom: 0;

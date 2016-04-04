@@ -673,7 +673,7 @@ html {
         margin-left: 50px !important; }
     html body.single-wsuwp_uc_entity main figure.featured-image {
       position: relative !important;
-      width: 25% !important;
+      width: 100% !important;
       display: inline-block;
       margin-left: 5% !important; }
     html body.single-wsuwp_uc_entity main .row:not(.boundless):not(.rebound) {

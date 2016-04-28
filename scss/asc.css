@@ -313,6 +313,18 @@ html {
     margin-top: 120px; }
   html body.single-wsuwp_uc_person #binder.fluid .row:not(.column):not(.rebound).pager {
     width: 100% !important; }
+  html body.categorized-notice-of-funding-opportunity .fluid main section.row.side-right .column.one {
+    float: right;
+    width: 60%;
+    padding-right: 3%; }
+  html body.categorized-notice-of-funding-opportunity .fluid main .article-header hgroup.source,
+  html body.categorized-notice-of-funding-opportunity .fluid main .article-header .hgroup.source {
+    display: none; }
+  html body.single-post.categorized-notice-of-funding-opportunity footer.article-footer {
+    display: none; }
+  html body.single-post.categorized-notice-of-funding-opportunity footer.main-foot {
+    float: right;
+    width: 66%; }
   html body.term-advisory-committee main section .column, html body.term-universities main section .column {
     margin-left: 0 !important;
     float: none !important; }
@@ -400,6 +412,17 @@ html {
       font-size: 1.3em;
       color: #CBCBCB;
       padding-right: 0; }
+  html body.archive main header.article-header dl.ascent-num {
+    padding-right: 0; }
+  html body.archive main header.article-header dl.ascent-num dt {
+    display: block;
+    padding-right: 0; }
+  html body.archive main header.article-header dl.ascent-num dt:before {
+    content: "FO";
+    margin-right: 8px;
+    font-size: 1.3em;
+    color: #CBCBCB;
+    padding-right: 0; }
   html body.archive main .description {
     float: right;
     margin-right: 120px;
@@ -410,6 +433,11 @@ html {
     padding-bottom: 8px; }
   html body.archive main figure.featured-image {
     background-image: url("../images/Clouds-Color0.jpg"); }
+  html body.archive.category-notice-of-funding-opportunity main section.row.side-right .column.one {
+    width: 90%;
+    float: right; }
+  html body.archive.category-notice-of-funding-opportunity main section header.article-header {
+    margin-top: 0; }
   html body.blog main {
     margin-left: 200px;
     margin-top: 75px; }
@@ -441,7 +469,7 @@ html {
       margin-top: 10em; }
     html body main header.main-header {
       float: left;
-      margin-top: 0 !important;
+      margin-top: 2rem !important;
       height: 52px; }
       html body main header.main-header h1 {
         text-align: center;
@@ -472,6 +500,8 @@ html {
 @media screen and (max-width: 791px) {
   html {
     /* body */ }
+    html body header.main-header {
+      margin-top: 3rem !important; }
     html body.term-universities section .wsuwp_uc_entity, html body.term-advisory-committee section .wsuwp_uc_entity {
       width: 100% !important;
       text-align: left !important;
@@ -513,8 +543,6 @@ html {
 @media screen and (max-width: 989px) {
   html {
     /* body */ }
-    html body main {
-      margin-top: 8em !important; }
     html body nav.main-menu {
       position: fixed;
       margin: 0;
@@ -623,8 +651,6 @@ html {
       margin-left: 0px !important; }
     html body.tax-wsuwp_uc_topics main header.article-header hgroup .ascent-num-box, html body.post-type-archive-wsuwp_uc_project main header.article-header hgroup .ascent-num-box {
       margin-top: 1em; }
-    html body.post-type-archive main header.main-header, html body.single-wsuwp_uc_person main header.main-header, html body.single-wsuwp_uc_project main header.main-header {
-      margin-top: 0; }
     html body.post-type-archive main h1, html body.single-wsuwp_uc_person main h1, html body.single-wsuwp_uc_project main h1 {
       margin-left: 0px; }
     html body.post-type-archive main h2.ascent-num, html body.single-wsuwp_uc_person main h2.ascent-num, html body.single-wsuwp_uc_project main h2.ascent-num {
@@ -671,6 +697,9 @@ html {
       margin-top: 140px; }
       html body.archive section header h1 {
         margin-left: 50px !important; }
+    html body.single-post.categorized-notice-of-funding-opportunity footer.main-foot {
+      float: none;
+      width: 100%; }
     html body.single-wsuwp_uc_entity main figure.featured-image {
       position: relative !important;
       width: 100% !important;
@@ -716,6 +745,8 @@ html {
       padding-left: 0 !important; }
     html body.term-advisory-committee section, html body.term-universities section {
       padding-left: 0 !important; }
+    html body.categorized-notice-of-funding-opportunity .fluid main section.row.side-right .column.one {
+      width: 100%; }
 
   /* html */ }
 /* media */

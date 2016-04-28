@@ -404,6 +404,34 @@ html {
 				width:100% !important;
 			}	
 	}
+	body.categorized-notice-of-funding-opportunity {
+		.fluid {
+			main {
+				section.row.side-right {
+					.column {
+						&.one {
+							float:right;
+							width:60%;
+							padding-right:3%;
+						}
+					}
+				}
+				.article-header hgroup.source, 
+				.article-header .hgroup.source {
+					display:none;
+				}
+			}
+		}
+	}
+	body.single-post.categorized-notice-of-funding-opportunity {
+		footer.article-footer {
+			display: none;
+		}
+		footer.main-foot {
+			float:right;
+			width:66%;
+		}
+	}
 	body.term-advisory-committee, body.term-universities {
 		main {
 			section {
@@ -522,13 +550,27 @@ html {
 							h3.ascent-num-title { 
 								display:none;
 							}
-							h2.ascent-num {
+							h2.ascent-num  {
 								margin-right:8px;
 								font-size:1.3em;
 								color:$medium-gray;
 								padding-right:0;
 							}
 					}
+				}
+				dl.ascent-num {
+					padding-right:0;
+				}
+				dl.ascent-num dt {
+					display:block;
+					padding-right:0;
+							}
+				dl.ascent-num dt:before {
+					content: "FO";
+					margin-right:8px;
+					font-size:1.3em;
+					color:$medium-gray;
+					padding-right:0;
 				}
 			}
 			.description {
@@ -547,6 +589,22 @@ html {
 			}
 		}
 	}
+	body.archive.category-notice-of-funding-opportunity {
+		main {
+			section.row.side-right {
+				.column.one {
+					width:90%;
+					float:right;
+				}
+
+			}
+			section {
+				header.article-header {
+					margin-top:0;
+				}
+			}
+		}
+	}
 	body.blog {
 		main {
 			margin-left:200px;
@@ -554,7 +612,6 @@ html {
 		}
 	}
 	body.error404 {
-
 		#binder.fluid.max-1980 .row {
 			margin-top:85px;
 			max-width:918px;
@@ -597,7 +654,7 @@ html {
 			main {
 				header.main-header {
 					float:left;
-					margin-top:0 !important;
+					margin-top:2rem !important;
 					height:52px;
 						h1 {
 							text-align: center;
@@ -653,6 +710,10 @@ html {
 @media screen and (max-width : 791px) {
 	html {
 		body {
+			header.main-header {
+					margin-top:3rem !important;
+				
+				}
 			&.term-universities, &.term-advisory-committee {
 				section {
 					.wsuwp_uc_entity {
@@ -743,9 +804,6 @@ html {
 @media screen and (max-width : 989px) {
 	html {
 		body {
-			main {
-				margin-top:8em !important;
-			}
 			nav.main-menu {
 				position: fixed;
 				margin: 0;
@@ -892,9 +950,7 @@ html {
 			}
 			&.post-type-archive, &.single-wsuwp_uc_person, &.single-wsuwp_uc_project {
 				main {
-					header.main-header {
-						margin-top:0;
-					}
+					
 					h1 {
 						margin-left:0px;
 					}
@@ -975,6 +1031,12 @@ html {
 					}
 				}
 			}
+			&.single-post.categorized-notice-of-funding-opportunity { 
+				footer.main-foot {
+					float:none;
+					width:100%;
+				}
+			}
 			&.single-wsuwp_uc_entity {
 				main {
 						figure.featured-image {
@@ -1041,6 +1103,17 @@ html {
 			&.term-advisory-committee, &.term-universities {
 				section {
 					padding-left:0 !important;
+				}
+			}
+			&.categorized-notice-of-funding-opportunity {
+				.fluid {
+					main {
+						section.row.side-right {
+							.column.one {
+								width:100%;
+							}
+						}
+					}
 				}
 			}
 		} /* body */

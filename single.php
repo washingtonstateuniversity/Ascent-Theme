@@ -12,7 +12,6 @@ if ( spine_has_background_image() ) {
 <main>
 
 <?php
-
 get_template_part('parts/headers');
 
 if ( function_exists( 'wsuwp_uc_get_object_type_slugs' ) && in_array( get_post_type(), wsuwp_uc_get_object_type_slugs() ) ) {

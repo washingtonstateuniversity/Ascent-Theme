@@ -6,12 +6,13 @@
 				<h1><span class="ascent-main-header">Ascent</span> Funding Opportunities</h1>
 			</header>
 	<?php get_template_part('parts/featured-images'); ?>
-			
+
 
 	<section class="row side-right gutter pad-ends">
 		<div class="column one">
 		<header>
 			<h1>Notice of Funding Opportunity</h1>
+			<?php echo category_description(); ?>
 		</header>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'articles/post-notice-of-funding-opportunity', get_post_type() ); ?>

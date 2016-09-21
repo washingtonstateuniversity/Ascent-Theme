@@ -3,7 +3,7 @@
 	<?php
 
 			if ( has_post_thumbnail() ) {
-				?><figure class="article-thumbnail"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( array( 132, 88 ) ); ?></a></figure><?php
+				?><figure class="article-thumbnail"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_post_thumbnail( 'spine-small_size' ); ?></a></figure><?php
 			}
 
 			// If a manual excerpt is available, display this. Otherwise, only the most basic information is needed.

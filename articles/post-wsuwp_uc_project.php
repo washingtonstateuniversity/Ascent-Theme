@@ -30,6 +30,29 @@
 	<?php else : ?>
 		<div class="article-body">
 			<?php the_content(); ?>
+
+			<?php // Display the date the project was last updated.
+			$revisions = wp_get_post_revisions( get_the_ID(), array(
+				'numberposts' => 1,
+			) );
+
+			// Calculate the last updated display based on our current timezone.
+			$current_time = time() + ( get_option( 'gmt_offset', 0 ) * HOUR_IN_SECONDS );
+
+			foreach ( $revisions as $revision ) {
+				echo '<p class="last-updated"><span class="last-updated-text">Last Updated:</span> <span class="last-updated-date">';
+
+				// If within 24 hours, show a human readable version instead
+				if ( ( $current_time - strtotime( $revision->post_date ) ) < DAY_IN_SECONDS ) {
+					echo esc_html( human_time_diff( $current_time, strtotime( $revision->post_date ) ) . ' ago' );
+				} else {
+					echo esc_html( date( 'm/d/Y', strtotime( $revision->post_date ) ) );
+				}
+
+				echo '</span></p>';
+			}
+			?>
+
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'spine' ), 'after' => '</div>' ) ); ?>
 		</div>
 	<?php endif; ?>
